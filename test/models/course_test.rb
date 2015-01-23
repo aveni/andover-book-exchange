@@ -1,19 +1,18 @@
 # == Schema Information
 #
-# Table name: offers
+# Table name: courses
 #
 #  id         :integer          not null, primary key
-#  type       :string
-#  price      :integer
-#  user_id    :integer
-#  listing_id :integer
+#  name       :string
+#  teacher    :string
+#  subject_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class OfferTest < ActiveSupport::TestCase
+class CourseTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

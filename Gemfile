@@ -1,5 +1,17 @@
 source 'https://rubygems.org'
 
+gem 'devise', '~> 3.4'
+gem 'devise-bootstrap-views', '~> 0.0.3'
+# Use Font Awesome
+gem 'font-awesome-rails', '~> 4.2.0.0'
+# Use Simple Form
+gem 'simple_form', '~> 3.1.0'
+# Use Cocoon
+gem 'cocoon', '~> 1.2.6'
+# Use Bootstrap
+gem 'bootstrap-sass', '~> 3.3.1'
+# Use AutoPrefixer
+gem 'autoprefixer-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
