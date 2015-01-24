@@ -1,0 +1,1000 @@
+   27  rhtml html.erb \ntext/x-eruby
+   28  rjs \napplication/xml
+   29  rxml builder" | sudo tee -a /etc/mime.types
+   30  sudo update-mime-database /usr/share/mime
+   31  cd Documents/COMP630/movielines/
+   32  rails 
+   33  rails s
+   34  rails c
+   35  rails s
+   36  rails c
+   37  rails s
+   38  rake db:setup
+   39  rails s
+   40  rake db:setup
+   41  rails s
+   42  gem install faker
+   43  bundle
+   44  rails s
+   45  reboot
+   46  sudo yum update
+   47  ls
+   48  cd Documents/
+   49  ls
+   50  rm money_maker~ 
+   51  ls
+   52  cd COMP630/
+   53  cd movielines/
+   54  rails s
+   55  cd Documents/COMP630/movielines/
+   56  rails c
+   57  history | grep scaffold
+   58  gedit app/views/trailers/index.html.erb
+   59  gedit app/views/trailers/_trailers.html.erb
+   60  man faker
+   61  gem man faker
+   62  gem
+   63  gem help fakker
+   64  gem help faker
+   65  gem help commands
+   66  locate faker
+   67  rails c
+   68  rake db:migrate
+   69  history | grep controller
+   70  history | grep rake
+   71  rake db:rollback
+   72  rake db:migrate
+   73  rake db:rollback
+   74  rake db:migrate
+   75  tail -20 history
+   76  history | tail -20
+   77  history | tail -100
+   78  history | tail -1000
+   79  rails generate migrate add_tname_trailers
+   80  rails db:migrate
+   81  rake db:migrate
+   82  history | grep mpaa
+   83  cd ..
+   84  ls
+   85  history | grep new
+   86  rails new ciphertool
+   87  rm -r ciphertool/
+   88  rails new blog
+   89  rails generate Model Article
+   90  cd blog/
+   91  rails generate Model Article
+   92  rails generate model Article
+   93  cd ../movielines/
+   94  rake db:migrate
+   95  history
+   96  history | grep controller
+   97  rails generate controller articles
+   98  cd ..
+   99  cd blog/
+  100  rails generate controller articles
+  101  reboot
+  102  ls
+  103  locate strategic
+  104  reboot
+  105  sudo yum install
+  106  reboot
+  107  exit
+  108  sudo yum update
+  109  sudo yum search movie
+  110  pry
+  111  cd Documents/COMP630/movielines/
+  112  ls
+  113  rails s
+  114  cd Documents/COMP630/blog/
+  115  gedit app/views/articles/index.html.erb
+  116  gedit app/views/articles/show.html.erb
+  117  gedit app/views/articles/edit.html.erb
+  118  gedit app/views/articles/new.html.erb
+  119  gedit app/views/articles/create.html.erb
+  120  sudo yum install python-webkitgtk
+  121  sudo vim /etc/mime.types 
+  122  bash
+  123  restart
+  124  reboot
+  125  cd Documents/COMP630/blog/
+  126  gedit app/views/_form.html.erb
+  127  gedit app/views/_article.html.erb
+  128  rails c
+  129  rake db:migrate
+  130  rails s
+  131  rake db:rollback
+  132  rake db:migrate
+  133  rails s
+  134  rails c
+  135  cd Documents/COMP630/blog/
+  136  rails c
+  137  cd ../movielines/
+  138  rails s
+  139  cd ../blog/
+  140  rails s
+  141  rails c
+  142  rails s
+  143  reboot
+  144  ls
+  145  exit
+  146  service sshd restart
+  147  sudo service sshd restart
+  148  hostname -I
+  149  ssh rbrigden@198.140.203.143
+  150  ssh -v rbrigden@198.140.203.143
+  151  curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//' 
+  152  curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+  153  ssh rbrigden@50.161.21.78
+  154  ssh rbrigden@50.161.21.78.kurtz
+  155  ssh rbrigden@kurtz.50.161.21.78
+  156  ssh rbrigden@50.161.21.78
+  157  reboot
+  158  exit
+  159  pdfimages --help
+  160  pdfimages -list Downloads/
+  161  ls Downloads/ | grep rwdc
+  162  ls Downloads/ | grep detail
+  163  ls Downloads/ | grep 2015
+  164  ls Downloads/ | grep 15
+  165  ls Downloads/ | grep Detail
+  166  ls Downloads/ | grep Detailed_Background
+  167  ls Downloads/ | grep Detailed_Background.pdf
+  168  ls Downloads
+  169  pdfimages -list Downloads/Detalied_Background.pdf 
+  170  pdfimages --help
+  171  pdfimages -f 15 -l 16
+  172  pdfimages -f 15 -l 16 Downloads/Detalied_Background.pdf 
+  173  pdfimages -f 15 -l 16 Downloads/Detalied_Background.pdf field-01.jpg
+  174  ls -a
+  175  ls -a | grep xpd
+  176  vim /etc/xpdfrc
+  177  cd Documents/COMP630/blog/
+  178  git --help
+  179  git init
+  180  git remote add origin git@bitbucket.org:rbrigden/blog.git
+  181  git add all
+  182  history | grep all
+  183  history | grep add
+  184  git add -A
+  185  history | grep commit
+  186  git commit -m 'first version'
+  187  git config user.email "brigdenr@gmail.com"
+  188  git config user.name "Ryan Brigden"
+  189  git commit -m 'first version'
+  190  history | grep all
+  191  git push -u origin all
+  192  git push -u origin --all
+  193  vim .bashrc
+  194  cd
+  195  vim .bashrc 
+  196  gedit .bashrc 
+  197  bash
+  198  exit
+  199  cd Documents/
+  200  cd COMP630/
+  201  exit
+  202  cd Documents/COMP630/
+  203  git clone git@bitbucket.org:rbrigden/blog.git
+  204  ls
+  205  ssh rbrigden@kurtz.local
+  206  ssh
+  207  sudo service sshd restart
+  208  ssh rbrigden@kurtz.local
+  209  hostname -I
+  210  cd
+  211  ls
+  212  xclip -sel clip < ~/id_rsa.pub 
+  213  rm id_rsa.pub 
+  214  scp .bashrc rbrigden@10.0.0.26:~/
+  215  ssh -R 10022:localhost:22 rbrigden@10.0.0.26
+  216  ssh -p 10022 localhost
+  217  ssh -R 10022:localhost:22 rbrigden@10.0.0.26
+  218  ls
+  219  cd Desktop/
+  220  ls
+  221  cd ..
+  222  clear
+  223  vim .bashrc
+  224  cd Documents/
+  225  vim .bashrc
+  226  cd
+  227  vim .bashrc
+  228  clear
+  229  gem update rails
+  230  cd Documents/COMP630/
+  231  heroku create
+  232  cd blog/
+  233  heroku create
+  234  history | grep git
+  235  git add -A
+  236  git commit -m "version to push to heroku"
+  237  git push -u origin --all
+  238  git pull origin
+  239  ls
+  240  ls -a
+  241  git push heroku master
+  242  cd ..
+  243  cd movielines/
+  244  ls
+  245  head Gemfile
+  246  head --help
+  247  head -n 20 Gemfile
+  248  cd ../blog/
+  249  vim Gemfile
+  250  gedit Gemfile
+  251  git push heroku master
+  252  git add -A
+  253  git commit -m 'for heroku'
+  254  history | grep git
+  255  git push -u origin --all
+  256  git push heroku master
+  257  bundle install
+  258  git add -A
+  259  git commit -m 'heroku eit'
+  260  git push -u origin --all
+  261  git push heroku master
+  262  heroku run rails c
+  263  rails c
+  264  ssh -R 10022:localhost:22 grant@127.0.0.1:7778
+  265  ssh -R 10022:localhost:22 grant@127.0.0.1
+  266  ssh 127.0.0.1:7778
+  267  ssh 127.0.0.1
+  268  ssh 127.0.0.1:7778
+  269  l
+  270  ls
+  271  sudo yum update
+  272  ls
+  273  cd Documents/COMP630/
+  274  ls
+  275  rm history 
+  276  rm message_key sayhi.rb 
+  277  cd blog/
+  278  rails s
+  279  exit
+  280  reboot
+  281  sudo yum install
+  282  sudo yum update
+  283  sudo yum uninstall suddenlink
+  284  sudo yum remove suddenlink
+  285  ls
+  286  cd Documents/
+  287  ls
+  288  rm -r rbrigden.theme/
+  289  ls senior\ year/
+  290  mkdir Summer2015
+  291  cd Summer2015/
+  292  man mkdir
+  293  mkdir -v HackCMMC
+  294  cd HackCMMC/
+  295  gedit proposal.tex
+  296  pdfdetach --helo
+  297  pdfdetach --help
+  298  pdfseparate 
+  299  pdfseparate -f 4 -l 26 chapter1.pdf chapter1.pdf
+  300  pdfseparate -f 4 -l 26 chapter1.pdf computer_basics.pdf
+  301  pdfseparate -f 4 -l 26 chapter1.pdf computer_basics
+  302  pdfseparate -f 4 -l 26 chapter1.pdf computer_basics%d.pdf
+  303  man pdfseparate 
+  304  man pdfdetach 
+  305  man pdftocairo 
+  306  ls
+  307  cd
+  308  clear
+  309  ls
+  310  cd Documents/CompStuff/games/
+  311  ls
+  312  cd DATA/
+  313  ls
+  314  history | grep ZORK1.
+  315  history | grep ZOR
+  316  history | grep Z
+  317  history | grep z
+  318  frotz ZORK1.DAT 
+  319  cd
+  320  history
+  321  history | grep git
+  322  cd Documents/
+  323  cd COMP630/blog/
+  324  git status
+  325  cd ..
+  326  cd blog/
+  327  git push heroku master
+  328  rails server -p $PORT -e $RAILS_ENV
+  329  heroku rails server -p $PORT -e $RAILS_ENV
+  330  heroku run rails server -p $PORT -e $RAILS_ENV
+  331  heroku ps
+  332  heroku ps -a ha-app
+  333  heroku ps:scale
+  334  heroku ps:scale web+2
+  335  heroku ps:scale web+1
+  336  rails s
+  337  reboot
+  338  cd Documents/Summer2015/HackCMMC/
+  339  ls
+  340  reboot
+  341  cd Documents/CompStuff/games/DATA/
+  342  frotz ZORK1.DAT 
+  343  cd
+  344  ls
+  345  cd Documents/
+  346  ls
+  347  cd CompStuff/games/DATA/
+  348  frotz ZORK1.DAT 
+  349  firefox --help
+  350  cd Documents/COMP630/blog/
+  351  rails s
+  352  ping www.google.com
+  353  ls
+  354  clear
+  355  echo hello this is my file > test
+  356  cat test
+  357  echo this is my second file > test
+  358  cat test
+  359  echo --man
+  360  echo --help
+  361  man echo
+  362  $PATH
+  363  $HOME
+  364  $USER
+  365  sudo yum update
+  366  gem update
+  367  gem update rails
+  368  rvm --help
+  369  rvm get
+  370  ls
+  371  pry
+  372  ls
+  373  ssh scan
+  374  ssh --help
+  375  ifconfig
+  376  arp-scan --help
+  377  sudo yum install arp-scan.x86_64 
+  378  arp-scan --help
+  379  arp-scan --help | head
+  380  arp-scan --help | head -n 5
+  381  arp-scan --help | grep local
+  382  arp-scan --help | grep netwok
+  383  arp-scan --help | grep network
+  384  arp-scan
+  385  iwconfig
+  386  sudo arp-scan --interface=wlpls0 --localnet
+  387  nmap
+  388  sudo yum install nmap
+  389  man nmap
+  390  nmap local
+  391  hostname -I
+  392  nmap 10.0.0.18
+  393  nmap -sn 10.0.0.18
+  394  arp -e
+  395  arp
+  396  man arp
+  397  ip addr
+  398  man ip addr
+  399  nmap ip
+  400  nmap ip addr
+  401  ip addr
+  402  nmap -sn 127.0.0.1/8
+  403  arp-scan 127.0.0.1/8
+  404  arp-scan 127.0.0.1
+  405  arp-scan 127.0.0.1/28
+  406  cd
+  407  cd Documents/CompStuff/
+  408  ls
+  409  vim public_ip.pl
+  410  chmod a+x public_ip.pl 
+  411  cd
+  412  public_ip.pl
+  413  vim .bashrc
+  414  exit
+  415  vim .bashrc
+  416  exit
+  417  public_ip
+  418  cd Documents/CompStuff/
+  419  ls
+  420  rename 'public_ip.pl' 'public_ip' public_ip.pl 
+  421  ls
+  422  rename 'public_ip' 'public_ip.sh' public_ip.pl 
+  423  rename 'public_ip' 'public_ip.sh' public_ip 
+  424  vim ~/.bashrc
+  425  public_ip
+  426  exit
+  427  public_ip
+  428  curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+  429  vim Documents/CompStuff/public_ip.sh 
+  430  public_ip
+  431  ssh 50.169.75.144
+  432  clear
+  433  echo $USER
+  434  echo $HOME
+  435  echo $USERGROUPS
+  436  echo $USER
+  437  echo $PATH
+  438  public_ip
+  439  ls
+  440  cd Documents/
+  441  CompStuff/
+  442  cd CompStuff/
+  443  ls
+  444  cp public_ip.sh ~/bin/
+  445  ls
+  446  public_ip.sh
+  447  cd
+  448  public_ip.sh
+  449  vim .bashrc
+  450  exit
+  451  pubic_ip
+  452  public_ip
+  453  cd Documents/
+  454  CompStuff/
+  455  cd CompStuff/
+  456  rm public_ip.sh 
+  457  ls
+  458  cat ipaddress.txt 
+  459  public_ip
+  460  cd
+  461  vim .bashrc
+  462  private_ip
+  463  exit
+  464  private_ip
+  465  public_ip
+  466  ls
+  467  cd Documents/
+  468  ls
+  469  cd RWDC/
+  470  ls
+  471  wolfram acres in a mile
+  472  wolfram acres in a square mile
+  473  wolfram sqrt(640)
+  474  wolfram sqrt 640
+  475  wolfram square mile / 400
+  476  sudo yum install rsync
+  477  sudo yum install rsnapshot.noarch 
+  478  sudo cp /etc/rsnapshot.conf /etc/rsnapshot.conf.default
+  479  sudo vim /etc/rsnapshot.conf
+  480  sudo gedit /etc/rsnapshot.conf
+  481  ls /mnt
+  482  cd /mnt/Music/
+  483  ls
+  484  cd ../shared/
+  485  ls
+  486  cd
+  487  ls
+  488  ls Templates/
+  489  rm Templates/
+  490  ls -a Templates/
+  491  rm -r Templates/
+  492  ls
+  493  ls bin
+  494  cd ..
+  495  ls
+  496  cd rbrigden/
+  497  ls
+  498  cd Documents/
+  499  ls
+  500  cd COMP500
+  501  ls
+  502  rsync -aP CH03/ ~/Documents/Backup
+  503  ls
+  504  cd ..
+  505  ls
+  506  cd Backup/
+  507  ls
+  508  cd ..
+  509  rm -r Backup/
+  510  ls
+  511  man rsync
+  512  sudo gparted /dev/sdb
+  513  mount rbrigden
+  514  rsync -aP /rbrigden/ /run/media/rbrigden/rbrigden/
+  515  rsync -aP ~ /run/media/rbrigden/rbrigden/
+  516  rsync -aP ~/ /run/media/rbrigden/rbrigden/backup
+  517  rsync -aP --delete ~/ /run/media/rbrigden/rbrigden/backup
+  518  ls -a
+  519  cd .local
+  520  ls
+  521  cd share/
+  522  cd tracker/
+  523  cd ..
+  524  ls | grep trash
+  525  ls | grep tr
+  526  rsync -aP --delete ~/ /run/media/rbrigden/rbrigden/backup
+  527  cd
+  528  vim .bashrc
+  529  backup
+  530  vim .bashrc
+  531  backup
+  532  exit
+  533  backup
+  534  vim backup.sh
+  535  chmod a+x backup.sh 
+  536  backup.sh
+  537  ls
+  538  backup.sh
+  539  history | grep chmod
+  540  history | grep 78*
+  541  vim .bash
+  542  vim .bashrc
+  543  ls
+  544  vim backup.sh 
+  545  backup.sh
+  546  exit
+  547  ls
+  548  bash backup.sh 
+  549  chmod a+x backup.sh 
+  550  backup.sh
+  551  ./backup.sh 
+  552  vim backup.sh 
+  553  ls
+  554  vim .bash
+  555  vim .bashrc
+  556  mv backup.sh bin/
+  557  ls
+  558  cd bin/
+  559  ls
+  560  mkdir shell_scripts
+  561  mv public_ip.sh backup.sh shell_scripts/
+  562  vim ~/.bashrc
+  563  clear
+  564  cd
+  565  exit
+  566  backup
+  567  reboot
+  568  sudo mv /mnt/shared/esha\ and\ ryan.jpg /mnt/shared/esha\ and\ ryan\ II.jpg Pictures/
+  569  backup
+  570  sudo yum install gnome-disk-utility
+  571  backup
+  572  exit
+  573  sudo yum update
+  574  ls
+  575  cd Documents/
+  576  ls
+  577  cd journalism/
+  578  ls
+  579  mv ../journalism ../2014-2015/
+  580  ls
+  581  cd ..
+  582  ls
+  583  cd ..
+  584  ls
+  585  cd 2014-2015/
+  586  ls
+  587  cd ..
+  588  ls
+  589  cd ..
+  590  ls
+  591  pry
+  592  wolfram 98 /115
+  593  ls
+  594  sudo yum update
+  595  ls
+  596  clear
+  597  gedit Documents/COMP500/CH10/src/StringTest.java
+  598  sudo yum update
+  599  clear
+  600  gedit Documents/COMP500/CH09
+  601  gedit Documents/COMP500/CH09/SnackBar/src/Vendor.java
+  602  ls
+  603  bash
+  604  exit
+  605  scan
+  606  if exit;  q; q; "
+  607  -a
+  608  clear
+  609  cd Documents/COMP630/movielines/
+  610  rake db:migrate
+  611  rails generate model actor first:string last:string gender:string
+  612  rake db:migrate
+  613  annotate
+  614  rails c
+  615  rails g CreateJoinTableActorMovie actor movie
+  616  rake db:migrate
+  617  rails g migration CreateJoinTableActorMovie actor movie
+  618  rake db:migrate
+  619  rails c
+  620  rake db:reset db:migrate
+  621  rails s
+  622  rake db:seed
+  623  rails s
+  624  rake db:seed
+  625  rails s
+  626  man mkdir
+  627  man pdfunite 
+  628  cd
+  629  cd /run/media/rbrigden/rbrigden/
+  630  ls
+  631  mkdir test
+  632  cp pliparchive/*1989.pdf ./test/
+  633  cd test/
+  634  ls
+  635  pdfunite *.pdf compiled.pdf
+  636  ld
+  637  ls
+  638  pry
+  639  cd
+  640  ls
+  641  cd Documents/COMP500/CH10/src/
+  642  ls
+  643  mv ~/Downloads/
+  644  javac -d ../bin StringTest.java
+  645  java -cp ../bin StringTest 
+  646  javac -d ../bin StringTest.java
+  647  java -cp ../bin StringTest 
+  648  javac -d ../bin StringTest.java
+  649  java -cp ../bin StringTest 
+  650  javac -d ../bin StringTest.java
+  651  java -cp ../bin StringTest 
+  652  javac -d ../bin StringTest.java
+  653  java -cp ../bin StringTest 
+  654  javac -d ../bin StringTest.java
+  655  java -cp ../bin StringTest 
+  656  cp ~/Documents/COMP500/StudentFiles/Ch10/Exercises/StringTest.java .
+  657  ls
+  658  cd ..
+  659  pdfdetach ap_comp_sci_a_quick_reference.pdf 
+  660  pdfseparate ap_comp_sci_a_quick_reference.pdf 
+  661  pdfseparate ap_comp_sci_a_quick_reference.pdf -f 3 -l 3
+  662  pdfseparate ap_comp_sci_a_quick_reference.pdf -f 3 -l 4
+  663  pdfseparate -f 3 -l 3 ap_comp_sci_a_quick_reference.pdf
+  664  pdfseparate -f 3 -l 4 ap_comp_sci_a_quick_reference.pdf
+  665  pdfseparate -f 3 -l 4 ap_comp_sci_a_quick_reference.pdf quick_reference.pdf
+  666  pdfseparate -f 3 -l 4 ap_comp_sci_a_quick_reference.pdf quick_reference%d.pdf
+  667  cd ../COMP630/movielines/
+  668  ls
+  669  rails s
+  670  rails c
+  671  cd
+  672  ftp archives.phillipian.net
+  673  sudo yum install ftp
+  674  ftp archives.phillipian.net
+  675  ls
+  676  rm 11011991.pdf 11081991.pdf 
+  677  ls
+  678  ftp
+  679  clear
+  680  cd /run/media/rbrigden/rbrigden/
+  681  mkdir pliparchive
+  682  cd pliparchive/
+  683  ftp archives.phillipian.net
+  684  pdfunite ./*.pdf 1980_2000.pdf
+  685  cd
+  686  clear
+  687  cd Documents/COMP500/
+  688  ls
+  689  cd StudentFiles/
+  690  ls
+  691  cd Ch10/
+  692  ls
+  693  cd Lipogrammer/
+  694  ls
+  695  cd ../Exercises/
+  696  ls
+  697  javac Cooney.class
+  698  java Cooney 
+  699  cd ..
+  700  cd ../CH10/src/
+  701  ls
+  702  mkdir Cooney
+  703  cd Cooney/
+  704  cd ..
+  705  rm Cooney/
+  706  rm -r Cooney/
+  707  cd ..
+  708  gedit Problems.java
+  709  cd src/
+  710  javac -d ../bin StringTest.java 
+  711  java -cp ../bin StringTest 
+  712  clear
+  713  reboot
+  714  ls
+  715  exit
+  716  cd Documents/COMP630/
+  717  ls
+  718  cd movielines/
+  719  sudo yum Powerdown
+  720  sudo yum install Powerdown
+  721  sudo yum install powerdown
+  722  pry
+  723  sudo yum install tlp
+  724  man tlp
+  725  tlp
+  726  tlp start
+  727  sudo tlp start
+  728  rails g model role
+  729  rake db:migrate
+  730  annotate
+  731  rails c
+  732  sudo yum install sublime
+  733  rails s
+  734  rails c
+  735  cd Documents/COMP630/movielines/
+  736  rails s
+  737  ls
+  738  sudo yum update
+  739  cd
+  740  cd Documents/COMP500/CH10
+  741  cd src/
+  742  ls
+  743  gedit Cooney.java
+  744  javac -d ../bin Cooney.java 
+  745  java -cp ../bin Cooney 
+  746  javac -d ../bin Cooney.java 
+  747  java -cp ../bin Cooney 
+  748  javac -d ../bin Cooney.java 
+  749  java -cp ../bin Cooney 
+  750  clear
+  751  java -cp ../bin Cooney 
+  752  clear
+  753  cd
+  754  cd Documents/COMP500/CH10/src/
+  755  gedit Magpie.java
+  756  javac -d ../bin Magpie2.java 
+  757  javac -d ../bin MagpieRunner2.java 
+  758  java -cp ../bin MagpieRunner2 
+  759  clear
+  760  java -cp ../bin MagpieRunner2 
+  761  javac -d ../bin MagpieRunner2.java Magpie2.java 
+  762  java -cp ../bin MagpieRunner2 
+  763  javac -d ../bin MagpieRunner2.java Magpie2.java 
+  764  java -cp ../bin MagpieRunner2 
+  765  javac -d ../bin MagpieRunner2.java Magpie2.java 
+  766  java -cp ../bin MagpieRunner2 
+  767  clear
+  768  gedit StringTest.java
+  769  sudo yum update
+  770  cd Documents/COMP630/movielines/
+  771  gedit Gemfile
+  772  bundle install
+  773  gem install autoprefixer-rails
+  774  gedit Gemfile
+  775  bundle install
+  776  gem install font-awesome-rails
+  777  bundle install
+  778  gedit app/assets/stylesheets/custom.css.scss
+  779  clear
+  780  rails s
+  781  gedit tweets.html
+  782  reboot
+  783  cd Documents/
+  784  cd COMP630/
+  785  ls
+  786  cd movielines/
+  787  gedit app/assets/stylesheets/movies.css.scss 
+  788  git commit -m 'bootstrap added'
+  789  git add -A
+  790  git commit -m 'bootstrap added'
+  791  git push origin --all
+  792  git push heroku master
+  793  heroku start
+  794  heroku
+  795  heroku auth
+  796  heroku --auth
+  797  heroku auth
+  798  heroku auth:login
+  799  git push heroku master
+  800  heroku create
+  801  git push heroku master
+  802  rake db:seed
+  803  gedit db/seeds.rb
+  804  rake db:seed
+  805  reboot
+  806  cd Documents/COMP630/movielines/
+  807  rails c
+  808  rails generate controller actor
+  809  rails generate controller actors
+  810  history | grep controller
+  811  ls
+  812  reboot
+  813  cd Documents/COMP630/movielines/
+  814  rails s
+  815  reboot
+  816  feet in acre
+  817  wolfram feet in acre
+  818  wolfram square feet in acre
+  819  cd Documents/
+  820  cd 2014-2015/
+  821  ls
+  822  vim solution.tex
+  823  pdflatex solution.tex 
+  824  ls
+  825  vim solution.tex
+  826  pdflatex solution.tex 
+  827  vim solution.tex
+  828  wolfram integral_1^3 t * sqrt t^2 + 1
+  829  clear
+  830  ls
+  831  cd
+  832  clear
+  833  sudo yum update
+  834  cd /proc/
+  835  cd ..
+  836  ls
+  837  reboot
+  838  pdftotext 
+  839  pdftotext -f 1 /tmp/CXXXIV\ Application..pdf apptext.txt
+  840  ls
+  841  gedit -b apptext.txt 
+  842  gedit -d apptext.txt 
+  843  gedit apptext.txt 
+  844  ls
+  845  rm apptext.txt 
+  846  clear
+  847  cd Documents/
+  848  ls
+  849  cd COMP630/
+  850  ls
+  851  cd ..
+  852  cd 2014-2015/
+  853  ls
+  854  cd ..
+  855  cd 2014-2015/
+  856  vim solution.
+  857  vim solution.tex 
+  858  pdfimages 
+  859  pdfimages /tmp/CXXXVII\ Application.pdf ~/Documents/image%d.jpg
+  860  mv /tmp/CXXXVII\ Application.pdf ~/Shared/
+  861  reboot
+  862  pry
+  863  clear
+  864  reboot
+  865  cd Documents/COMP630/movielines/
+  866  bundle install
+  867  rails g simple_form:install --bootstrap
+  868  bundle install
+  869  cd
+  870  vim .bashrc
+  871  cd
+  872  vim .bashrc
+  873  vim bin/shell_scripts/backup.sh 
+  874  vim command.txt
+  875  scp command.txt rbrigden@nelly.local:~ 
+  876  scp command.txt rbrigden@nelly 
+  877  scp command.txt rbrigden@nelly:~ 
+  878  cd Documents/COMP500/
+  879  ls
+  880  mkdir CH11
+  881  ls
+  882  cd CH11
+  883  ls
+  884  mv ~/Downloads/_ap05_frq_comp_sci_a_45544.pdf .
+  885  mkdir src bin
+  886  cd src/
+  887  vim Advance.java
+  888  vim StudentAdvance.java
+  889  clear
+  890  vim TaxableItem.java
+  891  vim Vehicle.java
+  892  clear
+  893  cd
+  894  cd Documents/2014-2015/
+  895  vim solution.tex 
+  896  pdflatex solution.tex 
+  897  vim solution.tex 
+  898  pdflatex solution.tex 
+  899  vim solution.tex 
+  900  pdflatex solution.tex 
+  901  vim solution.tex 
+  902  pdflatex solution.tex 
+  903  vim solution.tex 
+  904  pdflatex solution.tex 
+  905  vim solution.tex 
+  906  cd ~/Documents/COMP500/CH03/
+  907  ls
+  908  cd src/
+  909  ls
+  910  gedit Circle.java CircleTest.java
+  911  clear
+  912  javac -d ../bin Circle.java CircleTest.java 
+  913  java -cp ../bin CircleTest 
+  914  javac -d ../bin Circle.java CircleTest.java 
+  915  java -cp ../bin CircleTest 
+  916  javac -d ../bin Circle.java CircleTest.java 
+  917  java -cp ../bin CircleTest 
+  918  javac -d ../bin Circle.java CircleTest.java 
+  919  java -cp ../bin CircleTest 
+  920  javac -d ../bin Circle.java CircleTest.java 
+  921  java -cp ../bin CircleTest 
+  922  javac -d ../bin Circle.java CircleTest.java 
+  923  java -cp ../bin CircleTest 
+  924  javac -d ../bin Circle.java CircleTest.java 
+  925  java -cp ../bin CircleTest 
+  926  clear
+  927  wget http://repo.cloudhike.com/sublime2/fedora/sublime2.repo -O /etc/yum.repos.d/sublime2.repo
+  928  sudo wget http://repo.cloudhike.com/sublime2/fedora/sublime2.repo -O /etc/yum.repos.d/sublime2.repo
+  929  sudo yum -y install sublime-text
+  930  sudo wget https://gist.githubusercontent.com/dkd903/8ba3f51313c1781cc571/raw/f37b1c18547d086cd45e8b484efc518260106ea9/Install_Sublime_Text_3_64.sh -O install-sublime-text.sh
+  931  ls
+  932  chmod +x install-sublime-text.sh 
+  933  sudo chmod +x install-sublime-text.sh 
+  934  su -c "sh install-sublime-text.sh"
+  935  subl
+  936  man subl
+  937  subl --help
+  938  cd ~/Documents/COMP630/movielines/
+  939  rails c
+  940  rake db:seed
+  941  reboot
+  942  cd Documents/COMP630/movielines/
+  943  rails s
+  944  cd ..
+  945   cd ..
+  946  cd COMP500/CH11/
+  947  cd src/
+  948  ls
+  949  gedit Advance.java StudentAdvance.java 
+  950  gedit Advance.java StudentAdvance.java Vehicle.java 
+  951  clear
+  952  ls
+  953  cd ~/Documents/COMP630/movielines/
+  954  ls
+  955  clear
+  956  subl
+  957  wget http://repo.cloudhike.com/sublime2/fedora/sublime2.repo -O /etc/yum.repos.d/sublime2.repo
+  958  sudo wget http://repo.cloudhike.com/sublime2/fedora/sublime2.repo -O /etc/yum.repos.d/sublime2.repo
+  959  sudo yum -y install sublime-text
+  960  sudo yum update
+  961  yum-config-manager --save --setopt=sublime2.skip_if_unavailable=true
+  962  sudo yum-config-manager --save --setopt=sublime2.skip_if_unavailable=true
+  963  sudo yum update
+  964  gedit app/views/movies/_trailer_fields.html.erb
+  965  rails s
+  966  sudo yum update
+  967  pine
+  968  alpine
+  969  ls
+  970  cd ..
+  971  ls
+  972  cd ..
+  973  ls
+  974  cd rbrigden
+  975  cd home/rbrigden/Documents/
+  976  mkdir private
+  977  ls
+  978  cd private/
+  979  vim prvt_keys.txt
+  980  gpg -c prvt_keys.txt 
+  981  sudo yum install gpg
+  982  gpg -c prvt_keys.txt 
+  983  vim prvt_keys.txt
+  984  ks
+  985  ls
+  986  vim prvt_keys.txt
+  987  ls
+  988  rm prvt_keys.txt
+  989  vim prvt_keys.txt.gpg 
+  990  gpg 
+  991  gpg --help
+  992  gpg -d prvt_keys.txt.gpg 
+  993  ls
+  994  gpg prvt_keys.txt.gpg 
+  995  ls
+  996  cat prvt_keys.txt
+  997  vim prvt_keys.txt
+  998  gpg prvt_keys.txt.gpg 
+  999  vim prvt_keys.txt
+ 1000  reboot
+ 1001  cd Documents/COMP630/pabookexchange/
+ 1002  history | grep git
+ 1003  git push -u origin all
+ 1004  git push -u origin --all
+ 1005  history |grep git
+ 1006  git checkout -b offer
+ 1007  rails generate model offer
+ 1008  git commit -a -m 'add model offer'
+ 1009  git add -A
+ 1010  git commit -a -m 'add model offer'
+ 1011  git checkout master
+ 1012  ls
+ 1013  git checkout offer
+ 1014  ls
+ 1015  git checkout master
+ 1016  git merge offer
+ 1017  git branch -d offer
+ 1018  ls
+ 1019  git push -u origin --all
+ 1020  sudo yum search mhwave
+ 1021  sudo yum install mhwaveedit.x86_64 
+ 1022  pulseaudio -k && sudo alsa force-reload
+ 1023  pulseaudio -k
+ 1024  history | grep git
+ 1025  history
+ 1026  history > history.txt

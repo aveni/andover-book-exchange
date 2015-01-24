@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pabookexchange</title>
+  <title>Andover Book Exchange</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'Textbooks', books_path %></li>
+					<li><%= link_to 'Courses', courses_path %></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-<%= yield %>
-
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

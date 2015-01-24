@@ -1,0 +1,22 @@
+<div class="row col-md-10 col-md-offset-1">
+
+	<h1> <%= controller.action_name %> book </h1>
+
+<%= simple_form_for(@book, html:{class:'form-horizontal'} ) do |f| %>
+  
+    <%= f.error_notification %>
+    <%= f.input :title, hint:'required'%>
+    <%= f.input :author, hint:'required'%>
+    <%= f.input :isbn, hint:'required' %>
+    <%= f.association :course, collection:Course.all, label:'Select Course'%>
+
+    <div class='row text-center'>
+   	 <%= f.submit nil, class:'btn btn_primary' %>
+   	 <%= link_to 'cancel', :back, class:'btn btn-default'%>
+   	</div>
+
+    <% end %>
+
+    </div>
+
+   

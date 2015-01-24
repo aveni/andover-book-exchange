@@ -25,17 +25,17 @@ ActiveRecord::Schema.define(version: 20150123202547) do
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "teacher"
-    t.integer  "subject_id"
+    t.string   "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string   "description"
+    t.text     "description"
     t.string   "quality"
     t.string   "type"
-    t.integer  "max_price"
-    t.integer  "min_price"
+    t.float    "max_price"
+    t.float    "min_price"
     t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150123202547) do
 
   create_table "offers", force: :cascade do |t|
     t.string   "type"
-    t.integer  "price"
+    t.float    "price"
     t.integer  "user_id"
     t.integer  "listing_id"
     t.datetime "created_at", null: false

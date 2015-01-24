@@ -3,11 +3,11 @@
 # Table name: listings
 #
 #  id          :integer          not null, primary key
-#  description :string
+#  description :text
 #  quality     :string
 #  type        :string
-#  max_price   :integer
-#  min_price   :integer
+#  max_price   :float
+#  min_price   :float
 #  book_id     :integer
 #  user_id     :integer
 #  created_at  :datetime         not null

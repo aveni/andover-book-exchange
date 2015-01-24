@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration
 
     	t.string :name
     	t.string :teacher
-    	t.references :subject
+    	t.string :subject
     	
     	t.timestamps null: false
     end

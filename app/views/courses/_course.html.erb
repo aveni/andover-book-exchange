@@ -1,0 +1,8 @@
+<tr>
+      	<td><%= course.name %> </td>
+      	<td><%= course.teacher %> </td>
+      	<td> <%=  course.show_subject %></td>
+        <td><%= link_to fa_icon('eye'), course %>
+        <%= link_to fa_icon('pencil'), edit_course_path(course) %>
+        <%= link_to fa_icon('trash-o', text:'destroy'),  course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-xs btn-danger' %></td>
+</tr>

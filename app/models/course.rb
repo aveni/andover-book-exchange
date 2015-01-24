@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  name       :string
 #  teacher    :string
-#  subject_id :integer
+#  subject    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

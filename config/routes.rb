@@ -1,8 +1,26 @@
 Rails.application.routes.draw do
+  get 'courses/index'
+
+  get 'courses/show'
+
+  get 'courses/new'
+
+  get 'courses/create'
+
+  get 'courses/edit'
+
+  get 'books/index'
+
+  get 'books/show'
+
+  get 'books/new'
+
+  get 'books/create'
+
+  get 'books/edit'
+
   devise_for :users
-  resources :subjects do
-    resources :courses
-  end
+  resources :courses
   resources :books
   resources :listings do
     resources :offers

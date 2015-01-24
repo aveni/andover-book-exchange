@@ -3,7 +3,8 @@ class CreateSubjects < ActiveRecord::Migration
     create_table :subjects do |t|
 
     	t.string :name
-		t.timestamps null: false
+	t.timestamps null: false
+	
     end
   end
 end
