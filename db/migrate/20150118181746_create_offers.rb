@@ -7,7 +7,13 @@ class CreateOffers < ActiveRecord::Migration
     	t.string :last
     	t.integer :isbn
 
-      t.timestamps null: false
+    	t.string :type
+    	t.integer :price
+
+    	t.references :user
+    	t.references :listing
+
+     	t.timestamps null: false
     end
   end
 end
