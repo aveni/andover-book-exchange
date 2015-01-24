@@ -1,7 +1,7 @@
 <tr>
       	<td><%= book.title %> </td>
       	<td><%= book.author %> </td>
-      	<td> <%= book.course %></td> #can't yet figure out how to display the subject, a param from the course. 
+      	<td> <%= book.course #can't yet figure out how to display the subject, a param from the course.%></td>  
       	<td><%= book.isbn %></td>
         <td><%= link_to fa_icon('eye'), book %>
         <%= link_to fa_icon('pencil'), edit_book_path(book) %>
