@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def new
@@ -13,20 +14,20 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-        redirect_to books_path, notice: "textbook successfully added"
+        redirect_to @book, notice: "Textbook Successfully Added"
       else
         render 'new'
     end
   end
 
   def edit
-    @actor = Actor.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def update
       @book = Book.find(params[:id])
       if @book.update(book_params)
-        redirect_to @book, notice: 'textbook successfully added'
+        redirect_to @book, notice: 'Textbook Successfully Updated'
       else
         render 'edit'
       end
@@ -41,6 +42,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit(:title, :isbn, :course_id)
+    params[:book].permit(:title, :author, :isbn, :course_id)
   end
 end

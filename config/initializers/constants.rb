@@ -15,4 +15,4 @@ SUBJECTS = {
 "Classics" => "CLSS",
 "Music" => "MUSIC",
 "Art" => "ART"
-}
+}.sort_by{|k, v| k}

@@ -1,21 +1,21 @@
 <div class="row col-md-10 col-md-offset-1">
 
-	<h1> <%= controller.action_name %> course </h1>
+	<h1> <%= controller.action_name.capitalize %> Course </h1>
 
-<%= simple_form_for(@course, html:{class:'form-horizontal'} ) do |f| %>
-  
-    <%= f.error_notification %>
-    <%= f.input :name, hint:'required'%>
-    <%= f.input :teacher, hint:'required'%>
-    <%= f.input :subject, collection: SUBJECTS, label:'Select Subject'%>
+  <%= simple_form_for(@course, html:{class:'form-horizontal'}) do |f| %>
+    
+      <%= f.error_notification %>
+      <%= f.input :name, hint:'required'%>
+      <%= f.input :teacher, hint:'required'%>
+      <%= f.input :subject, collection: SUBJECTS, label:'Select Subject'%>
 
-    <div class='row text-center'>
-   	 <%= f.submit nil, class:'btn btn_primary' %>
-   	 <%= link_to 'cancel', :back, class:'btn btn-default'%>
-   	</div>
+      <div class='row text-center'>
+     	  <%= f.submit nil, class:'btn btn-primary' %>
+     	  <%= link_to 'Cancel', :back, class:'btn btn-default'%>
+     	</div>
 
-    <% end %>
+  <% end %>
 
-    </div>
+</div>
 
    

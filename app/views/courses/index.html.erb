@@ -6,19 +6,16 @@
       <th>Name</th>
       <th>Teacher</th>
       <th>Subject</th>
-      <th>Options</th>
     </tr>
   </thead>
 
   <tbody>
-    <%= render @courses %>
+  <%= render @courses %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Book', new_book_path, class:'btn btn-primary'%>
 
-<%= link_to 'New Course', new_course_path, class:'btn btn-default' %>
-
-<%= link_to 'cancel', :back, class: 'btn btn-default' %>
+<%= link_to 'New Course', new_course_path, class:'btn btn-primary' %>
+<%= link_to 'Cancel', :back, class: 'btn btn-default' %>

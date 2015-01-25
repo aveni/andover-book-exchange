@@ -1,9 +1,10 @@
 class CoursesController < ApplicationController
   def index
-    @couses = Course.all
+    @courses = Course.all
   end
 
   def show
+    @course = Course.find(params[:id])
   end
 
   def new
@@ -13,7 +14,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-        redirect_to courses_path, notice: "textbook successfully added"
+        redirect_to @course, notice: "Course Successfully Added"
       else
         render 'new'
     end
@@ -26,7 +27,7 @@ class CoursesController < ApplicationController
   def update
       @course = Course.find(params[:id])
       if @course.update(book_params)
-        redirect_to @course, notice: 'textbook successfully added'
+        redirect_to @course, notice: 'Course Successfully Updated'
       else
         render 'edit'
       end

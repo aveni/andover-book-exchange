@@ -1,6 +1,6 @@
 <div class="row col-md-10 col-md-offset-1">
 
-	<h1> <%= controller.action_name %> book </h1>
+<h1><%= controller.action_name.capitalize %> Book </h1>
 
 <%= simple_form_for(@book, html:{class:'form-horizontal'} ) do |f| %>
   
@@ -8,11 +8,11 @@
     <%= f.input :title, hint:'required'%>
     <%= f.input :author, hint:'required'%>
     <%= f.input :isbn, hint:'required' %>
-    <%= f.association :course, collection:Course.all, label:'Select Course'%>
+    <%= f.association :course, collection: Course.all.order(:name), label:'Select Course'%>
 
     <div class='row text-center'>
-   	 <%= f.submit nil, class:'btn btn_primary' %>
-   	 <%= link_to 'cancel', :back, class:'btn btn-default'%>
+   	 <%= f.submit nil, class:'btn btn-primary' %>
+   	 <%= link_to 'Cancel', :back, class:'btn btn-default'%>
    	</div>
 
     <% end %>

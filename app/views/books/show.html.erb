@@ -1,2 +1,9 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+
+<div class='row'>
+	<h1 class='text-center'><%= @book.title %></h1>
+	<h3 class='text-center text-muted'><%= @book.author %> | <%= @book.course.name %></h3>
+</div>
+
+
+<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-default' %>
+<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-danger' %></td>

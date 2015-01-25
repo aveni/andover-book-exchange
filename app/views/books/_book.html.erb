@@ -1,9 +1,6 @@
 <tr>
-      	<td><%= book.title %> </td>
-      	<td><%= book.author %> </td>
-      	<td> <%= book.course %></td>  
-      	<td><%= book.isbn %></td>
-        <td><%= link_to fa_icon('eye'), book %>
-        <%= link_to fa_icon('pencil'), edit_book_path(book) %>
-        <%= link_to fa_icon('trash-o', text:'destroy'),  book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-xs btn-danger' %></td>
+	<td><%= link_to book.title, book %> </td>
+	<td><%= book.author %> </td>
+	<td> <%= book.course.name %></td>  
+	<td><%= book.isbn %></td>
 </tr>
