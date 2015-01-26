@@ -13,6 +13,9 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    book_hash = searchISBN(@book.isbn)
+    @book.title = book_hash.title
+    @book.author = book_hash.authors_text
     if @book.save
         redirect_to @book, notice: "Textbook Successfully Added"
       else
@@ -42,6 +45,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit(:title, :author, :isbn, :course_id)
+    params[:book].permit( :isbn, :course_id)
   end
 end

@@ -13,6 +13,9 @@ gem 'bootstrap-sass', '~> 3.3.1'
 # Use AutoPrefixer
 gem 'autoprefixer-rails'
 
+
+#read the isbn database
+gem 'isbndb', '~> 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
