@@ -17,5 +17,5 @@ class Book < ActiveRecord::Base
 
 	validates :title, presence:true, uniqueness:true
 	validates :author, presence:true
-	
+	validates :course_id, presence:true
 end

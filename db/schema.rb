@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150123202547) do
   create_table "books", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
-    t.integer  "isbn"
+    t.string   "isbn"
     t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,12 +47,6 @@ ActiveRecord::Schema.define(version: 20150123202547) do
     t.float    "price"
     t.integer  "user_id"
     t.integer  "listing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "subjects", force: :cascade do |t|
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
