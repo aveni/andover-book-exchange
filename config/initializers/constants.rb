@@ -2,6 +2,7 @@ SUBJECTS = {
 "Mathematics" => "MATH",
 "Chemistry" => "CHEM",
 "Biology" => "BIO",
+"Computer Science" => "COMPSCI",
 "Physics" => "PHYS",
 "English" => "ENG", 
 "French" => "FRA", 

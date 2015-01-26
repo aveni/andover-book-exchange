@@ -26,7 +26,7 @@ class CoursesController < ApplicationController
 
   def update
       @course = Course.find(params[:id])
-      if @course.update(book_params)
+      if @course.update(course_params)
         redirect_to @course, notice: 'Course Successfully Updated'
       else
         render 'edit'

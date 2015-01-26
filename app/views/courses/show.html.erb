@@ -1,2 +1,19 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+<h1 class = 'text-center'><%= @course.name %> (<%= @course.subject %>)</h1>
+<h3 class='text-center text-muted'> Teacher: <%= @course.teacher %></h3>
+
+<br>
+<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
+<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+
+
+<div class="row">
+<h3>Books</h3>
+<% @course.books.each do |book| %>
+	<%= link_to(book.title, book) %><br>
+	<%= book.author  %><br>
+<% end %>
+</div>
+
+
+
+

@@ -1,9 +1,10 @@
 
 <div class='row'>
 	<h1 class='text-center'><%= @book.title %></h1>
-	<h3 class='text-center text-muted'><%= @book.author %> | <%= @book.course.name %></h3>
+	<h3 class='text-center text-muted'>Author: <%= @book.author %></h3>
+	<h3 class = 'text-center text-muted'>Course: <%= link_to(@book.course.name, @book.course) %></h3>
 </div>
 
 
-<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-default' %>
-<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-danger' %></td>
+<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
+<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>

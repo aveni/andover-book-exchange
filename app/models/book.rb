@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  title      :string
 #  author     :string
-#  isbn       :integer
+#  isbn       :string
 #  course_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
