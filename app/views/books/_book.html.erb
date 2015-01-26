@@ -1,6 +1,6 @@
 <tr>
-	<td><%= link_to book.title, book %> </td>
-	<td><%= book.author %> </td>
+	<td><%= link_to truncate(book.title), book %> </td>
+	<td><%= truncate(book.author) %> </td>
 	<td> <%= book.course.name %></td>  
 	<td><%= book.isbn %></td>
 </tr>
