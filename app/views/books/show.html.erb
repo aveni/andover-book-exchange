@@ -1,7 +1,7 @@
 
 <div class='row'>
 	<h1 class='text-center'><%= @book.title %></h1>
-	<h3 class='text-center text-muted'>Author: <%= @book.author %></h3>
+	<h3 class='text-center text-muted'><%= @book.author %></h3>
 	<h3 class = 'text-center text-muted'>Course: <%= link_to(@book.course.name, @book.course) %></h3>
 </div>
 

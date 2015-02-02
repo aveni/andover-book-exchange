@@ -15,7 +15,15 @@ class Book < ActiveRecord::Base
 	has_many :listings, dependent: :destroy
 	belongs_to :course
 
-	validates :title, presence:true, uniqueness:true
+	validates :title, presence:true
 	validates :author, presence:true
+	validates :isbn, presence: true, uniqueness:true
+	validate :is_valid_isbn
 	validates :course_id, presence:true
+
+	def is_valid_isbn
+		if (isbn.present? && !ISBNdb::Query.find_book_by_isbn(isbn).first)
+			errors.add(:isbn, "invalid ISBN")
+		end
+	end
 end
