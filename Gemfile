@@ -12,6 +12,8 @@ gem 'cocoon', '~> 1.2.6'
 gem 'bootstrap-sass', '~> 3.3.1'
 # Use AutoPrefixer
 gem 'autoprefixer-rails'
+# Use Faker
+gem 'faker'
 
 
 #read the isbn database

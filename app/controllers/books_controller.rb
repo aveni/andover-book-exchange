@@ -3,6 +3,11 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    if (params[:search])
+      @books = Book.all.where("title LIKE ?", "%#{params[:search]}%")
+    else
+      @books = Book.all
+    end
   end
 
   def show

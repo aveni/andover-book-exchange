@@ -73,6 +73,8 @@ GEM
     devise-bootstrap-views (0.0.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    faker (1.4.3)
+      i18n (~> 0.5)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     globalid (0.3.0)
@@ -198,6 +200,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise (~> 3.4)
   devise-bootstrap-views (~> 0.0.3)
+  faker
   font-awesome-rails (~> 4.2.0.0)
   isbndb (~> 2.0.2)
   jbuilder (~> 2.0)

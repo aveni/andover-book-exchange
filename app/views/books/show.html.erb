@@ -1,9 +1,9 @@
 
-<div class='row'>
-	<h1 class='text-center'><%= @book.title %></h1>
-	<h3 class='text-center text-muted'><%= @book.author %></h3>
-	<h3 class = 'text-center text-muted'>Course: <%= link_to(@book.course.name, @book.course) %></h3>
+<div class="page-header">
+  <h1><%= @book.title + " | "%> <small> <%= link_to(@book.course.name, @book.course) %></small></h1>
+  <h4><%=  @book.author%></h4>
 </div>
+
 
 
 <%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
