@@ -1,22 +1,30 @@
-<h1>All Books</h1>
-<h4 class='text-right'> <%= link_to 'Search by Course', courses_path, class:'btn btn-default' %></h4>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Course</th>
-      <th>ISBN</th>
-    </tr>
-  </thead>
+<div class="row">
+	<div class="col-xs-6">
+		<h1>Books</h1>	
+	</div>
+	<div class="col-xs-6">
+		<h4 class='text-right'> <%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %></h4>
+	</div>
+</div>
 
-  <tbody>
-    <%= render @books %>
-  </tbody>
-</table>
-
+<div class="row">
+	<form class="navbar-form navbar-left" role="search">
+	  <div class="form-group">
+	    <input type="text" class="form-control" placeholder="Search Textbooks" name="search">
+	  </div>
+	  <button type="submit" class="btn btn-default">Search</button>
+	</form>
+</div>
 <br>
 
+<div class="row">
+    <% @books.each do |book| %>
+		<div class="col-xs-3">
+			<%= render book %>
+		</div>
+	<% end %>
+</div>
+
+<br>
 <%= link_to 'New Book', new_book_path, class:'btn btn-primary'%>
-<%= link_to 'Cancel', :back, class: 'btn btn-default' %>
