@@ -4,7 +4,15 @@
   <h4><%=  @book.author%></h4>
 </div>
 
+<div class="row">
+    <% @book.listings.each do |listing| %>
+		<div class="col-xs-3">
+			<%= render listing %>
+		</div>
+	<% end %>
+</div>
 
 
+<%= link_to fa_icon('exchange', text:'Exchange Book'), new_book_listing_path(@book), class: 'btn btn-sm btn-default' %>
 <%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
 <%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>

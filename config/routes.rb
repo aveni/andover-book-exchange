@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :courses
-  resources :books
-  resources :listings do
-    resources :offers
+  resources :books do
+    resources :listings do
+      resources :offers
+    end
   end
 
   root 'books#index'

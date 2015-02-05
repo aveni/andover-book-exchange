@@ -1,0 +1,29 @@
+<div class="row col-md-10 col-md-offset-1">
+
+
+<h1><%= controller.action_name.capitalize %> Listing </h1>
+<br>
+<%= simple_form_for([@book,@listing], html:{class:'form-horizontal'} ) do |f| %>
+  
+    <% f.error_notification %>
+
+    <%= f.hidden_field :book_id %>
+    <%= f.input :quality, collection: QUALITY, label:'Select Condition'%>
+    <%= f.input :exchange_type, collection: TYPE, label:'Select Listing Type'%>
+    <%= f.input :description, placeholder: 'Description' %>
+    <%= f.input :max_price, placeholder: 'Max $' %>
+    <%= f.input :min_price, placeholder: 'Min $' %>
+
+
+
+
+    <div class='row text-center'>
+   	 <%= f.submit nil, class:'btn btn-primary' %>
+   	 <%= link_to 'Cancel', :back, class:'btn btn-default' %>
+   	</div>
+
+    <% end %>
+
+    </div>
+
+   

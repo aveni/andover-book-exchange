@@ -1,0 +1,19 @@
+<div class="page-header">
+  <h1>$<%= @listing.max_price.round.to_s + " | "%> <small> <strong>Other Listings for </strong><%= link_to(@listing.book.title, @listing.book) %></small></h1>
+</div>
+
+
+<div>
+<div class="col-md-6">
+<dl class="dl-horizontal">
+  <dt>Listing Type</dt>
+  <dd><%= @listing.exchange_type %></dd>
+  <dt>Quality</dt>
+  <dd><%= @listing.quality %></dd>
+  <dt>Description</dt>
+  <dd><%= @listing.description %></dd>
+  <dt>Maximum Price</dt>
+  <dd>$<%= @listing.max_price.round %></dd>
+  <dt>Minimum Price</dt>
+  <dd>$<%= @listing.min_price.round %></dd>
+</dl>
