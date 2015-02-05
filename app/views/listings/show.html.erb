@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>$<%= @listing.max_price.round.to_s + " | "%> <small> <strong>Other Listings for </strong><%= link_to(@listing.book.title, @listing.book) %></small></h1>
+  <h1>$<%= @listing.max_price.round.to_s + " | "%> <small> <strong>Listing for </strong><%= link_to(@listing.book.title, @listing.book) %></small></h1>
 </div>
 
 
@@ -17,3 +17,7 @@
   <dt>Minimum Price</dt>
   <dd>$<%= @listing.min_price.round %></dd>
 </dl>
+
+<%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
+<%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+

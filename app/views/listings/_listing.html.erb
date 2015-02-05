@@ -1,11 +1,27 @@
-	<div class="thumbnail warning">
+	<a href=<%= book_listing_path(listing.book, listing) %> class="thumbnail">
+		
 		<h1  class="text-center">
-			<a href=<%= book_listing_path(listing.book, listing) %>>$<%= listing.max_price %></a>
+			$<%= listing.max_price.round %>
 		</h1>
-		<h3 class="text-center">
+		
+		<div class="row">
+    			<div style="font-size: 26px" class="col-md-6 col-sm-offset-3">
+    				<span class="
+    				<%= case listing.exchange_type
+				when "Buy it Now"
+					"label label-success label-as-badge"
+				when "Borrow"
+					"label label-danger label-as-badge"
+				when "Auction"
+					"label label-info label-as-badge"
+				end%>">
 			<%= listing.exchange_type %>
+			</span>
+    			</div>
+		</div>
+		
 		
 		<div class="caption">
 			<h3 class='text-center'><%= listing.quality %></h3>
 		</div>
-	</div>
+	</a>

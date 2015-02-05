@@ -26,7 +26,7 @@ QUALITY = {
 }.sort_by{|k,v| v}
 
 TYPE = {
-	"Buy it Now"=> "BUY",
-	"Auction"=> "AUCTION",
-	"Borrow"=> "BORROW"
+	"Buy it Now"=> "Buy it Now",
+	"Auction"=> "Auction",
+	"Borrow"=> "Borrow"
 }.sort_by{|k,v| v}
