@@ -1,10 +1,11 @@
 
 <div class="page-header">
-  <h1><%= @book.title + " | "%> <small> <%= link_to(@book.course.name, @book.course) %></small></h1>
+  <h1><%= @book.title + " | "%> <small><%= link_to(@book.course.name, @book.course) %></small></h1>
   <h4><%=  @book.author%></h4>
 </div>
 
 
 
-<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
-<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+<%= link_to fa_icon('pencil', text:'Edit book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
+<%= link_to fa_icon('trash-o', text:'Delete book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+<br>

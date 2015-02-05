@@ -4,12 +4,17 @@
 
 
 <div class="row">
-	<h3>Books</h3>
-	<% @course.books.each do |book| %>
-		<div class="col-xs-2">
-			<%= render book %>
-		</div>
-	<% end %>
+	<div class="col-xs-8">
+		<h3>Books</h3>
+		<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-xs btn-primary' %>
+		<br>
+		<br>
+		<% @course.books.each do |book| %>
+			<div class="col-xs-4">
+				<%= render book %>
+			</div>
+		<% end %>
+	</div>
 </div>
 
 <br>
@@ -17,4 +22,4 @@
 	<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
 	<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
 </div>
-
+<br>
