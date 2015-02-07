@@ -6,13 +6,15 @@ module BooksHelper
 		end
 	end
 
-	def set_book(book, isbn)
-		book_hash = get_book(isbn)
+
+	def set_book(book)
+		book.isbn = strip(book.isbn, '-')
+		book_hash = get_book(book.isbn)
 		if (book_hash)
       		book.title = title_upcase(book_hash.title)
-      		book.author = strip_comma(book_hash.authors_text)
+      		book.author = strip(book_hash.authors_text, ',')
       	end
-    	end
+    end
 
 	def truncate(text, options = {}, &block)
 	   	if text
@@ -25,11 +27,10 @@ module BooksHelper
 	  	end
 	end
 
-	def strip_comma(str)
-		comma=','
+	def strip(str, strip)
    		new_str = ""
   		str.each_byte do |byte|
-      		new_str << byte.chr unless byte.chr == comma
+      		new_str << byte.chr unless byte.chr == strip
   	 	end
   	 	new_str
 	end

@@ -22,7 +22,7 @@ QUALITY = {
 "Book is new with no markings on the inside"=>"New",
 "Book is fairly new with some wear. No markings inside"=>"Like New", 
 "Book is slightly worn or has a few markings inside"=> "Good",
-"Book is fairly worn or has marking throughout"=>"Acceptable"
+"Book is fairly worn or has markings throughout"=>"Acceptable"
 }.sort_by{|k,v| v}
 
 TYPE = {
