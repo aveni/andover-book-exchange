@@ -4,17 +4,27 @@
 
 
 <div class="row">
-	<div class="col-xs-8">
-		<h3>Books</h3>
-		<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-xs btn-primary' %>
-		<br>
-		<br>
-		<% @course.books.each do |book| %>
-			<div class="col-xs-4">
+	<h2>Books</h2>
+	<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-sm btn-primary' %>
+	<br>
+	<br>
+	<% @course.books.each do |book| %>
+		<div class="row">
+			<div class="col-xs-3">
 				<%= render book %>
 			</div>
-		<% end %>
-	</div>
+
+			<div class="col-xs-9">
+				<div class="row">
+					<% book.listings.sort_by{|l| [l.exchange_type, l.min_price]}.first(8).each do |listing| %>
+						<div class="col-xs-3">
+							<%= render listing %>
+						</div>
+					<% end %>
+				</div>		
+			</div>
+		</div>
+	<% end %>
 </div>
 
 <br>

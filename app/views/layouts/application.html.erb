@@ -34,32 +34,32 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <p class="nav navbar-text">Welcome, <%= current_user.email.split('@').first %> </p>
+        <% end %>
         <li><a href= <%= books_path %> >Textbooks</a></li>
         <li><a href= <%= courses_path %> >Courses</a></li>
+        <% if user_signed_in? %>
+            <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign-in', new_user_session_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>	
 
-	<div class="container">
-    <% if notice %>
-      <p id="notice">
-        <div class="alert alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= notice %>
-        </div>
-      </p>
-    <% end %>
-    <% if alert %>
-      <p id="alert">
-        <div class="alert alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= alert %>
-        </div>
-      </p>
-    <% end %>
-		<%= yield %>
-	</div>
+<div class="container">
+   
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  
+	<%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-
+	before_action :set_book
 
 	#def index
 	#	@book = Book.find(params[:book_id])
@@ -11,14 +11,13 @@ class ListingsController < ApplicationController
 	end
 
 	def new
-		@book = Book.find(params[:book_id])
-		@listing = @book.listings.new
+		@listing = Listing.new(book_id: @book.id)
 	end
 
 	def create
 		@listing = Listing.new(listings_params)
 		if @listing.save
-			redirect_to @listing.book, notice:'Listing was created successfully'
+			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
 		else
 			render :new
 		end
@@ -31,14 +30,23 @@ class ListingsController < ApplicationController
 	def update
 		@listing = Listing.find(params[:id])
 		if @listing.update(listings_params)
-			redirect_to @listing, notice: 'Listing was successfully updated'
+			redirect_to book_listing_path(@listing.book, @listing), notice: 'Listing was successfully updated'
 		else
 			render 'edit'
 		end
 	end
 
+	def destroy
+		@listing = Listing.find(params[:id])
+		@listing.destroy unless @listing.nil?
+		redirect_to @book
+	end
 
 	private
+
+	def set_book
+		@book = Book.find(params[:book_id])
+	end
 
 	def listings_params
 		params[:listing].permit(:description, :quality, :exchange_type, :max_price, :min_price, :book_id, :course_id)

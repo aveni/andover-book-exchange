@@ -19,14 +19,14 @@ SUBJECTS = {
 }.sort_by{|k, v| k}
 
 QUALITY = {
-"Book is new with no markings on the inside"=>"New",
-"Book is fairly new with some wear. No markings inside"=>"Like New", 
-"Book is slightly worn or has a few markings inside"=> "Good",
-"Book is fairly worn or has markings throughout"=>"Acceptable"
-}.sort_by{|k,v| v}
+"New"=>"0",
+"Like New"=>"1", 
+"Good"=> "2",
+"Acceptable"=>"3"
+}
 
 TYPE = {
-	"Buy it Now"=> "BUY",
-	"Auction"=> "AUCTION",
-	"Borrow"=> "BORROW"
+"Buy"=> "0",
+"Auction"=> "1",
+"Borrow"=> "2"
 }.sort_by{|k,v| v}

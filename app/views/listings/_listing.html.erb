@@ -1,11 +1,7 @@
-	<div class="thumbnail">
-		<h1  class="text-center">
-			<a href=<%= book_listing_path(listing.book, listing) %>>$<%= listing.max_price %></a>
-		</h1>
-		<h3 class="text-center">
-			<%= listing.exchange_type %>
-		
-		<div class="caption">
-			<h3 class='text-center'><%= listing.quality %></h3>
-		</div>
+<a href=<%= book_listing_path(listing.book, listing) %> class="thumbnail text-center">
+	<div class="caption">
+		<h1>$<%= listing.min_price.round %></h1>
+		<h3><%= show_type(listing) %></h3>
+		<h3> <%= show_quality(listing) %> </h3>
 	</div>
+</a>

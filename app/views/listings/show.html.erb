@@ -1,19 +1,26 @@
 <div class="page-header">
-  <h1>$<%= @listing.max_price.round.to_s + " | "%> <small> <strong>Listing for </strong><%= link_to(@listing.book.title, @listing.book) %></small></h1>
+  <h1>$<%= @listing.min_price.round.to_s + " | "%> <small> <strong>Listing for </strong><%= link_to(truncate(@listing.book.title), @listing.book) %></small>
+  </h1>
 </div>
 
+<div class="row">
+  <div class="col-md-6">
+    <dl class="dl-horizontal">
+      <dt>Listing Type</dt>
+      <dd><%= show_type(@listing) %></dd>
+      <dt>Quality</dt>
+      <dd><%= show_quality(@listing) %></dd>
+      <dt>Description</dt>
+      <dd><%= @listing.description %></dd>
+      <dt>Maximum Price</dt>
+      <dd>$<%= @listing.max_price.round %></dd>
+      <dt>Minimum Price</dt>
+      <dd>$<%= @listing.min_price.round %></dd>
+    </dl>
+  </div>
+</div>
 
-<div>
-<div class="col-md-6">
-<dl class="dl-horizontal">
-  <dt>Listing Type</dt>
-  <dd><%= @listing.exchange_type %></dd>
-  <dt>Quality</dt>
-  <dd><%= @listing.quality %></dd>
-  <dt>Description</dt>
-  <dd><%= @listing.description %></dd>
-  <dt>Maximum Price</dt>
-  <dd>$<%= @listing.max_price.round %></dd>
-  <dt>Minimum Price</dt>
-  <dd>$<%= @listing.min_price.round %></dd>
-</dl>
+<div class='text-right'>
+  <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
+  <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+</div>
