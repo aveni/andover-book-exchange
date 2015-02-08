@@ -19,8 +19,24 @@ class Listing < ActiveRecord::Base
 	belongs_to :book
 	has_many :offers
 
-	validates :min_price, presence:true
-	validates :max_price, presence:true
-	#validates :exchange_type, presence:true, inclusion: {in: TYPE.values}
-	
+	validates :exchange_type, presence:true, inclusion: {in: TYPE}
+	validate :check_listing
+
+	def check_listing
+		if (exchange_type.present? && exchange_type!="Borrow" && !min_price.present?)
+			errors.add(:min_price, "need Min Price")
+		end
+		if (exchange_type.present? && exchange_type=="Auction" && !max_price.present?)
+			errors.add(:max_price, "need Max Price")
+		end
+
+		if (min_price.present? && min_price<0)
+			errors.add(:min_price, "Must be non-negative")
+		end
+
+		if (max_price.present? && max_price<0)
+			errors.add(:max_price, "Must be non-negative")
+		end
+	end
 end
+

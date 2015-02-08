@@ -25,8 +25,4 @@ QUALITY = {
 "Acceptable"=>"3"
 }
 
-TYPE = {
-"Buy"=> "0",
-"Auction"=> "1",
-"Borrow"=> "2"
-}.sort_by{|k,v| v}
+TYPE = ["Buy","Auction","Borrow"]

@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
 	end
 
 	def new
-		@listing = Listing.new(book_id: @book.id)
+		@listing = Listing.new(book_id: @book.id, exchange_type: params[:exchange_type])
 	end
 
 	def create
@@ -19,7 +19,7 @@ class ListingsController < ApplicationController
 		if @listing.save
 			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
 		else
-			render :new
+			render 'new'
 		end
 	end
 

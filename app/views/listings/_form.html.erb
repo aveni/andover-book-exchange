@@ -7,15 +7,13 @@
     <% f.error_notification %>
 
     <%= f.hidden_field :book_id %>
+    <%= f.hidden_field :exchange_type %>
+
+    <%= f.input :exchange_type, collection: TYPE, label:'Listing Type', disabled: @listing.exchange_type.present?%>
     <%= f.input :quality, collection: QUALITY, label:'Select Condition'%>
-    <%= f.input :exchange_type, collection: TYPE, label:'Select Listing Type'%>
     <%= f.input :description, placeholder: 'Description' %>
-
-    <%= f.input :max_price, placeholder: 'Max $' %>
-    <%= f.input :min_price, placeholder: 'Min $' %>
-
-
-
+    <%= f.input :min_price, placeholder: 'Min $', disabled: @listing.exchange_type=="Borrow"  %>
+    <%= f.input :max_price, placeholder: 'Max $', disabled: @listing.exchange_type=="Borrow" || @listing.exchange_type=="Buy"  %>
 
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>

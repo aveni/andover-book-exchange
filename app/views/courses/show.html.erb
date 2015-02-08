@@ -2,7 +2,6 @@
   <h1><%= @course.name  + " | " %> <small><%= @course.teacher %></small></h1>
 </div>
 
-
 <div class="row">
 	<h2>Books</h2>
 	<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-sm btn-primary' %>
@@ -16,7 +15,7 @@
 
 			<div class="col-xs-9">
 				<div class="row">
-					<% book.listings.sort_by{|l| [l.exchange_type, l.min_price]}.first(8).each do |listing| %>
+					<% book.listings.sort_by{|l| [l.exchange_type.size, l.min_price]}.first(8).each do |listing| %>
 						<div class="col-xs-3">
 							<%= render listing %>
 						</div>
