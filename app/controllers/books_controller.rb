@@ -17,7 +17,6 @@ class BooksController < ApplicationController
   def new
     @book = Book.new
     @book.course_id = params[:course_id]
-    @book.isbn = params[:isbn]
   end
 
   def create
@@ -36,6 +35,7 @@ class BooksController < ApplicationController
 
   def update
       @book = Book.find(params[:id])
+      set_book(@book)
       if @book.update(book_params)
         redirect_to @book, notice: 'Textbook Successfully Updated'
       else

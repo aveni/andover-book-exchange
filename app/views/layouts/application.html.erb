@@ -12,7 +12,7 @@
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<ul class="nav navbar-nav navbar-right">
-					<li><%= link_to 'Textbooks', books_path %></li>
+					<li><%= link_to 'Books', books_path %></li>
 					<li><%= link_to 'Courses', courses_path %></li>
 				</ul>
 			</div>
@@ -37,7 +37,7 @@
         <% if user_signed_in? %>
           <p class="nav navbar-text">Welcome, <%= current_user.email.split('@').first %> </p>
         <% end %>
-        <li><a href= <%= books_path %> >Textbooks</a></li>
+        <li><a href= <%= books_path %> >Books</a></li>
         <li><a href= <%= courses_path %> >Courses</a></li>
         <% if user_signed_in? %>
             <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>

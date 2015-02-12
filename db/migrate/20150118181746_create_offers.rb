@@ -2,7 +2,6 @@ class CreateOffers < ActiveRecord::Migration
   def change
     create_table :offers do |t|
 
-    	t.string :type
     	t.float :price
 
     	t.references :user

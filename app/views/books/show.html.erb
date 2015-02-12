@@ -3,37 +3,18 @@
   <h4><%=  @book.author%> </h4>
 </div>
 
-<div class='text-right'>
-	<%= link_to('Sort by Price', book_path(@book, sort:'price'), class:'btn btn-md btn-default') %>
-	<%= link_to('Sort by Quality', book_path(@book, sort:'quality'), class:'btn btn-md btn-default') %>
+<div class = "text-right">
+<%= link_to "Sort by Price", book_path(@book, sort:"price"), class: 'btn btn-md btn-default' %>
+<%= link_to "Sort by Quality", book_path(@book, sort:"quality"), class: 'btn btn-md btn-default' %>
+<%= link_to fa_icon('exchange', text:'New Listing'), new_book_listing_path(@book), class: 'btn btn-md btn-primary' %>
+</div><br>
 
-	<div class="btn-group">
-		<button type="button" class="btn btn-md btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">		
-			New Listing <span class="caret"></span>
-		</button>
-
-	<ul class="dropdown-menu" role="menu">
-	    <li><a href= <%= new_book_listing_path(@book, exchange_type: "Buy") %>>Buy Listing</a></li>
-		<li><a href= <%= new_book_listing_path(@book, exchange_type: "Borrow") %>>Borrow Listing</a></li>
-	    <li><a href= <%= new_book_listing_path(@book, exchange_type: "Auction") %>>Auction Listing</a></li>
-	  </ul>
-	</div>
-	
-</div>
-
-<% buys = @book.listings.select{ |l| l.exchange_type == "Buy" } %>
-<% borrows = @book.listings.select{ |l| l.exchange_type == "Borrow" } %>
-<% auctions = @book.listings.select{ |l| l.exchange_type == "Auction" } %>
+<% buys = @book.listings.select{ |l| l.listing_type = "Buy" } %>
 
 <% if (params[:sort] == 'price') %>
-	<% buys = buys.sort_by { |l| l.min_price }  %>
-	<% auctions = auctions.sort_by { |l| l.min_price }  %>
-<% end %>
-
-<% if (params[:sort] == 'quality') %>
-	<% buys = buys.sort_by { |l| l.quality }  %>
-	<% auctions = auctions.sort_by { |l| l.quality }  %>
-	<% borrows = borrows.sort_by { |l| l.quality }  %>
+	<% buys = buys.sort_by { |l| [l.min_price, l.quality] }  %>
+<% elsif (params[:sort] == 'quality') %>
+	<% buys = buys.sort_by { |l| [l.quality, l.min_price] }  %>
 <% end %>
 
 <div class="row">
@@ -43,20 +24,7 @@
 		</div>
 	<% end %>
 </div>
-<div class="row">
-    <% borrows.each do |borrow| %>
-		<div class="col-xs-3">
-			<%= render borrow %>
-		</div>
-	<% end %>
-</div>
-<div class="row">
-    <% auctions.each do |auction| %>
-		<div class="col-xs-3">
-			<%= render auction %>
-		</div>
-	<% end %>
-</div>
+
 
 <br><br>
 <div class='text-right'>

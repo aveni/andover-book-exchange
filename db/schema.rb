@@ -33,17 +33,16 @@ ActiveRecord::Schema.define(version: 20150123202547) do
   create_table "listings", force: :cascade do |t|
     t.text     "description"
     t.string   "quality"
-    t.string   "exchange_type"
-    t.float    "max_price"
+    t.string   "listing_type"
     t.float    "min_price"
+    t.boolean  "status"
     t.integer  "book_id"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "offers", force: :cascade do |t|
-    t.string   "type"
     t.float    "price"
     t.integer  "user_id"
     t.integer  "listing_id"

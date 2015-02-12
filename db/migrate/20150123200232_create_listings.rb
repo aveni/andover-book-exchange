@@ -4,9 +4,9 @@ class CreateListings < ActiveRecord::Migration
 
     	t.text :description
     	t.string :quality
-    	t.string :exchange_type
-    	t.float :max_price
+        t.string :listing_type
     	t.float :min_price
+        t.boolean :status
 
     	t.references :book
     	t.references :user

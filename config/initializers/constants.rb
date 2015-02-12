@@ -26,3 +26,5 @@ QUALITY = {
 }
 
 TYPE = ["Buy","Auction","Borrow"]
+
+TEACHERS = ["Mr. Hugon", "Mr. Farrell", "Mr. Scott"]

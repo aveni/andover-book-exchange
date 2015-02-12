@@ -3,7 +3,6 @@
 # Table name: offers
 #
 #  id         :integer          not null, primary key
-#  type       :string
 #  price      :float
 #  user_id    :integer
 #  listing_id :integer
