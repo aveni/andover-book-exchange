@@ -15,7 +15,8 @@ SUBJECTS = {
 "Religion & Philosophy" => "RELPHIL",
 "Classics" => "CLSS",
 "Music" => "MUSIC",
-"Art" => "ART"
+"Art" => "ART",
+"Miscellaneous" => "MISC"
 }.sort_by{|k, v| k}
 
 QUALITY = {
@@ -27,4 +28,4 @@ QUALITY = {
 
 TYPE = ["Buy","Auction","Borrow"]
 
-TEACHERS = ["Mr. Hugon", "Mr. Farrell", "Mr. Scott"]
+TEACHERS = ["Jacque Hugon", "Patrick Farrell", "William Scott"]
