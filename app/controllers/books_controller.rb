@@ -16,13 +16,14 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    
+    if (params[:course_id] != nil)
+      @book.courses << Course.find(params[:course_id])
+    end 
   end
 
   def create
     @book = Book.new(book_params)
     set_book(@book)
-
     if @book.save
       redirect_to @book, notice: "Textbook Successfully Added"
     else
@@ -53,6 +54,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit(:title, :author, :isbn, :courses)
+    params[:book].permit(:title, :author, :isbn, :course_ids=>[])
   end
 end
