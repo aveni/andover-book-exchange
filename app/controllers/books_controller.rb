@@ -16,12 +16,13 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @book.course_id = params[:course_id]
+    
   end
 
   def create
     @book = Book.new(book_params)
     set_book(@book)
+
     if @book.save
       redirect_to @book, notice: "Textbook Successfully Added"
     else
@@ -52,6 +53,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit( :title, :author, :isbn, :course_id)
+    params[:book].permit(:title, :author, :isbn, :courses)
   end
 end

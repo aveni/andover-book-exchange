@@ -8,16 +8,16 @@
     <% f.error_notification %>
 
     <%= f.input :isbn, placeholder: 'ISBN' %>
-    <%= f.association :course, collection: Course.all.order(:name), label: 'Select Course'%>
 
+   	<%= f.association :courses, collection: Course.all.order(:name), as: :radio_buttons %>
 
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>
    	 <%= link_to 'Cancel', :back, class:'btn btn-default' %>
    	</div>
 
-    <% end %>
+<% end %>
 
-    </div>
+</div>
 
    

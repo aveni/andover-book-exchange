@@ -3,9 +3,8 @@
 	<div class="nested-fields">
 	
 	<div class="col-md-11">
-		<%= f.input :name %>
-		<%= f.input :teacher %>
-		<%= f.input :subject, collection:SUBJECTS, label_method: :fullname %>
+
+	    <%= f.association :course, collection: Course.all.order(:name) %>
 	</div>
 	
 	<div class="col-md-1">
