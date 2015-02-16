@@ -6,7 +6,6 @@ module BooksHelper
 		end
 	end
 
-
 	def set_book(book)
 		book.isbn = strip(book.isbn, '-')
 		book_hash = get_book(book.isbn)

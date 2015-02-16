@@ -17,7 +17,7 @@ gem 'faker'
 # Use JQuery Datables Rails
 gem 'jquery-datatables-rails', '~> 3.1.1'
 
-
+gem 'forgery', '~> 0.6.0'
 #read the isbn database
 gem 'isbndb', '~> 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -14,6 +14,6 @@ class Course < ActiveRecord::Base
 	has_and_belongs_to_many :books, dependent: :destroy
 
 	validates :name, presence:true, uniqueness:true
-	validates :teacher, presence:true
-	validates :subject, presence:true
+	validates :teacher, presence:true, inclusion: {in: TEACHERS}
+	validates :subject, presence:true, inclusion: {in: SUBJECTS.collect {|k,v| v}}
 end
