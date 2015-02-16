@@ -1,0 +1,28 @@
+<div class="row">
+	<h1 class="text-center">User Administration</h1>
+</div>
+
+<div class="row">
+	<table class="table table-condensed" id="users_table">
+		<thead>
+			<tr>
+				<th>first</th>
+				<th>last</th>
+				<th>email</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%= render @users %>
+		</tbody>
+	</table>
+
+<script>
+$(document).ready(
+	function() {
+		$('#users_table').DataTable({
+			paginationType: 'full_numbers'
+		})
+	}
+	)
+</script>

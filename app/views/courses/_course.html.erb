@@ -1,5 +1,10 @@
-<tr>
-      	<td><%= link_to course.name, course %> </td>
-      	<td><%= course.teacher %> </td>
-      	<td> <%= show_subject(course) %></td>
-</tr>
+ <a href=<%= course_path(course) %> class="thumbnail text-center">
+	<div class="caption">
+	<tbody>
+		<td><%= course.name %></td>
+		<td><%= course.teacher %></td>
+		<td> <%= show_subject(course) %> </td>
+	</tbody>
+	</div>
+</a>
+

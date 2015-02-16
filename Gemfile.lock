@@ -77,6 +77,7 @@ GEM
       i18n (~> 0.5)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
+    forgery (0.6.0)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -90,6 +91,11 @@ GEM
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jquery-datatables-rails (3.1.1)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
+      sass-rails
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -206,8 +212,10 @@ DEPENDENCIES
   devise-bootstrap-views (~> 0.0.3)
   faker
   font-awesome-rails (~> 4.2.0.0)
+  forgery (~> 0.6.0)
   isbndb (~> 2.0.2)
   jbuilder (~> 2.0)
+  jquery-datatables-rails (~> 3.1.1)
   jquery-rails
   pry-doc
   pry-rails (~> 0.3.2)

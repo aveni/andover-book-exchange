@@ -16,6 +16,8 @@ gem 'autoprefixer-rails'
 gem 'faker'
 
 
+#for search bars
+gem 'jquery-datatables-rails', '~> 3.1.1'
 #read the isbn database
 gem 'isbndb', '~> 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,7 +42,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Pry ruby console
 gem 'pry-rails', '~> 0.3.2'
+
+#Generating fake data for development db
+gem 'forgery', '~> 0.6.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
