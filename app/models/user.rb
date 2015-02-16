@@ -26,6 +26,8 @@ class User < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :offers, dependent: :destroy
 
+  validates_format_of :email, with: /andover\.edu/i, message: "must use andover.edu address"
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

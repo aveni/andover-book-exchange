@@ -1,0 +1,6 @@
+<tr>
+	<td><%= user.first %></td>
+	<td><%= user.last %></td>
+	<td><%= user.email %></td>
+	<td><%= link_to "Destroy", admin_destroy_user_path(user), class:"btn btn-xs btn-primary", method: :delete, data: { confirm: "You sure?" } %></td>
+</tr>

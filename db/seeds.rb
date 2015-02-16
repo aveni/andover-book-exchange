@@ -6,18 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# abhi = User.new
-# abhi.first = 'Abhinav'
-# abhi.last = 'Venigalla'
-# abhi.email = 'avenigalla@andover.edu'
-# abhi.password = 'abhiveni'
-# abhi.password_confirmation = 'abhiveni'
-# abhi.save!
 
 include BooksHelper
 
+abhi = User.create!(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
+
 c1 = Course.create!(name: "MATH-595", teacher: "Patrick Farrell", subject: "MATH")
 c2 = Course.create!(name: "COMP-630: Ruby on Rails", teacher: "Jacque Hugon", subject: "COMPSCI")
+c3 = Course.create(name:"COMP-500", teacher:"Maria Litvin", subject:"COMPSCI")
+c4 = Course.create(name:"PHYS-550", teacher:"Fei Yao", subject:"PHYS")
+c5 = Course.create(name:"ENGL-500: A Room of Their Own", teacher:"Emma Staffaroni", subject:"ENGL")
 
 b1 = Book.new(isbn: '1934356549')
 set_book(b1)
