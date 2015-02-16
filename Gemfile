@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 # Use Faker
 gem 'faker'
+# Use JQuery Datables Rails
+gem 'jquery-datatables-rails', '~> 3.1.1'
 
 
 #for search bars

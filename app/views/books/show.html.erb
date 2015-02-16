@@ -1,6 +1,11 @@
 <div class="page-header">
-  <h1><%= @book.title + " | "%><%= link_to(@book.course.name, @book.course) %></h1>
+  <h1><%= @book.title%></h1>
   <h4><%=  @book.author%> </h4>
+  <h3>|
+	<% @book.courses.each do |course| %>
+	<%= link_to(course.name, course) + " | " %>
+	<% end %>
+</h3>
 </div>
 
 <div class = "text-right">

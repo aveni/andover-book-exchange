@@ -11,7 +11,7 @@
 #
 
 class Course < ActiveRecord::Base
-	has_many :books, dependent: :destroy
+	has_and_belongs_to_many :books, dependent: :destroy
 
 	validates :name, presence:true, uniqueness:true
 	validates :teacher, presence:true

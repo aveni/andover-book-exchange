@@ -16,7 +16,9 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @book.course_id = params[:course_id]
+    if (params[:course_id] != nil)
+      @book.courses << Course.find(params[:course_id])
+    end 
   end
 
   def create
@@ -52,6 +54,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit( :title, :author, :isbn, :course_id)
+    params[:book].permit(:title, :author, :isbn, :course_ids=>[])
   end
 end
