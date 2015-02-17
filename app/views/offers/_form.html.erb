@@ -1,0 +1,24 @@
+<div class="row col-md-10 col-md-offset-1">
+
+<h1><%= controller.action_name.capitalize %> Offer </h1>
+<br>
+<%= simple_form_for([@listing.book, @listing, @offer], html:{class:'form-horizontal'} ) do |f| %>
+  
+    <% f.error_notification %>
+
+    <%= f.hidden_field :listing_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :price %>
+
+    <%= f.input :price, placeholder: "X or X.XX" , label: 'Price', disabled: @listing.listing_type == "Buy" %>
+
+    <div class='row text-center'>
+   	 <%= f.submit nil, class:'btn btn-primary' %>
+   	 <%= link_to 'Cancel', :back, class:'btn btn-default' %>
+   	</div>
+
+<% end %>
+
+</div>
+
+   

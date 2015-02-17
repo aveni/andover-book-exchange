@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= show_price(@listing, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title), @listing.book) %></small>
+  <h1><%= show_price(@listing.min_price, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title), @listing.book) %></small>
   </h1>
 </div>
 
@@ -14,7 +14,7 @@
         <dt>Description</dt>
         <dd><%= @listing.description %></dd>
         <dt>Price</dt>
-        <dd><%= show_price(@listing, 2) %></dd>
+        <dd><%= show_price(@listing.min_price, 2) %></dd>
         <dt>Seller</dt>
         <dd><%= show_seller(@listing) %></dd>
       </dl>
@@ -22,7 +22,25 @@
   </h4>
 </div>
 
+<br>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+    <th>Offer</th>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+
+  <tbody>
+    <%= render @listing.offers %>
+  </tbody>
+</table>
+
+
 <div class='text-right'>
+  <%= link_to fa_icon('dollar', text:'Make Offer'), new_book_listing_offer_path(@listing.book, @listing), class: 'btn btn-sm btn-primary' %>
   <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
   <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
 </div>
