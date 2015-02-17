@@ -1,10 +1,7 @@
- <a href=<%= course_path(course) %> class="thumbnail">
-	<div class="caption"
-		<div class="col-md-8"><h1><%= course.name + " | " %></h1><h3><%= course.teacher %></h3></div>
-  	
-  	</div>
-
-	
-	
+<a href=<%= course_path(course) %> class="thumbnail">
+	<p style="text-align:left;">
+		<h4><%= course.name + " | " %> <small><%= course.teacher %></small>
+		<span style="float:right;"><%= show_subject(course) %> ||| </span></h4>
+	</p>
 </a>
 
