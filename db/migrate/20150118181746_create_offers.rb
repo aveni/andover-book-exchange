@@ -3,7 +3,6 @@ class CreateOffers < ActiveRecord::Migration
     create_table :offers do |t|
 
     	t.float :price
-
     	t.references :user
     	t.references :listing
 

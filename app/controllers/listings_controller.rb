@@ -12,12 +12,11 @@ class ListingsController < ApplicationController
 	end
 
 	def new
-		@listing = Listing.new(book_id: @book.id, listing_type: "Buy")
+		@listing = Listing.new(book_id: @book.id, listing_type: "Buy", status: true, user_id: current_user.id)
 	end
 
 	def create
 		@listing = Listing.new(listings_params)
-		@listing.status=true
 		if @listing.save
 			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
 		else
@@ -51,7 +50,7 @@ class ListingsController < ApplicationController
 	end
 
 	def listings_params
-		params[:listing].permit(:description, :quality, :listing_type, :status, :min_price, :book_id, :course_id)
+		params[:listing].permit(:description, :quality, :listing_type, :status, :min_price, :book_id, :course_id, :user_id)
 	end
 
 

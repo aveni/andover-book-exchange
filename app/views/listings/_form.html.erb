@@ -8,6 +8,8 @@
 
     <%= f.hidden_field :book_id %>
     <%= f.hidden_field :listing_type %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :status %>
 
     <%= f.input :quality, collection: QUALITIES, label:'Select Condition'%>
     <%= f.input :description, placeholder: 'Description' %>

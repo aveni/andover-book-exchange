@@ -18,6 +18,11 @@ module ListingsHelper
 		end
 	end
 
+	def show_seller(listing)
+		user = User.find(listing.user_id)
+		"#{user.first} #{user.last}"
+	end
+
 	def show_quality(listing)
 		QUALITIES.key(listing.quality)
 	end	
