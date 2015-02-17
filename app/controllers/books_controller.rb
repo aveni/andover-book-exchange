@@ -2,11 +2,10 @@ class BooksController < ApplicationController
  include BooksHelper
 
   def index
-    @books = Book.all
     if (params[:search])
       @books = Book.all.where("title LIKE ?", "%#{params[:search]}%")
     else
-      @books = Book.all
+      @books = Book.all.order(:title)
     end
   end
 

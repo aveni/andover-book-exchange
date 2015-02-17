@@ -15,18 +15,14 @@
 </div>
 
 
-            <% @courses.each do |course| %>
-            <div class="row">
-                  <div class="col-xs-12">
-                        <%= render course %>
-                  </div>
-            </div>
-            <% end %>
-
-
+<% @courses.each do |course| %>
+<div class="row">
+      <div class="col-xs-12">
+            <%= render course %>
+      </div>
+</div>
+<% end %>
 
 <br>
-
-
 <%= link_to 'New Course', new_course_path, class:'btn btn-primary' %>
 <br>

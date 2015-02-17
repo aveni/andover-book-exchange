@@ -17,10 +17,11 @@ gem 'faker'
 # Use JQuery Datables Rails
 gem 'jquery-datatables-rails', '~> 3.1.1'
 
-
-
 # typeahead functionality
 gem 'twitter-typeahead-rails', '~> 0.10.5'
+
+# fake data for database
+gem 'forgery', '~> 0.6.0'
 
 #for search bars
 gem 'jquery-datatables-rails', '~> 3.1.1'

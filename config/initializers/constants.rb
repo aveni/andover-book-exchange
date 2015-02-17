@@ -4,7 +4,7 @@ SUBJECTS = {
 "Biology" => "BIO",
 "Computer Science" => "COMPSCI",
 "Physics" => "PHYS",
-"English" => "ENG", 
+"English" => "ENGL", 
 "French" => "FRA", 
 "Spanish" => "ESP", 
 "Russian" => "RUS", 
@@ -19,13 +19,20 @@ SUBJECTS = {
 "Miscellaneous" => "MISC"
 }.sort_by{|k, v| k}
 
-QUALITY = {
+QUALITIES = {
 "New"=>"0",
 "Like New"=>"1", 
 "Good"=> "2",
 "Acceptable"=>"3"
 }
 
-TYPE = ["Buy","Auction","Borrow"]
+TYPES = ["Buy","Auction","Borrow"]
 
-TEACHERS = ["Jacque Hugon", "Patrick Farrell", "William Scott"]
+TEACHERS = [
+	"Jacque Hugon", 
+	"Patrick Farrell", 
+	"William Scott", 
+	"Maria Litvin", 
+	"Fei Yao",
+	"Emma Staffaroni" 
+]

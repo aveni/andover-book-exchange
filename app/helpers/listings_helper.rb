@@ -10,16 +10,16 @@ module ListingsHelper
 		end
 	end
 
-	def show_price(listing)
+	def show_price(listing, precision)
 		if (listing.min_price == 0)
 			"Free"
 		else
-			"$#{listing.min_price.round}"
+			number_to_currency(listing.min_price, precision: precision)
 		end
 	end
 
 	def show_quality(listing)
-		QUALITY.key(listing.quality)
+		QUALITIES.key(listing.quality)
 	end	
 
 end

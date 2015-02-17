@@ -15,12 +15,15 @@ class Course < ActiveRecord::Base
 
 
 	validates :name, presence:true, uniqueness:true
-	validates :teacher, presence:true
-	validates :subject, presence:true
+	validates :teacher, presence:true, inclusion: {in: TEACHERS}
+	validates :subject, presence:true, inclusion: {in: SUBJECTS.collect {|k,v| v}}
+
 
 	def self.search(query)
     	# where(:title, query) -> This would return an exact match of the query
     		where("name like ?", "%#{search}%") 
  	end
+
+
 
 end

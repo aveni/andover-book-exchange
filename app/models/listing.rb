@@ -19,7 +19,8 @@ class Listing < ActiveRecord::Base
 	belongs_to :book
 	has_many :offers, dependent: :destroy
 
-	validates :quality, presence: true
+	validates :quality, presence: true, inclusion: {in: QUALITIES.collect {|k,v| v}}
+	validates :listing_type, presence: true, inclusion: {in: TYPES}
 	validates :status, presence: true
 	validates :min_price, presence: true, :numericality => {:greater_than_or_equal_to => 0}
 	#validate :check_listing

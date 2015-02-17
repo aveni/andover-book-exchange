@@ -15,12 +15,12 @@ namespace :utils do
 
 
 		# user.roles = %w[member]
-		if user.save
-			puts "... created account for #{user.first} #{user.last} #{user.email}"
-		else
-			puts "... could not create account for #{user.email}"
-		# 		user.errors.full
-		end
+			if user.save
+				puts "... created account for #{user.first} #{user.last} #{user.email}"
+			else
+				puts "... could not create account for #{user.email}"
+			# 		user.errors.full
+			end
 
 		end
 	end

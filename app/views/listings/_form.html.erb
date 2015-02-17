@@ -9,9 +9,9 @@
     <%= f.hidden_field :book_id %>
     <%= f.hidden_field :listing_type %>
 
-    <%= f.input :quality, collection: QUALITY, label:'Select Condition'%>
+    <%= f.input :quality, collection: QUALITIES, label:'Select Condition'%>
     <%= f.input :description, placeholder: 'Description' %>
-    <%= f.input :min_price, placeholder: 'X.XX', label: 'Price' %>
+    <%= f.input :min_price, placeholder: 'X or X.XX', label: 'Price' %>
 
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>
