@@ -39,17 +39,17 @@ BOOKS = [
 ]
 
 LISTINGS = [
-	["Buy", 0, 15, "", 1],
-	["Buy", 0, 20, "", 1],
-	["Buy", 1, 9, "", 1],
-	["Buy", 1, 8, "", 1],
-	["Buy", 1, 7, "", 1],
-	["Buy", 2, 4, "", 1],
-	["Buy", 2, 5, "", 1],
-	["Buy", 2, 5, "", 1],
-	["Buy", 2, 3, "", 1],
-	["Buy", 3, 2, "", 1],
-	["Buy", 3, 1, "", 1]
+	["Buy", 0, 15, "", 1, 1],
+	["Buy", 0, 20, "", 1, 1],
+	["Buy", 1, 9, "", 1, 1],
+	["Buy", 1, 8, "", 1, 1],
+	["Buy", 1, 7, "", 1, 1],
+	["Buy", 2, 4, "", 1, 1],
+	["Buy", 2, 5, "", 1, 1],
+	["Buy", 2, 5, "", 1, 1],
+	["Buy", 2, 3, "", 1, 1],
+	["Buy", 3, 2, "", 1, 1],
+	["Buy", 3, 1, "", 1, 1]
 ]
 
 COURSES.each do |name, teacher, subject|
@@ -68,7 +68,8 @@ BOOKS.each do |isbn, course_ids|
 	puts "Added #{b.title}."
 end
 
-LISTINGS.each do |type, quality, min_price, description, book_id|
-	l = Listing.create!(listing_type: type, quality: quality, min_price: min_price, description: description, book_id: book_id, status: true)
+LISTINGS.each do |type, quality, min_price, description, book_id, user_id|
+	l = Listing.create!(listing_type: type, quality: quality, min_price: min_price, 
+		description: description, book_id: book_id, user_id: user_id, status: true)
 	puts "Added listing for #{Book.find(book_id).title}."
 end
