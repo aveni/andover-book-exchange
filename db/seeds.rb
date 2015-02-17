@@ -19,7 +19,7 @@ COURSES = [
 	["COMP-500", "Maria Litvin", "COMPSCI"],
 	["PHYS-550", "Fei Yao", "PHYS"],
 	["ENGL-500: A Room of Their Own", "Emma Staffaroni", "ENGL"],
-	[ "MATH-590", "William Scott", "MATH"]
+	["MATH-590", "William Scott", "MATH"]
 ]
 
 BOOKS = [

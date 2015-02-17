@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     if (params[:search])
       @books = Book.all.where("title LIKE ?", "%#{params[:search]}%")
     else
-      @books = Book.all
+      @books = Book.all.order(:title)
     end
   end
 
