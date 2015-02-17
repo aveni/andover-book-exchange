@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150212212906) do
     t.string   "title"
     t.string   "author"
     t.string   "isbn"
+    t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -17,4 +17,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require cocoon
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require twitter/typeahead
+//= require twitter/typeahead.min
+//= require autocomplete-rails
 //= require_tree .

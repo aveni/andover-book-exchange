@@ -1,6 +1,11 @@
 class CoursesController < ApplicationController
   def index
     @courses = Course.all
+    if (params[:search])
+      @courses = Course.all.where("name LIKE ?", "%#{params[:search]}%")
+    else
+      @courses = Course.all
+    end
   end
 
   def show
