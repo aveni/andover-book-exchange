@@ -10,13 +10,6 @@ module ListingsHelper
 		end
 	end
 
-	def show_price(listing, precision)
-		if (listing.min_price == 0)
-			"Free"
-		else
-			number_to_currency(listing.min_price, precision: precision)
-		end
-	end
 
 	def show_seller(listing)
 		user = User.find(listing.user_id)

@@ -1,7 +1,8 @@
 <a href=<%= book_listing_path(listing.book, listing) %> class="thumbnail text-center">
 	<div class="caption">
-		<h1><%= show_price(listing, 0) %></h1>
-		<h3><%= show_type(listing) %></h3>
-		<h3> <%= show_quality(listing) %> </h3>
+		<h1><%= show_price(listing.min_price, 0) %></h1>
+		<h3><%= show_type(listing) %> </h3>
+		<h3><%= show_quality(listing) %> </h3>
+		<h5><%= show_seller(listing) %> </h5>
 	</div>
 </a>
