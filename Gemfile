@@ -16,15 +16,12 @@ gem 'autoprefixer-rails'
 gem 'faker'
 # Use JQuery Datables Rails
 gem 'jquery-datatables-rails', '~> 3.1.1'
-
+# JQuery UI Rails
+gem 'jquery-ui-rails'
+# Rails Autocomplete
+gem 'rails4-autocomplete'
 # typeahead functionality
 gem 'twitter-typeahead-rails', '~> 0.10.5'
-
-# fake data for database
-gem 'forgery', '~> 0.6.0'
-
-#for search bars
-gem 'jquery-datatables-rails', '~> 3.1.1'
 #read the isbn database
 gem 'isbndb', '~> 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
