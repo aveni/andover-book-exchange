@@ -11,7 +11,7 @@
 	<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-md btn-primary' %>
 	</div><br>
 	
-	<% @course.books.each do |book| %>
+	<% @course.books.order(:title).each do |book| %>
 		<div class="row">
 			<div class="col-xs-3">
 				<%= render book %>

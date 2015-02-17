@@ -10,14 +10,65 @@
 include BooksHelper
 
 abhi = User.create!(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
+ryan = User.create!(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
 
-c1 = Course.create!(name: "MATH-595", teacher: "Patrick Farrell", subject: "MATH")
-c2 = Course.create!(name: "COMP-630: Ruby on Rails", teacher: "Jacque Hugon", subject: "COMPSCI")
-c3 = Course.create(name:"COMP-500", teacher:"Maria Litvin", subject:"COMPSCI")
-c4 = Course.create(name:"PHYS-550", teacher:"Fei Yao", subject:"PHYS")
-c5 = Course.create(name:"ENGL-500: A Room of Their Own", teacher:"Emma Staffaroni", subject:"ENGL")
 
-b1 = Book.new(isbn: '1934356549')
-set_book(b1)
-b1.save!
-c2.books << b1
+COURSES = [
+	["MATH-595", "Patrick Farrell", "MATH"],
+	["COMP-630: Ruby on Rails", "Jacque Hugon", "COMPSCI"],
+	["COMP-500", "Maria Litvin", "COMPSCI"],
+	["PHYS-550", "Fei Yao", "PHYS"],
+	["ENGL-500: A Room of Their Own", "Emma Staffaroni", "ENGL"],
+	[ "MATH-590", "William Scott", "MATH"]
+]
+
+BOOKS = [
+	['1934356549', [2]],
+	['0596002149', [2]],
+	['0470088702', [2, 3]],
+	['0982477503', [3]],
+	['0538497815', [1, 6]],
+	['978-0321611116', [4]],
+	['007236811X', [4]],
+	['1853260827', [5]],
+	['0486415864', [5]],
+	['0140439447', [5]],
+	['0486424537', [5]],
+	['0486419207', [5]],
+	['0309212960', [1, 2, 3, 4, 6]]
+]
+
+LISTINGS = [
+	["Buy", 0, 15, "", 1],
+	["Buy", 0, 20, "", 1],
+	["Buy", 1, 9, "", 1],
+	["Buy", 1, 8, "", 1],
+	["Buy", 1, 7, "", 1],
+	["Buy", 2, 4, "", 1],
+	["Buy", 2, 5, "", 1],
+	["Buy", 2, 5, "", 1],
+	["Buy", 2, 3, "", 1],
+	["Buy", 3, 2, "", 1],
+	["Buy", 3, 1, "", 1]
+]
+
+COURSES.each do |name, teacher, subject|
+	Course.create!(name: name, teacher: teacher, subject: subject)
+end
+
+BOOKS.each do |isbn, course_ids|
+	puts "Adding #{isbn} ..." 
+	b = Book.new(isbn: isbn)
+	set_book(b)
+	b.save!
+	course_ids.each do |course_id|
+		course = Course.find(course_id)
+		course.books << b
+	end
+	puts "Added #{b.title}."
+end
+
+LISTINGS.each do |type, quality, min_price, description, book_id|
+	l = Listing.create!(listing_type: type, quality: quality, min_price: min_price, description: description, book_id: book_id, status: true)
+	puts "Added listing for #{Book.find(book_id).title}."
+end

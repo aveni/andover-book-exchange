@@ -2,12 +2,12 @@
   <h1><%= @book.title%></h1>
   <h4><%=  @book.author%> </h4>
   <h3>|
-	<% @book.courses.each do |course| %>
+	<% @book.courses.order(:name).each do |course| %>
 	<%= link_to(course.name, course) + " | " %>
 	<% end %>
 </h3>
 </div>
-
+<br>
 <div class = "text-right">
 <%= link_to "Sort by Price", book_path(@book, sort:"price"), class: 'btn btn-md btn-default' %>
 <%= link_to "Sort by Quality", book_path(@book, sort:"quality"), class: 'btn btn-md btn-default' %>
