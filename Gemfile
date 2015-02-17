@@ -52,6 +52,12 @@ gem 'pry-rails', '~> 0.3.2'
 #Generating fake data for development db
 gem 'forgery', '~> 0.6.0'
 
+# User privileges
+gem 'cancancan', '~> 1.10'
+
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

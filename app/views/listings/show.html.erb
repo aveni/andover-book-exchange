@@ -21,6 +21,12 @@
 </div>
 
 <div class='text-right'>
-  <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
-  <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+  
+  <% if can? :modify, Listing %>
+    <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
+  <% end %>
+
+  <% if can? :destroy, Listing %>
+    <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+  <% end %>
 </div>

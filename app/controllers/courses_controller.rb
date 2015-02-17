@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
-  
+  load_and_authorize_resource
+
   def index
     if (params[:search])
       @courses = Course.all.where("name LIKE ?", "%#{params[:search]}%")

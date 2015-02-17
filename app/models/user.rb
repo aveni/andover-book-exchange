@@ -27,7 +27,27 @@ class User < ActiveRecord::Base
   has_many :offers, dependent: :destroy
 
   validates_format_of :email, with: /andover\.edu/i, message: "must use andover.edu address"
+  validates :first, presence: true
+  validates :last, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  ROLES = %w[superuser admin member]
+  
+  def roles=(roles)
+    # => %w[admin]
+    self.roles_mask = (roles&ROLES).map{|r| 2**ROLES.index(r)}.inject(0,:+)
+  end
+  
+  def roles
+    ROLES.reject do |r|
+      (roles_mask & 2**ROLES.index(r)).zero?
+    end
+  end
+  
+  def is?(role)
+    # => true if matches a role for this user, false otherwise
+    roles.include?(role.to_s)
+  end
 end

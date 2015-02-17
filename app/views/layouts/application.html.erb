@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <p class="nav navbar-text">Welcome, <%= current_user.first%> </p>
+          <p class="nav navbar-text">Welcome, <%= current_user.first%> <%= show_role(current_user)%> </p>
         <% end %>
         <li><a href= <%= books_path %> >Books</a></li>
         <li><a href= <%= courses_path %> >Courses</a></li>
@@ -44,8 +44,11 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% if user_signed_in? %>
-              <li><%= link_to 'Change Password', edit_user_registration_path %>
-              <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>
+              <% if current_user.is?(:superuser) %>
+                <li><%= link_to 'Users', users_path %></li>
+               <% end %>
+                <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+                <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>
             <% else %>
               <li><%= link_to 'Sign-in', new_user_session_path %></li>
             <% end %>

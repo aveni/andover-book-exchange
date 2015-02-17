@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
  include BooksHelper
+ load_and_authorize_resource
 
   def index
     if (params[:search])

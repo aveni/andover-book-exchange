@@ -11,16 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require cocoon
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui
+
 //= require twitter/typeahead
 //= require twitter/typeahead.min
-//= require autocomplete-rails
+
 //= require_tree .
