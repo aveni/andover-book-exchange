@@ -2,5 +2,8 @@
 	<td><%= offer.id %></td>
 	<td> <%= show_buyer(offer) %> </td>
 	<td> <%= show_price(offer.price, 2) %> </td>
+	<% if can? :destroy, Offer %>
+		<td><%= link_to fa_icon('trash-o', text:'Delete Offer'),  @offer, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %></td>
+	<% end %>
 </tr>
 

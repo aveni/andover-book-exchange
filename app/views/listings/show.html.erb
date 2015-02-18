@@ -22,25 +22,48 @@
   </h4>
 </div>
 
-<br>
-<table class='table table-striped'>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-    <th>Offer</th>
-    <th>Name</th>
-    <th>Price</th>
-  </thead>
+<% if @listing.user_id == current_user.id or  current_user.is?(:superuser) or current_user.is?(:admin)%>
+      <br>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+          <th>Offer</th>
+          <th>Name</th>
+          <th>Price</th>
+          <% if can? :destroy, Offer %>
+              <th>Options</th>
+          <% end %>
+        </thead>
 
-  <tbody>
-    <%= render @listing.offers %>
-  </tbody>
-</table>
+        <tbody>
+          <%= render @listing.offers %>
+        </tbody>
+      </table>
+<% end %>
+
+<% @listing.offers.each do |offer| %>
+      <% if offer.user_id == current_user.id %>
+            <p style="text-align:left;">
+                  <h3>You have made an offer of <%= show_price(offer.price, 2) %>  </span></h3>
+            </p>
+      <% end %>
+<% end %>
+
+<% if @listing.offers.size == 0 %>
+            <p style="text-align:left;">
+                  <h4>You have not made an offer for this listing</h4>
+            </p>
+<% end %>
+
+
 
 
 <div class='text-right'>
-  <%= link_to fa_icon('dollar', text:'Make Offer'), new_book_listing_offer_path(@listing.book, @listing), class: 'btn btn-sm btn-primary' %>
+  <% if current_user.id != @listing.user_id %>
+      <%= link_to fa_icon('dollar', text:'Make Offer'), new_book_listing_offer_path(@listing.book, @listing), class: 'btn btn-sm btn-primary' %>
+  <% end %>
 
   <% if can? :modify, Listing %>
     <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>

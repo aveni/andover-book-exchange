@@ -43,7 +43,7 @@ class OffersController < ApplicationController
 	end
 
 	def set_book_listing
-		@book = Listing.find(params[:book_id])
+		@book = Book.find(params[:book_id])
 		@listing = Listing.find(params[:listing_id])
 	end
 end
