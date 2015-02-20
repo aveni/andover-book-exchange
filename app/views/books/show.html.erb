@@ -14,7 +14,8 @@
 <%= link_to fa_icon('exchange', text:'New Listing'), new_book_listing_path(@book), class: 'btn btn-md btn-primary' %>
 </div><br>
 
-<% buys = @book.listings.select{ |l| l.listing_type = "Buy" } %>
+<% listings = @book.listings.where(status: true) %>
+<% buys = listings.select{ |l| l.listing_type = "Buy" } %>
 
 <% if (params[:sort] == 'price') %>
 	<% buys = buys.sort_by { |l| [l.min_price, l.quality] }  %>

@@ -17,6 +17,7 @@
 #  last_sign_in_ip        :string
 #  created_at             :datetime
 #  updated_at             :datetime
+#  roles_mask             :integer          default("0")
 #
 
 require 'test_helper'

@@ -41,7 +41,7 @@ class Ability
     can :read, Course
     # can :modify, Trailer if User.exists?(user)
     
-    
+    can :buy, Listing
     can :modify, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:admin)
     can :destroy, :all if user.is?(:superuser)

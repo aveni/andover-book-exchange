@@ -21,7 +21,7 @@
 				<%= render book %>
 			</div>
 
-			<% listings = book.listings %>
+			<% listings = book.listings.where(status:true) %>
 			<% if (params[:sort] == 'price') %>
 				<% listings = listings.sort_by { |l| [l.listing_type.size, l.min_price, l.quality] }  %>
 			<% elsif (params[:sort] == 'quality') %>

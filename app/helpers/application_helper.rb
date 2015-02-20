@@ -21,6 +21,10 @@ module ApplicationHelper
 	  	end
 	end
 
+	def show_name(user)
+		"#{user.first} #{user.last}"
+	end
+	
 	def show_price(price, precision)
 		if (price == 0)
 			"Free"

@@ -7,6 +7,15 @@ class ListingsController < ApplicationController
 	#	@listings = @book.listings
 	#end
 
+	def buy
+		@listing = Listing.find(params[:listing_id])
+		@listing.status = false
+		@listing.save
+		@exchange = Exchange.create(listing_id: @listing.id, user_id: current_user.id)
+		@exchange.save
+		redirect_to exchanges_path
+	end
+
 	def show
 		@listing = Listing.find(params[:id])
 	end

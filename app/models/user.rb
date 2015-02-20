@@ -17,6 +17,7 @@
 #  last_sign_in_ip        :string
 #  created_at             :datetime
 #  updated_at             :datetime
+#  roles_mask             :integer          default("0")
 #
 
 class User < ActiveRecord::Base
@@ -25,6 +26,7 @@ class User < ActiveRecord::Base
 
   has_many :listings, dependent: :destroy
   has_many :offers, dependent: :destroy
+  has_many :exchanges
 
   validates :first, presence:true
   validates :last, presence:true
