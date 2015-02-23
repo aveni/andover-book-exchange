@@ -65,16 +65,11 @@
 <% if @listing.status %>
   <div class='text-right'>
     <% if current_user.id != @listing.user_id %>
-  <!-- <%= link_to fa_icon('dollar', text:'Make Offer'), new_book_listing_offer_path(@listing.book, @listing), class: 'btn btn-sm btn-primary' %> -->
-      <%= link_to fa_icon('dollar', text:'Buy Book'), book_listing_buy_path(@listing.book, @listing), class: 'btn btn-sm btn-primary', data: { confirm: 'Are you sure you want to purchase this book?'  } %>
-
+      <%= link_to fa_icon('dollar', text:'Buy Book'), book_listing_buy_path(@listing.book, @listing), class: 'btn btn-lg btn-primary', data: { confirm: 'Are you sure you want to purchase this book?'  } %>
     <% end %>
-
-    <% if can? :modify, Listing || current_user == @listing.user %>
+    <br><br>
+    <% if current_user == @listing.user || (can? :modify, Listing) %>
       <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
-    <% end %>
-
-    <% if can? :destroy, Listing %>
       <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
     <% end %>
   </div>

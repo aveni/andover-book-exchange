@@ -1,18 +1,20 @@
 <div class="page-header">
-  <h1>Books</h1>
+	<h1>Books</h1>
 </div>
 
 <div class="row">
 	<p style="text-align:left;">
 		<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search Books" name="search">
+				<input type="text" class="form-control" placeholder="Search by Title or Author" name="search">
 			</div>
 			<button type="submit" class="btn btn-info">Search</button>
 		</form>
 
 		<span style="float:right;">
+		<% if can? :modify, Book %>
 			<%= link_to 'New Book', new_book_path, class:'btn btn-lg btn-primary'%>
+		<% end %>
 			<%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %>
 		</span>
 	</p>

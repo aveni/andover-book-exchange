@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
-	load_and_authorize_resource
 	before_action :set_book
+	before_filter :verify_ed, :only=>[:edit, :update, :destroy]
+	before_filter :verify_buy, :only=>:buy
 
 	#def index
 	#	@book = Book.find(params[:book_id])
@@ -13,7 +14,7 @@ class ListingsController < ApplicationController
 		@listing.save
 		@exchange = Exchange.create(listing_id: @listing.id, user_id: current_user.id)
 		@exchange.save
-		redirect_to exchanges_path
+		redirect_to @exchange.user
 	end
 
 	def show
@@ -56,6 +57,16 @@ class ListingsController < ApplicationController
 
 	def set_book
 		@book = Book.find(params[:book_id])
+	end
+
+	def verify_buy
+		@listing = Listing.find(params[:listing_id])
+		redirect_to books_path unless @listing.status && @listing.user_id != current_user.id
+	end
+
+	def verify_ed
+		@listing = Listing.find(params[:id])
+		redirect_to books_path unless @listing.status && (@listing.user_id == current_user.id || (can? :modify, Listing))
 	end
 
 	def listings_params

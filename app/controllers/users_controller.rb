@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
+  before_filter :verify_superuser, :only=>:index
+  before_filter :verify_owner, :only=>:show
 
 	def index
 		@users = User.all.order(:last, :first)
@@ -13,7 +16,20 @@ class UsersController < ApplicationController
     		@user.destroy
 
    		 if @user.destroy
-     			redirect_to root_url, notice: "User deleted."
-    		end
-  	end
+   			redirect_to root_url, notice: "User deleted."
+  		end
+	end
+
+  private
+
+  def verify_superuser
+    # assume the route looks like this  /user/:username
+    redirect_to root_url unless current_user.is?(:superuser)
+  end  
+
+  def verify_owner
+    # assume the route looks like this  /user/:username
+    redirect_to root_url unless params[:id] == "#{current_user.id}"
+  end  
+
 end

@@ -2,13 +2,21 @@
 	<h1>Courses</h1>
 </div>
 <div class="row">
-	<form class="navbar-form navbar-left" role="search">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search Courses" name="search">
-		</div>
-		<button type="submit" class="btn btn-info">Search</button>
-	</form>
+	<p style="text-align:left;">
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search by Name or Teacher" name="search">
+			</div>
+			<button type="submit" class="btn btn-info">Search</button>
+		</form>
+
+		<span style="float:right;">
+			<%= link_to "Sort by Name", courses_path, class: 'btn btn-md btn-default' %>
+			<%= link_to "Sort by Subject", courses_path(sort:"subj"), class: 'btn btn-md btn-default' %>
+		</span>
+	</p>
 </div>
+
 <br>
 <% @courses.each do |course| %>
 	<div class="row">

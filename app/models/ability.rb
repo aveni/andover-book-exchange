@@ -32,20 +32,10 @@ class Ability
     
     alias_action :create, :update, :to=>:modify
     
-    can :read, Book    # show and index
-    # can :modify, Actor if User.exists?(user)
-    
-    can :read, Listing
-    can :buy, Listing
-    # can :modify, Movie if User.exists?(user)
-    
+    can :read, Book
     can :read, Course
-    # can :modify, Trailer if User.exists?(user)
-
-    can :read, Exchange if user.is?(:superuser)
-    can :modify, Exchange if user.is?(:superuser)
-
-    
+    can :read, Exchange if user.is?(:superuser)  
+    can :read, User
 
     can :modify, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:admin)

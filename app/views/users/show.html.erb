@@ -1,0 +1,69 @@
+<div class="page-header">
+  <h1><%= show_name(@user) %></h1>
+</div>
+
+<div class="row">
+
+	<h2>My Open Listings</h2>
+
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="3"></th>
+		    </tr>
+		    <th>Course(s)</th>
+		    <th>Listing</th>
+		    <th>Price</th>
+		</thead>
+		<tbody>
+			<% @user.listings.where(status:true).each do |listing| %>
+			<tr>   
+			<td><% listing.book.courses.each do |c| %><%= link_to c.name, c %><br><% end %></td>
+			<td><%= link_to listing.book.title, book_listing_path(listing.book, listing) %></td>
+			<td><%= show_price(listing.min_price,2) %></td>				
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<h2>Past Purchases</h2>
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="6"></th>
+		    </tr>
+		    <th> Exchange ID</th>
+		    <th> Listing </th>
+		    <th> Price </th>
+		    <th> Buyer </th>
+			<th> Seller </th>
+		</thead>
+		<tbody>
+			<%= render @user.exchanges %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<h2>Past Sells</h2>
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="6"></th>
+		    </tr>
+		    <th> Exchange ID</th>
+		    <th> Listing </th>
+		    <th> Price </th>
+		    <th> Buyer </th>
+			<th> Seller </th>
+		</thead>
+		<tbody>
+			<% @user.listings.where(status:false).each do |listing| %>
+				<%= render listing.exchange %>
+			<% end %>
+		</tbody>
+	</table>
+
+</div>

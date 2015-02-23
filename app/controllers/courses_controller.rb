@@ -3,7 +3,9 @@ class CoursesController < ApplicationController
 
   def index
     if (params[:search])
-      @courses = Course.all.where("name LIKE ?", "%#{params[:search]}%")
+      @courses = Course.all.where("name LIKE ? OR teacher LIKE ?", "%#{params[:search]}%","%#{params[:search]}%" )
+    elsif params[:sort] == 'subj'
+      @courses = Course.all.sort_by {|c| [c.subject, c.name]}     
     else
       @courses = Course.all.order(:name)
     end
