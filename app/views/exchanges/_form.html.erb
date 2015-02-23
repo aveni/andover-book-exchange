@@ -3,8 +3,8 @@
 	<%= simple_form_for(@exchange	, html:{class:'form-horizontal'}) do |f| %>
 	      <% f.error_notification %>
 
-	      <%= f.input :listing_id %>
-	      <%= f.input :user_id %>
+	      <%= f.association :listing, collection: Listing.all, :label_method => lambda { |l| "#{l.book.title} | #{show_name(l.user)}" } %>
+	      <%= f.association :user, label: "Buyer", collection: User.all, :label_method => lambda { |u| show_name(u) } %>
 
 	      <div class='row text-center'>
 	     	  <%= f.submit nil, class:'btn btn-primary' %>

@@ -36,12 +36,17 @@ class Ability
     # can :modify, Actor if User.exists?(user)
     
     can :read, Listing
+    can :buy, Listing
     # can :modify, Movie if User.exists?(user)
     
     can :read, Course
     # can :modify, Trailer if User.exists?(user)
+
+    can :read, Exchange if user.is?(:superuser)
+    can :modify, Exchange if user.is?(:superuser)
+
     
-    can :buy, Listing
+
     can :modify, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:admin)
     can :destroy, :all if user.is?(:superuser)

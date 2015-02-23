@@ -1,18 +1,15 @@
 <div class="page-header">
-	<h1>Courses
-
-	<form class="navbar-form navbar-right" role="search">
+	<h1>Courses</h1>
+</div>
+<div class="row">
+	<form class="navbar-form navbar-left" role="search">
 		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search Books" name="search">
+			<input type="text" class="form-control" placeholder="Search Courses" name="search">
 		</div>
 		<button type="submit" class="btn btn-info">Search</button>
 	</form>
-
-	</h1>
 </div>
 <br>
-
-
 <% @courses.each do |course| %>
 	<div class="row">
 		<%= render course %>

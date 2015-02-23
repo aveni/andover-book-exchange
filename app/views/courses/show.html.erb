@@ -44,7 +44,11 @@
 
 <br>
 <div class="text-right">
-	<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
-	<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+	<% if can? :modify, Course %>
+		<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
+	<% end %>
+	<% if can? :destroy, Course %>
+		<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+	<% end %>
 </div>
 <br>

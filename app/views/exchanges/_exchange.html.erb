@@ -5,5 +5,13 @@
 	<td> <%= show_price(exchange.listing.min_price, 2) %> </td>
 	<td> <%= show_name(exchange.user) %> </td>
 	<td> <%= show_name(exchange.listing.user) %> </td>
+	<td>
+	<% if can? :modify, Exchange %>
+  		<%= link_to fa_icon('pencil', text: 'Edit'), edit_exchange_path(exchange), class:'btn btn-xs btn-default'%>
+  	<% end %>
+  	<% if can? :modify, Exchange %>
+		<%= link_to fa_icon('trash-o', text:'Delete'), exchange, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-xs btn-danger' %>  	
+	<% end %>
 
+  	</td>
 </tr>
