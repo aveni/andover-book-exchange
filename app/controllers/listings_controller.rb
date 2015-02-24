@@ -29,6 +29,7 @@ class ListingsController < ApplicationController
 	def create
 		@listing = Listing.new(listings_params)
 		if @listing.save
+			Mailrobot.notify_listing(current_user, @listing).deliver
 			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
 		else
 			render 'new'
