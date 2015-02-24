@@ -2,7 +2,7 @@ module BooksHelper
 
 	def get_book(isbn)
 		if (isbn != '')
-			ISBNdb::Query.find_book_by_isbn(isbn).first
+			ISBNdb::Query.find_book_by_isbn(isbn.to_str).first
 		end
 	end
 
@@ -26,4 +26,11 @@ module BooksHelper
 	def title_upcase(ttl)
 		ttl.split.map(&:capitalize).join(' ')
 	end
+
+	def format(i)
+		strip(i, '-')
+	end
+		
+
+
 end

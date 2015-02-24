@@ -24,12 +24,12 @@ class UsersController < ApplicationController
 
   def verify_superuser
     # assume the route looks like this  /user/:username
-    redirect_to root_url unless current_user.is?(:superuser)
+    redirect_to books_path unless current_user.is?(:superuser)
   end  
 
   def verify_owner
     # assume the route looks like this  /user/:username
-    redirect_to root_url unless params[:id] == "#{current_user.id}"
+    redirect_to books_path unless params[:id] == "#{current_user.id}"
   end  
 
 end

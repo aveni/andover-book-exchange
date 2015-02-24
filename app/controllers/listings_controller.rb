@@ -3,6 +3,7 @@ class ListingsController < ApplicationController
 	before_filter :verify_ed, :only=>[:edit, :update, :destroy]
 	before_filter :verify_buy, :only=>:buy
 
+
 	#def index
 	#	@book = Book.find(params[:book_id])
 	#	@listings = @book.listings
@@ -70,7 +71,7 @@ class ListingsController < ApplicationController
 	end
 
 	def listings_params
-		params[:listing].permit(:description, :quality, :listing_type, :status, :min_price, :book_id, :course_id, :user_id)
+		params.require(:listing).permit( :description, :quality, :listing_type, :status, :min_price,  :course_id,  :user_id, :book_id)
 	end
 
 

@@ -12,10 +12,11 @@
 		</form>
 
 		<span style="float:right;">
-		<% if can? :modify, Book %>
+		<% if current_user.is? :superuser%>
 			<%= link_to 'New Book', new_book_path, class:'btn btn-lg btn-primary'%>
 		<% end %>
-			<%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %>
+		<%= link_to fa_icon('fa fa-usd', text:'Sell Book'), sell_books_path, class:'btn btn-lg btn-primary'%>
+		<%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %>
 		</span>
 	</p>
 </div>
