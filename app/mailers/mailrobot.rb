@@ -5,7 +5,11 @@ class Mailrobot < ApplicationMailer
 	def notify_listing(user, listing)
 		@listing = listing
 		@user = user
-		mail(to:@user.email, subject:"Listing for #{@listing.book.title} has been created")
+		if Rails.env.development?
+			recipient = "brigdenr@gmail.com"
+		else
+			recipient = @user.email
+		mail(to:recipient, subject:"Listing for #{@listing.book.title} has been created")
+		end
 	end
-
 end
