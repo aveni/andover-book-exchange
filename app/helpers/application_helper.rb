@@ -6,10 +6,12 @@ module ApplicationHelper
 		      content_tag(:span, 'Super User', class:'label label-warning')
 		    elsif user.is?(:admin)
 		      content_tag(:span, 'Admin', class:'label label-success')
-		    else
-		      content_tag(:span, 'Member', class:'label label-info')
-		    end
+			end
 		end
+	end
+
+	def format (text, length)
+		(text.length>length) ? text.slice(0..length) : text.ljust(length)
 	end
 
 	def truncate(text, options = {}, &block)

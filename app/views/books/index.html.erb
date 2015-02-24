@@ -21,13 +21,15 @@
 </div>
 <br>
 
-<div class="row">
-    <% @books.each do |book| %>
+
+<% @books.each_slice(4) do |books| %>
+	<div class="row">
+		<% books.each do |book| %>
 		<div class="col-xs-3">
 			<%= render book %>
 		</div>
-	<% end %>
-</div>
-
+		<% end %>
+	</div>
+<% end %>
 <br>
 <br>
