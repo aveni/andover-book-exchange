@@ -1,4 +1,5 @@
 module ListingsHelper
+	
 	def show_type(listing)
 		case listing.listing_type
 		when "Buy"

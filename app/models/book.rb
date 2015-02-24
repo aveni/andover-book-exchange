@@ -11,10 +11,12 @@
 #
 
 class Book < ActiveRecord::Base
+	
 	has_many :listings, dependent: :destroy
 	has_and_belongs_to_many :courses
 
-	validates :isbn, presence: true, uniqueness:true
+	
+	validates :isbn, presence: true#, uniqueness:true
 	validate :is_valid_isbn
 
 	def is_valid_isbn

@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1><%= @user.first + " " + @user.last %></h1>
+  <h4><%=  show_role(@user)%> </h4>
+  <h3>Books Sold: 
+	<% @book.courses.order(:name).each do |course| %>
+	<%= link_to(course.name, course) + " | " %>
+	<% end %>
+</h3>
+</div>
+<br>
+<div class = "text-right">
+<%= link_to "Sell a Book", books_path, class: 'btn btn-md btn-default' %>
+<%= link_to "Course", book_path(@book, sort:"quality"), class: 'btn btn-md btn-default' %>
+<%= link_to fa_icon('exchange', text:'New Listing'), new_book_listing_path(@book), class: 'btn btn-md btn-primary' %>
+</div><br>

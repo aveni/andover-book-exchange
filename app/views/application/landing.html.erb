@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Andover Book Exchange</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+</head>
+<body>
+
+<%= stylesheet_link_tag "background.css" %>
+		
+		<%= image_tag("Andover.jpg", :class => "bg") %>
+		<div class="row">
+			<h1 class="title">Andover Textbook Exchange </h1>
+		</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		<div class="row">
+			<div class="text-center">
+				<%= link_to fa_icon('usd', text:'Sell a Book'),  sell_books_path, class: 'btn btn-xl btn-default' %>
+				<%= link_to fa_icon('search', text:'Find a Book'), books_path, class: 'btn btn-xl btn-primary' %>
+			</div>
+		</div>
+
+</body>
+

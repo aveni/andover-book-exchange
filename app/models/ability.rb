@@ -33,10 +33,14 @@ class Ability
     alias_action :create, :update, :to=>:modify
     
     can :read, Book    # show and index
-    # can :modify, Actor if User.exists?(user)
+    can :modify, Book if User.exists?(user)
+    can :sell, Book if User.exists?(user)
+    can :create_sell, Book if User.exists?(user)
+    can :book_save, Book if User.exists?(user)
+    can :landing, Book if User.exists?(user)
     
     can :read, Listing
-    # can :modify, Movie if User.exists?(user)
+    can :modify, Listing if User.exists?(user)
     
     can :read, Course
     # can :modify, Trailer if User.exists?(user)

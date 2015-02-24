@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
-	load_and_authorize_resource
+	load_and_authorize_resource except: [:create]
 	before_action :set_book
+
 
 	#def index
 	#	@book = Book.find(params[:book_id])
@@ -50,7 +51,7 @@ class ListingsController < ApplicationController
 	end
 
 	def listings_params
-		params[:listing].permit(:description, :quality, :listing_type, :status, :min_price, :book_id, :course_id, :user_id)
+		params.require(:listing).permit( :description, :quality, :listing_type, :status, :min_price,  :course_id,  :user_id, :book_id)
 	end
 
 
