@@ -1,29 +1,26 @@
 <div class="page-header">
-  <h1>Step 2: Select courses for this book... </h1>
+  <h1>Select courses for <%= @book.title %> </h1>
 </div>
-<br>
 
+<div class="alert alert-warning" role="alert">
+  This book is new to our database! We need some more information before you can sell this book.<br>Note that as the first seller of this book, your username/email WILL BE LOGGED.
+</div>
+
+<br>
 <%= simple_form_for(@book, html:{class:'form-horizontal'}, url: book_save_books_path ) do |f| %>
   
     <% f.error_notification %>
-
-
     <%= f.hidden_field :isbn %>
     <%= f.hidden_field :author %>
     <%= f.hidden_field :title %>
 
-    <%= f.association :courses, collection: Course.all.order(:name), as: :check_boxes %>
+    <%= f.association :courses, label:"Select all Courses for this book:", collection: Course.all.order(:name), as: :check_boxes %>
 
     <div class='row text-center'>
-   	 <%= f.submit nil, class:'btn btn-primary' %>
-   	 <%= link_to 'Cancel', :back, class:'btn btn-default' %>
+   	 <%= f.submit "Add Book to Database", class:'btn btn-primary' %>
+   	 <%= link_to 'Cancel', books_path, class:'btn btn-default' %>
    	</div>
 
 <% end %>
 
 
-
-
-
-
-</div>

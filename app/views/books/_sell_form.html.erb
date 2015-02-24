@@ -1,23 +1,19 @@
 <div class="page-header">
-  <h1>Step 1: Search for the book you want to sell... </h1>
+  <h1>Search for a book to sell</h1>
 </div>
 <br>
 
-<div class="row col-md-6 col-md-offset-1">
+<div class="row">
 
   <%= form_tag(create_sell_books_path, method: "post", :class => "form-horizontal", role: 'form') do %>
   
-  <div class="form-group">
-  	<%= text_field_tag :isbn, nil, :placeholder=>"ISBN", class: "form-control"%>
-  	
+  <div class="col-xs-6 col-offset-1">
+  	<%= text_field_tag :isbn, nil, :placeholder=>"ISBN", class: "form-control"%><br>
+  	<%= link_to 'Cancel', :back, class:'btn btn-default ' %>
+
+  </div>
+  <div class="col-xs-6">
   	<%= submit_tag "Search",  class: 'btn btn-success' %>
   </div>
-  
 <% end %>
-
-
-
-
-
-
 </div>

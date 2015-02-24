@@ -2,6 +2,7 @@ class BooksController < ApplicationController
  include BooksHelper
   
   load_and_authorize_resource :except => [:landing]
+  before_filter :verify_ed, :only=>[:new, :create, :edit, :update, :destroy]
 
   
   def index
@@ -36,7 +37,7 @@ class BooksController < ApplicationController
       if matches.blank?
         course_select(book_hash)
       else
-        redirect_to matches, notice: "Book found. Now add a listing for this book"
+        redirect_to matches, notice: "Book found. Now add a listing for this book."
       end   
     else
       render 'sell'
@@ -54,9 +55,9 @@ class BooksController < ApplicationController
   def book_save
     @book = Book.new(book_params)
     if @book.save
-          redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book'
+      redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book.'
     else
-          render 'sell', notice: "Couldn't save book"
+      render 'sell', notice: "Couldn't save book."
     end
   end 
 
@@ -64,7 +65,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     set_book(@book)
     if @book.save
-      redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book'
+      redirect_to @book, notice: 'Book created.'
     else
       render 'new'
     end
@@ -94,6 +95,10 @@ class BooksController < ApplicationController
 
   def book_params
     params[:book].permit(:title, :author, :isbn, :course_ids=>[])
+  end
+
+  def verify_ed
+    redirect_to books_path unless current_user.is?(:superuser)
   end
 
 end

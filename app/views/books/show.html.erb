@@ -39,7 +39,7 @@
 
 <br><br>
 <div class='text-right'>
-	<% if can? :modify, Book %>
+	<% if current_user.is? (:superuser)%>
 		<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
 	<% end %>
 	
