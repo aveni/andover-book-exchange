@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
 
   def landing
-    render :layout => false
+    if current_user != nil
+      redirect_to books_path
+    else
+      render :layout => false
+    end
   end
 
   protected
