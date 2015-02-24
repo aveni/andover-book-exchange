@@ -1,11 +1,11 @@
 <div class="page-header">
-  <h1><%= @book.title%></h1>
-  <h4><%=  @book.author%> </h4>
-  <h3>|
-	<% @book.courses.order(:name).each do |course| %>
-	<%= link_to(course.name, course) + " | " %>
-	<% end %>
-</h3>
+	<h1><%= @book.title%></h1>
+	<h4><%=  @book.author%> </h4>
+	<h3>|
+		<% @book.courses.order(:name).each do |course| %>
+		<%= link_to(course.name, course) + " | " %>
+		<% end %>
+	</h3>
 </div>
 <br>
 <div class = "text-right">
@@ -14,12 +14,18 @@
 <%= link_to fa_icon('exchange', text:'New Listing'), new_book_listing_path(@book), class: 'btn btn-md btn-primary' %>
 </div><br>
 
-<% buys = @book.listings.select{ |l| l.listing_type = "Buy" } %>
+<% listings = @book.listings.where(status: true) %>
+<% buys = listings.select{ |l| l.listing_type = "Buy" } %>
 
 <% if (params[:sort] == 'price') %>
 	<% buys = buys.sort_by { |l| [l.min_price, l.quality] }  %>
 <% elsif (params[:sort] == 'quality') %>
 	<% buys = buys.sort_by { |l| [l.quality, l.min_price] }  %>
+<% end %>
+
+
+<% if listings.size == 0 %>
+	<h1><small>No Current Listings for this Book :(<small></h1>
 <% end %>
 
 <div class="row">

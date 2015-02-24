@@ -28,27 +28,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href= <%= books_path %>>PA Book Exchange</a>
+      <a class="navbar-brand" href= <%= books_path %>>PA Book Exchange <%= show_role(current_user)%> </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <p class="nav navbar-text">Welcome, <%= current_user.first%> <%= show_role(current_user)%> </p>
+          <li><%= link_to "Welcome, #{current_user.first}", current_user %> <li>
         <% end %>
         <li><a href= <%= books_path %> >Books</a></li>
         <li><a href= <%= courses_path %> >Courses</a></li>
-        
+        <% if current_user && current_user.is?(:superuser) %>
+          <li><a href= <%= users_path %> >Users</a></li>
+          <li><a href= <%= exchanges_path %> >Exchanges</a></li>
+        <% end %>
+             
         <li class ="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% if user_signed_in? %>
-              <% if current_user.is?(:superuser) %>
-                <li><%= link_to 'Users', users_path %></li>
-               <% end %>
-                <li><%= link_to 'Change Password', edit_user_registration_path %></li>
-                <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>
+              <li><%= link_to 'My Page', current_user %></li>
+              <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+              <li><%= link_to 'Sign-out', destroy_user_session_path, :method=>:delete %></li>
             <% else %>
               <li><%= link_to 'Sign-in', new_user_session_path %></li>
             <% end %>
@@ -62,10 +64,17 @@
 <div class="container">
    
   <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
+    <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+    </div>
   <% end %>
+
   <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+    </div>
   <% end %>
   
 	<%= yield %>

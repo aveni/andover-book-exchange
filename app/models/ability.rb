@@ -32,6 +32,7 @@ class Ability
     
     alias_action :create, :update, :to=>:modify
     
+
     can :read, Book    # show and index
     can :modify, Book if User.exists?(user)
     can :sell, Book if User.exists?(user)
@@ -39,13 +40,11 @@ class Ability
     can :book_save, Book if User.exists?(user)
     can :landing, Book if User.exists?(user)
     
-    can :read, Listing
-    can :modify, Listing if User.exists?(user)
     
     can :read, Course
-    # can :modify, Trailer if User.exists?(user)
-    
-    
+    can :read, Exchange if user.is?(:superuser)  
+    can :read, User
+
     can :modify, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:admin)
     can :destroy, :all if user.is?(:superuser)

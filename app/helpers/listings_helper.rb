@@ -11,15 +11,13 @@ module ListingsHelper
 		end
 	end
 
-	def show_status(bool)
-		if bool
-			content_tag(:div, "Pending", class: "label label-warning label-as-badge")
+	def show_status(listing)
+		if listing.status
+			content_tag(:div, "Open", class: "label label-success label-as-badge")
 		else
-			content_tag(:div, "Accepted", class: "label label-success label-as-badge")
+			content_tag(:div, "Closed", class: "label label-danger label-as-badge")
 		end
 	end
-
-
 
 	def show_seller(listing)
 		user = User.find(listing.user_id)

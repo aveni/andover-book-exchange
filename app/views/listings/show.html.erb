@@ -1,5 +1,6 @@
 <div class="page-header">
-  <h1><%= show_price(@listing.min_price, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title), @listing.book) %></small>
+  <h1><%= show_price(@listing.min_price, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title, length:35), @listing.book) %></small>
+  <%= show_status(@listing) %>
   </h1>
 </div>
 
@@ -22,6 +23,7 @@
   </h4>
 </div>
 
+<!-- 
 <% if @listing.user_id == current_user.id or  current_user.is?(:superuser) or current_user.is?(:admin)%>
       <br>
       <table class='table table-striped'>
@@ -41,7 +43,8 @@
           <%= render @listing.offers %>
         </tbody>
       </table>
-<% end %>
+<% end %> 
+
 
 <% @listing.offers.each do |offer| %>
       <% if offer.user_id == current_user.id %>
@@ -56,20 +59,19 @@
                   <h4>You have not made an offer for this listing</h4>
             </p>
 <% end %>
+-->
 
 
+<% if @listing.status %>
+  <div class='text-right'>
+    <% if current_user.id != @listing.user_id %>
+      <%= link_to fa_icon('dollar', text:'Buy Book'), book_listing_buy_path(@listing.book, @listing), class: 'btn btn-lg btn-primary', data: { confirm: 'Are you sure you want to purchase this book?'  } %>
+    <% end %>
+    <br><br>
+    <% if current_user == @listing.user || (can? :modify, Listing) %>
+      <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
+      <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+    <% end %>
+  </div>
 
-
-<div class='text-right'>
-  <% if current_user.id != @listing.user_id %>
-      <%= link_to fa_icon('dollar', text:'Make Offer'), new_book_listing_offer_path(@listing.book, @listing), class: 'btn btn-sm btn-primary' %>
-  <% end %>
-
-  <% if can? :modify, Listing %>
-    <%= link_to fa_icon('pencil', text:'Edit Listing'), edit_book_listing_path(@listing.book, @listing), class: 'btn btn-sm btn-default' %>
-  <% end %>
-
-  <% if can? :destroy, Listing %>
-    <%= link_to fa_icon('trash-o', text:'Delete Listing'),  book_listing_path(@listing.book, @listing), method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
-  <% end %>
-</div>
+<% end %>

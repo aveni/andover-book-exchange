@@ -1,15 +1,70 @@
 <div class="page-header">
-  <h1><%= @user.first + " " + @user.last %></h1>
-  <h4><%=  show_role(@user)%> </h4>
-  <h3>Books Sold: 
-	<% @book.courses.order(:name).each do |course| %>
-	<%= link_to(course.name, course) + " | " %>
-	<% end %>
-</h3>
+  <h1><%= show_name(@user) %></h1>
 </div>
-<br>
-<div class = "text-right">
-<%= link_to "Sell a Book", books_path, class: 'btn btn-md btn-default' %>
-<%= link_to "Course", book_path(@book, sort:"quality"), class: 'btn btn-md btn-default' %>
-<%= link_to fa_icon('exchange', text:'New Listing'), new_book_listing_path(@book), class: 'btn btn-md btn-primary' %>
-</div><br>
+
+<div class="row">
+
+	<h2>My Open Listings</h2>
+
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="3"></th>
+		    </tr>
+		    <th>Course(s)</th>
+		    <th>Listing</th>
+		    <th>Price</th>
+		</thead>
+		<tbody>
+			<% @user.listings.where(status:true).each do |listing| %>
+			<tr>   
+			<td><% listing.book.courses.each do |c| %><%= link_to c.name, c %><br><% end %></td>
+			<td><%= link_to listing.book.title, book_listing_path(listing.book, listing) %></td>
+			<td><%= show_price(listing.min_price,2) %></td>				
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<h2>Past Purchases</h2>
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="6"></th>
+		    </tr>
+		    <th> Exchange ID</th>
+		    <th> Listing </th>
+		    <th> Price </th>
+		    <th> Buyer </th>
+			<th> Seller </th>
+		</thead>
+		<tbody>
+			<%= render @user.exchanges %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<h2>Past Sells</h2>
+	<table class='table table-striped'>
+	    <thead>
+		    <tr>
+		      <th colspan="6"></th>
+		    </tr>
+		    <th> Exchange ID</th>
+		    <th> Listing </th>
+		    <th> Price </th>
+		    <th> Buyer </th>
+			<th> Seller </th>
+		</thead>
+		<tbody>
+			<% @user.listings.where(status:false).each do |listing| %>
+				<%= render listing.exchange %>
+			<% end %>
+		</tbody>
+	</table>
+
+</div>
+

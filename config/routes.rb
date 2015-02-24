@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  resources :users, :only=>[:index]
+  resources :users
   match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
 
+  resources :exchanges
   resources :courses
   resources :books do
     collection do
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
       post 'book_save'
     end
     resources :listings do
+      get 'buy'
       resources :offers
     end
  

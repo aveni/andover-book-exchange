@@ -9,7 +9,9 @@
 		<span style="float:right;">
 			<%= link_to "Sort by Price", course_path(@course, sort:"price"), class: 'btn btn-md btn-default' %>
 			<%= link_to "Sort by Quality", course_path(@course, sort:"quality"), class: 'btn btn-md btn-default' %>
-			<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-md btn-primary' %>
+			<% if can? (:modify), Book %>
+				<%= link_to fa_icon('book', text:'New Book'), new_book_path(course_id:@course.id), class: 'btn btn-md btn-primary' %>
+			<% end %>
 		</span>
 		</h2>
 	</p>
@@ -21,14 +23,18 @@
 				<%= render book %>
 			</div>
 
-			<% listings = book.listings %>
+			<% listings = book.listings.where(status:true) %>
 			<% if (params[:sort] == 'price') %>
 				<% listings = listings.sort_by { |l| [l.listing_type.size, l.min_price, l.quality] }  %>
 			<% elsif (params[:sort] == 'quality') %>
 				<% listings = listings.sort_by { |l| [l.listing_type.size, l.quality, l.min_price] }  %>
 			<% end %>
 
+
 			<div class="col-xs-9">
+				<% if listings.size == 0 %>
+					<h3><small>No Current Listings for this Book :(</small></h3>
+				<% end %>
 				<div class="row">
 					<% listings.first(8).each do |listing| %>
 						<div class="col-xs-3">
@@ -44,7 +50,11 @@
 
 <br>
 <div class="text-right">
-	<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
-	<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+	<% if can? :modify, Course %>
+		<%= link_to fa_icon('pencil', text:'Edit Course'), edit_course_path(@course), class: 'btn btn-sm btn-default' %>
+	<% end %>
+	<% if can? :destroy, Course %>
+		<%= link_to fa_icon('trash-o', text:'Delete Course'),  @course, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+	<% end %>
 </div>
 <br>

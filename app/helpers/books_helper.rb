@@ -11,7 +11,7 @@ module BooksHelper
 		book_hash = get_book(book.isbn)
 		if (book_hash)
       		book.title = title_upcase(book_hash.title)
-      		book.author = strip(book_hash.authors_text, ',')
+      		book.author = book_hash.authors_text
       	end
     end
 

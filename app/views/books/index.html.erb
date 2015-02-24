@@ -1,31 +1,36 @@
 <div class="page-header">
-  <h1>Books</h1>
+	<h1>Books</h1>
 </div>
 
 <div class="row">
 	<p style="text-align:left;">
 		<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search Books" name="search">
+				<input type="text" class="form-control" placeholder="Search by Title or Author" name="search">
 			</div>
 			<button type="submit" class="btn btn-info">Search</button>
 		</form>
 
 		<span style="float:right;">
-			<%= link_to fa_icon('fa fa-usd', text:'Sell Book'), sell_books_path, class:'btn btn-lg btn-primary'%>
-			<%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %>
+		<% if current_user.is? :superuser%>
+			<%= link_to 'New Book', new_book_path, class:'btn btn-lg btn-primary'%>
+		<% end %>
+		<%= link_to fa_icon('fa fa-usd', text:'Sell Book'), sell_books_path, class:'btn btn-lg btn-primary'%>
+		<%= link_to 'Search by Course', courses_path, class:'btn btn-lg btn-default' %>
 		</span>
 	</p>
 </div>
 <br>
 
-<div class="row">
-    <% @books.each do |book| %>
+
+<% @books.each_slice(4) do |books| %>
+	<div class="row">
+		<% books.each do |book| %>
 		<div class="col-xs-3">
 			<%= render book %>
 		</div>
-	<% end %>
-</div>
-
+		<% end %>
+	</div>
+<% end %>
 <br>
 <br>
