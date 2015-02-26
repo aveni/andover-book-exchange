@@ -36,12 +36,14 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to "Welcome, #{current_user.first}", current_user %> <li>
+          <li><a href= <%= books_path %> >Books</a></li>
+          <li><a href= <%= courses_path %> >Courses</a></li>
         <% end %>
-        <li><a href= <%= books_path %> >Books</a></li>
-        <li><a href= <%= courses_path %> >Courses</a></li>
-        <% if current_user && current_user.is?(:superuser) %>
+        
+        <% if current_user && (current_user.is?(:superuser) ||  current_user.is?(:admin))%>
           <li><a href= <%= users_path %> >Users</a></li>
           <li><a href= <%= exchanges_path %> >Exchanges</a></li>
+          <li><a href= <%= reports_path %> >Reports</a></li>
         <% end %>
              
         <li class ="dropdown">
@@ -54,6 +56,7 @@
             <% else %>
               <li><%= link_to 'Log in', new_user_session_path %></li>
               <li><%= link_to 'Sign up', new_user_registration_path %></li>
+              <li><%= link_to 'Forgot Password', new_user_password_path %></li>
 
             <% end %>
           </ul>
@@ -80,12 +83,12 @@
   <% end %>
   
 	<%= yield %>
-  <%= render 'layouts/footer' %>
-   </div>
+</div>
 
+
+  <%= render 'layouts/footer' %>
 
 
      
-
 </body>
 </html>

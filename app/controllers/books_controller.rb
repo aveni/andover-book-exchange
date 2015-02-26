@@ -1,10 +1,7 @@
 class BooksController < ApplicationController
  include BooksHelper
-  
-  load_and_authorize_resource :except => [:landing]
-  before_filter :verify_ed, :only=>[:new, :create, :edit, :update, :destroy]
+  load_and_authorize_resource
 
-  
   def index
     if (params[:search])
       @books = Book.all.where("title LIKE ? OR author LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
@@ -29,7 +26,6 @@ class BooksController < ApplicationController
 
    def create_sell
     isbnf = strip(params[:isbn], "-")
-    course_array = params[:course_ids]
     book_hash = get_book(isbnf)
     unless book_hash.blank?
       matches = Book.find_by_isbn(isbnf) 
@@ -40,7 +36,7 @@ class BooksController < ApplicationController
         redirect_to matches, notice: "Book found. Now add a listing for this book."
       end   
     else
-      render 'sell'
+      render 'sell', alert: "Invalid ISBN."
     end
   end
 
@@ -55,6 +51,7 @@ class BooksController < ApplicationController
   def book_save
     @book = Book.new(book_params)
     if @book.save
+      Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED")
       redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book.'
     else
       render 'sell', notice: "Couldn't save book."
@@ -96,9 +93,5 @@ class BooksController < ApplicationController
   def book_params
     params[:book].permit(:title, :author, :isbn, :course_ids=>[])
   end
-
-  def verify_ed
-    redirect_to books_path unless current_user.is?(:superuser)
-  end
-
+  
 end

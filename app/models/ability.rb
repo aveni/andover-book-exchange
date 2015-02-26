@@ -34,15 +34,14 @@ class Ability
     
 
     can :read, Book    # show and index
-    can :modify, Book if User.exists?(user)
-    can :sell, Book if User.exists?(user)
-    can :create_sell, Book if User.exists?(user)
-    can :book_save, Book if User.exists?(user)
-    can :landing, Book if User.exists?(user)
-    
+    can :sell, Book
+    can :create_sell, Book
+    can :book_save, Book     
     
     can :read, Course
-    can :read, Exchange if user.is?(:superuser)  
+    can :read, Exchange if user.is?(:superuser)
+    can :read, Report if user.is?(:superuser)
+    can :create, Report
     can :read, User
 
     can :modify, :all if user.is?(:superuser)

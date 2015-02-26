@@ -27,7 +27,7 @@ class ListingsController < ApplicationController
 	end
 
 	def create
-		@listing = Listing.new(listings_params)
+		@listing = Listing.new(listing_params)
 		if @listing.save
 			Mailrobot.notify_listing(current_user, @listing).deliver
 			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
@@ -42,7 +42,7 @@ class ListingsController < ApplicationController
 
 	def update
 		@listing = Listing.find(params[:id])
-		if @listing.update(listings_params)
+		if @listing.update(listing_params)
 			redirect_to book_listing_path(@listing.book, @listing), notice: 'Listing was successfully updated'
 		else
 			render 'edit'
@@ -71,7 +71,7 @@ class ListingsController < ApplicationController
 		redirect_to books_path unless @listing.status && (@listing.user_id == current_user.id || (can? :modify, Listing))
 	end
 
-	def listings_params
+	def listing_params
 		params.require(:listing).permit( :description, :quality, :listing_type, :status, :min_price,  :course_id,  :user_id, :book_id)
 	end
 
