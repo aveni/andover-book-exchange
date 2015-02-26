@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     		@user.destroy
 
    		 if @user.destroy
-   			redirect_to root_url, notice: "User deleted."
+   			redirect_to users_path, notice: "User deleted."
   		end
 	end
 

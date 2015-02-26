@@ -28,8 +28,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href= <%= root_url %>>PA Book Exchange <%= show_role(current_user)%> </a>
+       <a href=<%= root_url %>> <%= image_tag "logo_100.png", class:"brand"   %><%= show_role(current_user)%> </a>
     </div>
+
+    
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
