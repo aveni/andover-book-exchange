@@ -27,6 +27,8 @@ class User < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :offers, dependent: :destroy
   has_many :exchanges
+  has_many :reports, dependent: :destroy
+
 
   validates :first, presence:true
   validates :last, presence:true

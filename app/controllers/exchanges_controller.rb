@@ -5,7 +5,6 @@ class ExchangesController < ApplicationController
     @exchanges = Exchange.all
   end
 
-
   def new
   	@exchange = Exchange.new(listing_id: params[:listing_id], user_id: params[:user_id])
   end
@@ -25,7 +24,7 @@ class ExchangesController < ApplicationController
 
   def update
     @exchange = Exchange.find(params[:id])
-    if @exchange.update(exchanges_params)
+    if @exchange.update(exchange_params)
       redirect_to exchanges_path, notice: 'Exchange Transaction was successfully updated'
     else
       render 'edit'

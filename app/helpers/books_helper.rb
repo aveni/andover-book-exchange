@@ -16,11 +16,15 @@ module BooksHelper
     end
 
 	def strip(str, strip)
-   		new_str = ""
-  		str.each_byte do |byte|
-      		new_str << byte.chr unless byte.chr == strip
-  	 	end
-  	 	new_str
+		unless str==nil
+	   		new_str = ""
+	  		str.each_byte do |byte|
+	      		new_str << byte.chr unless byte.chr == strip
+	  	 	end
+	  	 	new_str
+	  	 else
+	  	 	""
+	  	 end
 	end
 
 	def title_upcase(ttl)

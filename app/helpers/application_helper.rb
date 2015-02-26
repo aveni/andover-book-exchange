@@ -26,7 +26,11 @@ module ApplicationHelper
 	end
 
 	def show_name(user)
-		"#{user.first} #{user.last}"
+		if (user != nil)
+			"#{user.first} #{user.last}"
+		else
+			""
+		end
 	end
 	
 	def show_price(price, precision)
