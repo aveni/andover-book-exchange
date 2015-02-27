@@ -1,6 +1,20 @@
- Hi <%= @seller.name %>! 
 
- Your listing for <%= @listing.book.title  %> has just sold for <%= show_price(@listing.min_price) %>! 
 
- Please contact the contact the buyer to organize a transaction 
+ Sold! 
+
+Your listing for <%= @listing.book.title  %> has just sold for <%=  number_to_currency(@listing.min_price) %>! 
+
+In order to complete this sale and offload your book, please follow the steps below:
+
+
+1. Contact the buyer, <%= @buyer.first + " " + @buyer.last %>, at <%= @buyer.email %> and arrange a time and place to conduct the transaction.
+
+  2. Only accept cash payment of the  exact same  amount specified in the listing.
+
+ 3. If for any reason you are unable able to make the transaction, you can relist the book <%= link_to "here", new_book_listing_path(@listing.book) %>.
+  
+  4. If you have any concerns, please submit a report here, or contact us at pabookexchange@gmail.com.
+
+Thanks!
+Andover Book Exchange Team
 

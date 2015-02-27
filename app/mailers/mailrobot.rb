@@ -1,20 +1,22 @@
 class Mailrobot < ApplicationMailer
 	default from: "pabookexchange@gmail.com"
-	default reply_to: "brigdenr@gmail.com"
+	default reply_to: "pabookexchange@gmail.com"
 
 
-	def notify_buyer(buyer, seller, listing)
+	def notify_buyer(buyer, listing)
 		@buyer = buyer
-		@seller = seller
 		@listing = listing
-		mail(to:@buyer.email, subject:"Congrats! You purchased #{@listing.book.title} from #{@seller.name}")
+		@seller = listing.user
+		
+		mail(to:@buyer.email, subject:"Congrats! You purchased #{@listing.book.title} from #{@seller.first + " " + @seller.last}")
 	end
 
-	def notify_seller(buyer, seller, listing)
+	def notify_seller(buyer, listing)
 		@buyer = buyer
-		@seller = seller
 		@listing = listing
-		mail(to:@buyer.email, subject:"Congrats! You purchased #{@listing.book.title} from #{@seller.name}")
+		@seller = listing.user
+		
+		mail(to:@seller.email, subject:"Congrats! You sold #{@listing.book.title} to #{@buyer.first + " " + @buyer.last}")
 	end
 
 

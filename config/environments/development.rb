@@ -16,6 +16,10 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  # perform deliveries in development mode. Not set by default
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -42,17 +46,14 @@ Rails.application.configure do
   # Setup for gmail
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-    
-    enable_starttls_auto: true,
-    address:              'smtp.gmail.com',
-    #address:                "localhost",
-    port:                        587,
-    #port:                       1025,
-    domain:                 'gmail.com',
-    authentication:       :login,
-    user_name:            'pabookexchange@gmail.com',
-    password:               'rubyonrails'
-    
+  
+      :address               => "smtp.gmail.com",
+      :port                     => 587,
+      :user_name          => "pabookexchange@gmail.com",
+      :password            => "rubyonrails",
+      :authentication     => "plain",
+      :enable_starttls_auto => true
+
       }
 
   # Raises error for missing translations

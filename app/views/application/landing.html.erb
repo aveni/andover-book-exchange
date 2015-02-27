@@ -20,25 +20,21 @@
 <br>
 <br>
 <br>
-		<div class="container">
-			<div class="row">
-  				
-  				<%=  image_tag "logo_900.png", class:"center4" %>
-  				
-		</div>
-		</div>
-
-
-
-
+<div class="container">
+	<div class="row text-center">
+			
+			<%=  image_tag "logo_500.png"%>
+			
+	</div>
+</div>
 <br>
 <br>
-		<div class="row">
-			<div class="text-center">
-				<%= link_to fa_icon('user', text:'Sign up'),  new_user_registration_path, class: 'btn btn-xl btn-default' %> &nbsp;&nbsp;
-				<%= link_to fa_icon('unlock-alt', text:'Log in'), new_user_session_path, class: 'btn btn-xl btn-primary' %>
-			</div>
-		</div>
+<div class="row">
+	<div class="text-center">
+		<%= link_to fa_icon('user', text:'Sign up'),  new_user_registration_path, class: 'btn btn-xl btn-default' %> &nbsp;&nbsp;
+		<%= link_to fa_icon('unlock-alt', text:'Log in'), new_user_session_path, class: 'btn btn-xl btn-primary' %>
+	</div>
+</div>
 
 </body>
 

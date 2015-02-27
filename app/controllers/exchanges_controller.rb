@@ -15,6 +15,7 @@ class ExchangesController < ApplicationController
 
   def create
     @exchange = Exchange.new(exchange_params)
+   
     if @exchange.save
       redirect_to exchanges_path, notice: "Succesfully bought book!"
     else
