@@ -11,9 +11,19 @@ module BooksHelper
 		book_hash = get_book(book.isbn)
 		if (book_hash)
       		book.title = title_upcase(book_hash.title)
-      		book.author = book_hash.authors_text
+      		book.author = fixcomma(book_hash.authors_text)
       	end
     end
+
+    def fixcomma(str)
+		if str[-1] == ","
+			str[0..-2]
+		elsif str[-2..-1] == ", "
+			str[0..-3]
+		else
+			str
+		end
+	end
 
 	def strip(str, strip)
 		unless str==nil

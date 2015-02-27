@@ -4,6 +4,14 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
+h3.resize {
+  font-size: 2.8vmin;
+}
+
+h5.resize {
+  font-size: 1.6vmin;
+}
+
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
