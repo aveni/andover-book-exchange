@@ -3,19 +3,19 @@ module ListingsHelper
 	def show_type(listing)
 		case listing.listing_type
 		when "Buy"
-			content_tag(:div, "Buy", class: "label label-success label-as-badge")
+			content_tag(:span, "Buy", class: "label label-success label-as-badge")
 		when "Auction"
-			content_tag(:div, "Auction", class: "label label-warning label-as-badge")
+			content_tag(:span, "Auction", class: "label label-warning label-as-badge")
 		when "Borrow"
-			content_tag(:div, "Borrow", class: "label label-info label-as-badge")
+			content_tag(:span, "Borrow", class: "label label-info label-as-badge")
 		end
 	end
 
 	def show_status(listing)
 		if listing.status
-			content_tag(:div, "Open", class: "label label-success label-as-badge")
+			content_tag(:span, "Open", class: "label label-success label-as-badge")
 		else
-			content_tag(:div, "Closed", class: "label label-danger label-as-badge")
+			content_tag(:span, "Closed", class: "label label-danger label-as-badge")
 		end
 	end
 

@@ -3,48 +3,45 @@
 </div>
 
 <div class="row">
-	
-	<p style="text-align:left;">
-		<h2> Books
-		<span style="float:right;">
-			<%= link_to "Sort by Price", course_path(@course, sort:"price"), class: 'btn btn-md btn-default' %>
-			<%= link_to "Sort by Quality", course_path(@course, sort:"quality"), class: 'btn btn-md btn-default' %>
-		</span>
-		</h2>
-	</p>
-	<br>
-	
-	<% @course.books.order(:title).each do |book| %>
-		<div class="row">
-			<div class="col-xs-3">
-				<%= render book %>
-			</div>
-
-			<% listings = book.listings.where(status:true) %>
-			<% if (params[:sort] == 'price') %>
-				<% listings = listings.sort_by { |l| [l.listing_type.size, l.min_price, l.quality] }  %>
-			<% elsif (params[:sort] == 'quality') %>
-				<% listings = listings.sort_by { |l| [l.listing_type.size, l.quality, l.min_price] }  %>
-			<% end %>
-
-
-			<div class="col-xs-9">
-				<% if listings.size == 0 %>
-					<h3><small>No Current Listings for this Book :(</small></h3>
-				<% end %>
-				<div class="row">
-					<% listings.first(8).each do |listing| %>
-						<div class="col-xs-3">
-							<%= render listing %>
-						</div>
-					<% end %>
-				</div>		
-			</div>
-		</div>
-		<br>
-	<% end %>
+	<div class="col-xs-6">
+		<h2> Books </h2>
+	</div>
+	<div class="col-xs-6 text-right">
+		<%= link_to "Sort by Price", course_path(@course, sort:"price"), class: 'btn btn-md btn-default' %>
+		<%= link_to "Sort by Quality", course_path(@course, sort:"quality"), class: 'btn btn-md btn-default' %>
+	</div>
 </div>
+<br>
+	
+<% @course.books.order(:title).each do |book| %>
+	<div class="row">
+		<div class="col-xs-3">
+			<%= render book %>
+		</div>
 
+		<% listings = book.listings.where(status:true) %>
+		<% if (params[:sort] == 'price') %>
+			<% listings = listings.sort_by { |l| [l.listing_type.size, l.min_price, l.quality] }  %>
+		<% elsif (params[:sort] == 'quality') %>
+			<% listings = listings.sort_by { |l| [l.listing_type.size, l.quality, l.min_price] }  %>
+		<% end %>
+
+
+		<div class="col-xs-9">
+			<% if listings.size == 0 %>
+				<h3><small>No Current Listings for this Book :(</small></h3>
+			<% end %>
+			<div class="row">
+				<% listings.first(8).each do |listing| %>
+					<div class="col-xs-3">
+						<%= render listing %>
+					</div>
+				<% end %>
+			</div>		
+		</div>
+	</div>
+<br>
+<% end %>
 <br>
 <div class="text-right">
 	<% if can? :modify, Course %>

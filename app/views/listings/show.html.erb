@@ -4,12 +4,9 @@
   </h1>
 </div>
 
-<div class="row">
-  <h4>
-    <div class="col-md-6">
       <dl class="dl-horizontal">
         <dt>Listing Type</dt>
-        <dd><%= show_type(@listing) %></dd>
+        <dd><%= @listing.listing_type %></dd>
         <dt>Quality</dt>
         <dd><%= show_quality(@listing) %></dd>
         <dt>Description</dt>
@@ -19,9 +16,6 @@
         <dt>Seller</dt>
         <dd><%= show_seller(@listing) %></dd>
       </dl>
-    </div>
-  </h4>
-</div>
 
 <!-- 
 <% if @listing.user_id == current_user.id or  current_user.is?(:superuser) or current_user.is?(:admin)%>

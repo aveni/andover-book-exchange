@@ -3,8 +3,14 @@
 	<td> <%= show_type(exchange.listing) %> 
 	<%= link_to exchange.listing.book.title, book_listing_path(exchange.listing.book, exchange.listing) %> </td>
 	<td> <%= show_price(exchange.listing.min_price, 2) %> </td>
-	<td> <%= show_name(exchange.user) %> </td>
-	<td> <%= show_name(exchange.listing.user) %> </td>
+	<% if current_user.is?(:superuser) || current_user.is?(:admin) %>
+		<td> <%= link_to(show_name(exchange.user), exchange.user) %> </td>
+		<td> <%= link_to(show_name(exchange.listing.user), exchange.listing.user) %> </td>
+	<% else %>
+		<td> <%= show_name(exchange.user) %> </td>
+		<td> <%= show_name(exchange.listing.user) %> </td>
+	<% end %>
+
 	<td>
 	<% if can? :modify, Exchange %>
   		<%= link_to fa_icon('pencil', text: 'Edit'), edit_exchange_path(exchange), class:'btn btn-xs btn-default'%>

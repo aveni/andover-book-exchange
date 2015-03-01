@@ -1,8 +1,6 @@
 class ListingsController < ApplicationController
 	before_action :set_book
 	before_filter :verify_ed, :only=>[:edit, :update, :destroy]
-	before_filter :verify_buy, :only=>:buy
-
 
 	#def index
 	#	@book = Book.find(params[:book_id])
@@ -11,13 +9,20 @@ class ListingsController < ApplicationController
 
 	def buy
 		@listing = Listing.find(params[:listing_id])
-		@listing.status = false
-		@listing.save
-		@exchange = Exchange.create(listing_id: @listing.id, user_id: current_user.id)
-		@exchange.save
-		Mailrobot.notify_buyer(@exchange.user, @exchange.listing).deliver
-      	Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
-		redirect_to @exchange.user
+		if @listing.status && @listing.user_id != current_user.id
+			@exchange = Exchange.new(listing_id: @listing.id, user_id: current_user.id)
+			if @exchange.save
+	      		@listing.status = false
+				@listing.save
+				redirect_to @exchange.user, notice: "Sucessfully bought #{@listing.book.title}! An email will be sent to both you and the seller shortly."
+				Mailrobot.notify_buyer(@exchange.user, @exchange.listing).deliver
+	      		Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
+			else
+				redirect_to books_path, alert: "Error. Could not purchase book."
+			end
+	    else
+	    	redirect_to books_path, alert: "Cannot purchase book."
+	    end
 	end
 
 	def show
@@ -60,11 +65,6 @@ class ListingsController < ApplicationController
 
 	def set_book
 		@book = Book.find(params[:book_id])
-	end
-
-	def verify_buy
-		@listing = Listing.find(params[:listing_id])
-		redirect_to books_path unless @listing.status && @listing.user_id != current_user.id
 	end
 
 	def verify_ed
