@@ -1,7 +1,20 @@
-<a href= <%= book_path(book) %> class="thumbnail text-center">
-	<%= image_tag "book.svg" %>
-	<div class="caption">
-		<h3 class='resize'><%= truncate(book.title, length:25) %></h3>
-		<h5 class='resize'><%= truncate(book.author) %></h5>
-	</div>
-</a>
+<%= javascript_include_tag "hover.js" %>
+
+ <div class="thumbnail">
+                <div class="caption-top fill-div" style="background:rgba(<%= COLORS[rand(8)] %>);">
+                <a href=<%= book_path(book) %>>
+
+                     <h3 class="center-title resize"><%=  book.title %></h4>
+                    <h5 class="center-title resize"><%= book.author %></h5>
+                    <h4 class="center-title resize"> <%= show_subject(book.courses.first) %> </h4>
+      
+                    </p>
+                    </a>
+                    
+                </div>
+                <%= image_tag "book.svg" %>
+                <div class="caption-hover">
+				<h3 class='resize'><%= truncate(book.title, length:20) %></h3>
+				<h5 class='resize'><%= truncate(book.author) %></h5>	
+		    </div> 
+ </div>

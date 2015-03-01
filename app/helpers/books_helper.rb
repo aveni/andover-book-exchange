@@ -45,6 +45,16 @@ module BooksHelper
 		strip(i, '-')
 	end
 		
+	def rand_spacing(range)
+		nums = Array.new(7)
+		elem = rand(range)
+		for i in [0..7] do
+			if elem != nums[i]
+				nums.push(elem)
+			end
+		end
+		return nums
+	end
 
 
 end

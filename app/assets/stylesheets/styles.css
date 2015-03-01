@@ -5,11 +5,11 @@ body {
 }
 
 h3.resize {
-  font-size: 2.8vmin;
+  font-size: 3.2vmin;
 }
 
 h5.resize {
-  font-size: 1.6vmin;
+  font-size: 2.0vmin;
 }
 
 /* Wrapper for page content to push down footer */
@@ -31,3 +31,45 @@ h5.resize {
 .container .credit {
   margin: 20px 0;
 }
+
+
+.caption{
+  overflow:hidden;
+}
+ 
+.thumbnail {
+    position:relative;
+    overflow:hidden;
+}
+ 
+.caption-top {
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:80%;
+    padding:2%;
+    display: none;
+    text-align:center;
+    color:#fff !important;
+    z-index:2;
+}
+
+.fill-div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.center-title {
+  text-align: center;
+  margin-top: 10%;
+  position: relative;
+  color: white;
+  top:15%;
+  bottom:10%;
+  
+}
+  
+
