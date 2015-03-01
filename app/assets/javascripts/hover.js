@@ -4,9 +4,9 @@ $(function() {
  
 $('.thumbnail').hover(
     function(){
-        $(this).find('.caption-top').fadeIn(200); // .slideDown(300);
+        $(this).find('.caption-top').slideDown(300); //.fadeIn(200);
     },
     function(){
-        $(this).find('.caption-top').fadeOut(200); // .slideUp(300);
+        $(this).find('.caption-top').slideUp(300); //.fadeOut(200); 
     }
 ); 

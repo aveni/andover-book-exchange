@@ -3,7 +3,6 @@
 <div class="thumbnail">
     <div class="caption-top fill-div" style="background:rgba(<%= COLORS[rand(8)] %>);">
         <a href=<%= book_path(book) %>>
-
             <h4 class="center-title resize"><%=  book.title %></h4>
             <h5 class="center-title resize"><%= book.author %></h5>
             <h4 class="center-title resize"> <%= show_subject(book.courses.first) %> </h4>
