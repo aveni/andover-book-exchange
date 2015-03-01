@@ -137,6 +137,8 @@ GEM
       yard (~> 0.8)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -248,6 +250,7 @@ DEPENDENCIES
   premailer-rails
   pry-doc
   pry-rails (~> 0.3.2)
+  puma
   rails (= 4.2.0)
   rails4-autocomplete
   rails_12factor (~> 0.0.3)
