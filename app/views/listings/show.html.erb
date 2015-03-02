@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= show_price(@listing.min_price, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title, length:35), @listing.book) %> &nbsp; <%= show_status(@listing) %></small>
+  <h1><%= show_price(@listing.min_price, 0) + " | "%> <small> Listing for <%= link_to(truncate(@listing.book.title, length:35), @listing.book) %>  <%= show_status(@listing) %></small>
   </h1>
 </div>
 
