@@ -1,10 +1,10 @@
 <%= javascript_include_tag "hover.js" %>
 
 <a href=<%= book_path(book) %> class="thumbnail thumbnail-book">
-    <div class="caption-top fill-div" style="background:rgba(<%= COLORS[rand(8)] %>);">
+    <div class="caption-top fill-div" style="background:rgba(<%= COLORS[SUBJECT_COLORS[book.courses.first.subject]] %>);">
         <h4 class="center-title resize"><%=  book.title %></h4>
         <h5 class="center-title resize"><%= book.author %></h5>
-        <h4 class="center-title resize"> <%= show_subject(book.courses.first) %> </h4>
+        <h4 class="center-title resize"> <%= show_subject(book.courses.first, false) %> </h4>
     </div>
     <%= image_tag "book.svg" %>
     <div class="caption-hover">
