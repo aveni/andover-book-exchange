@@ -5,7 +5,19 @@
     padding: 20px 30px;
     font-size: 50px;
     line-height: 2;
-    border-radius: 0px
+    border-radius: 0px;
+}
+
+a.thumbnail-book {
+  color: #333333; 
+  text-decoration:none;
+  border: 2px solid #dddddd;
+}
+
+a.thumbnail-book:hover,
+a.thumbnail-book:focus,
+a.thumbnail-book.active {
+  border: 0px;
 }
 
 @font-face {
