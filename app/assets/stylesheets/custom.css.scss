@@ -8,15 +8,16 @@
     border-radius: 0px;
 }
 
-a.thumbnail-book {
+.thumbnail-book {
   color: #333333; 
-  text-decoration:none;
   border: 2px solid #dddddd;
+  position:relative;
+  overflow:hidden;
 }
 
-a.thumbnail-book:hover,
-a.thumbnail-book:focus,
-a.thumbnail-book.active {
+.thumbnail-book:hover,
+.thumbnail-book:focus,
+.thumbnail-book.active {
   border: 2px solid #ffffff;
 }
 
