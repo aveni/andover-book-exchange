@@ -37,6 +37,28 @@ TEACHERS = [
 	"Emma Staffaroni" 
 ]
 
+SUBJECT_COLORS = {
+"MATH" => 7,
+"CHEM" => 3,
+"BIO" => 3,
+"COMPSCI" => 7,
+"PHYS" => 3,
+"ENGL" => 1, 
+"FRA" => 5, 
+"ESP" => 5, 
+"RUS" => 5, 
+"GER" => 5, 
+"JPN" => 5, 
+"CHIN" => 5, 
+"HIST" => 2,
+"RELPHIL" => 2,
+"CLSS" => 5,
+"MUSIC" => 4,
+"ART" => 6,
+"MISC" => 0
+}
+
+
 COLORS = [
 	"66, 139, 202, 1.00",
 	"190, 95, 124, 1.00",
@@ -46,6 +68,4 @@ COLORS = [
 	"238, 130, 51, 1.00",	
 	"76, 50, 164, 1.00",
 	"31, 146, 138, 1.00",
-
-
 	]
