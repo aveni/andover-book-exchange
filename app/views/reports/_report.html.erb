@@ -7,7 +7,7 @@
 	<% if can? :modify, Report %>
   		<%= link_to fa_icon('pencil', text: 'Edit'), edit_report_path(report), class:'btn btn-xs btn-default'%>
   	<% end %>
-  	<% if can? :modify, Report %>
+  	<% if can? :destroy, Report %>
 		<%= link_to fa_icon('trash-o', text:'Delete'), report, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-xs btn-danger' %>  	
 	<% end %>
   	</td>

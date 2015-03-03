@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="col-sm-6 text-right">
-		<% if current_user.is? :superuser %>
+		<% if can? :modify, Book %>
 			<%= link_to 'New Book', new_book_path, class:'btn btn-lg btn-primary'%>
 		<% end %>
 		<%= link_to fa_icon('usd', text:'Sell A Book'), sell_books_path, class:'btn btn-lg btn-primary'%>

@@ -36,16 +36,27 @@ class Ability
     can :read, Book    # show and index
     can :sell, Book
     can :create_sell, Book
-    can :book_save, Book     
+    can :book_save, Book
+    can :modify, Book if user.is?(:admin)
+    can :destroy, Book if user.is?(:admin)
+   
     
     can :read, Course
-    can :read, Exchange if user.is?(:superuser)
-    can :read, Report if user.is?(:superuser)
-    can :create, Report
-    can :read, User
+    can :modify, Course if user.is?(:admin)
+    can :destroy, Course if user.is?(:admin)
 
+
+    can :read, Exchange if user.is?(:admin)
+
+    can :read, Report if user.is?(:admin)
+    can :create, Report
+
+    can :read, User
+    can :modify, User if user.is?(:admin)
+    can :destroy, User if user.is?(:admin)
+
+    can :read, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:superuser)
-    can :modify, :all if user.is?(:admin)
     can :destroy, :all if user.is?(:superuser)
 
 

@@ -5,7 +5,7 @@ module ApplicationHelper
 		    if user.is?(:superuser)
 		      content_tag(:span, 'Super User', class:'label label-warning')
 		    elsif user.is?(:admin)
-		      content_tag(:span, 'Admin', class:'label label-success')
+		      content_tag(:span, 'Admin', class:'label label-info')
 			end
 		end
 	end

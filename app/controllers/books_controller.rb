@@ -33,10 +33,10 @@ class BooksController < ApplicationController
       if matches.blank?
         course_select(book_hash)
       else
-        redirect_to matches, notice: "Book found. Now add a listing for this book."
+        redirect_to matches, notice: "Book found! Now add a listing for this book."
       end   
     else
-      render 'sell', alert: "Invalid ISBN."
+      render 'sell', alert: "Invalid ISBN. Book cannot be found."
     end
   end
 

@@ -41,7 +41,7 @@
 <div class='text-right'>
 	<%= link_to "Found an Error? Report this Book", new_report_path(book_id: @book.id), class: 'btn btn-sm btn-warning' %>
 
-	<% if current_user.is? (:superuser)%>
+	<% if can? :modify, Book%>
 		<%= link_to fa_icon('pencil', text:'Edit Book'), edit_book_path(@book), class: 'btn btn-sm btn-default' %>
 	<% end %>
 	
