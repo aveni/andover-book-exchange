@@ -26,8 +26,6 @@ gem 'jquery-ui-rails'
 gem 'rails4-autocomplete'
 # typeahead functionality
 gem 'twitter-typeahead-rails', '~> 0.10.5'
-#read the isbn database
-gem 'isbndb', '~> 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 

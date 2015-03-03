@@ -17,4 +17,15 @@ class Book < ActiveRecord::Base
 	has_many :reports
 
 	validates :isbn, presence: true, uniqueness:true
+	validate :is_valid_isbn
+
+	def is_valid_isbn
+		if isbn.present?
+			url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
+			res = JSON.parse open(url).read
+			res['totalItems'] != 0
+		else
+			false
+		end
+	end
 end

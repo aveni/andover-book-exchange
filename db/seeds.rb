@@ -14,8 +14,8 @@ av = User.find_by_email('avenigalla@andover.edu')
 unless rb || av
   av = User.new(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
   rb = User.new(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
-  rb.roles = %w[superuser admin member]
-  av.roles = %w[superuser admin member]
+  rb.roles = %w[superuser admin]
+  av.roles = %w[admin]
   rb.save
   av.save
 end

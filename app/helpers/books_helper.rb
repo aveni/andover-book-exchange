@@ -1,17 +1,30 @@
 module BooksHelper
 
 	def get_book(isbn)
-		if (isbn != '')
-			ISBNdb::Query.find_book_by_isbn(isbn.to_str).first
+		return nil if isbn.empty?
+
+		url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
+		res = JSON.parse open(url).read
+
+		if res['totalItems'] == 0 
+			nil
+		else
+			info = res['items'].first['volumeInfo']
+			title = info['title']
+			authors = info['authors'].join(", ")
+			{"title" => title, "authors_text" => authors, "isbn" => isbn}
 		end
 	end
 
 	def set_book(book)
-		book.isbn = strip(book.isbn, '-')
+		book.isbn.gsub! '-', ''
 		book_hash = get_book(book.isbn)
 		if (book_hash)
-      		book.title = title_upcase(book_hash.title)
-      		book.author = fixcomma(book_hash.authors_text)
+      		book.title = title_upcase(book_hash["title"])
+      		book.author = fixcomma(book_hash["authors_text"])
+      	else
+      		book.title = nil
+      		book.author = nil
       	end
     end
 
@@ -25,24 +38,9 @@ module BooksHelper
 		end
 	end
 
-	def strip(str, strip)
-		unless str==nil
-	   		new_str = ""
-	  		str.each_byte do |byte|
-	      		new_str << byte.chr unless byte.chr == strip
-	  	 	end
-	  	 	new_str
-	  	 else
-	  	 	""
-	  	 end
-	end
 
 	def title_upcase(ttl)
 		ttl.split.map(&:capitalize).join(' ')
-	end
-
-	def format(i)
-		strip(i, '-')
 	end
 		
 	def rand_spacing(range)
@@ -55,6 +53,5 @@ module BooksHelper
 		end
 		return nums
 	end
-
 
 end

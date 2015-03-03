@@ -16,32 +16,29 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    if (params[:course_id] != nil)
-      @book.courses << Course.find(params[:course_id])
-    end 
   end
 
   def sell
   end
 
    def create_sell
-    isbnf = strip(params[:isbn], "-")
+    isbnf = params[:isbn].gsub '-', ''
     book_hash = get_book(isbnf)
-    unless book_hash.blank?
+    if book_hash
       matches = Book.find_by_isbn(isbnf) 
-      matches = Book.find_by_title(title_upcase(book_hash.title)) if matches.blank?
+      matches = Book.find_by_title(title_upcase(book_hash["title"])) if matches.blank?
       if matches.blank?
         course_select(book_hash)
       else
         redirect_to matches, notice: "Book found! Now add a listing for this book."
       end   
     else
-      render 'sell', alert: "Invalid ISBN. Book cannot be found."
+      redirect_to sell_books_path, alert: "Invalid ISBN. Could not find book."
     end
   end
 
   def course_select(book_hash)
-    @book = Book.new(isbn: book_hash.isbn, title: title_upcase(book_hash.title), author: strip(book_hash.authors_text, ','))
+    @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"])
     if (params[:course_id] != nil)
       @book.courses << Course.find(params[:course_id])
     end 
@@ -54,7 +51,7 @@ class BooksController < ApplicationController
       Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED")
       redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book.'
     else
-      render 'sell', notice: "Couldn't save book."
+      render 'sell', alert: "Couldn't save book."
     end
   end 
 
