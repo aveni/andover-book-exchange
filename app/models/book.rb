@@ -20,12 +20,10 @@ class Book < ActiveRecord::Base
 	validate :is_valid_isbn
 
 	def is_valid_isbn
-		if isbn.present?
-			url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
-			res = JSON.parse open(url).read
-			res['totalItems'] != 0
-		else
-			false
+		url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
+		res = JSON.parse open(url).read
+		if isbn.present? && res['totalItems'] == 0
+			 errors.add(:isbn, "Invalid ISBN.")
 		end
 	end
 end
