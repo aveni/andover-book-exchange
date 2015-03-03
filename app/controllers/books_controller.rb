@@ -4,7 +4,7 @@ class BooksController < ApplicationController
 
   def index
     if (params[:search])
-      @books = Book.all.where("title COLLATE UTF8_GENERAL_CI LIKE ? OR author COLLATE UTF8_GENERAL_CI LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%").order(:title)
+      @books = Book.all.where("lower(title) LIKE ? OR lower(author) LIKE ?", "%#{params[:search]}%".downcase, "%#{params[:search]}%".downcase).order(:title)
     else
       @books = Book.all.order(:title)
     end
