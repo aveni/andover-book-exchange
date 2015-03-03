@@ -21,17 +21,12 @@
 </div>
 <br>
 
-
 <% @books.each_slice(4) do |books| %>
 	<div class="row">
 		<% books.each do |book| %>
 		<div class="col-xs-3">
 			<%= render book %>
 		</div>
-		<% end %>
-		<% if books.size < 4%>
-			<div class="col-xs-<%= 12-3*books.size %>">
-			</div>
 		<% end %>
 	</div>
 <% end %>

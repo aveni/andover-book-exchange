@@ -17,7 +17,7 @@ class Book < ActiveRecord::Base
 	has_many :reports
 
 	
-	validates :isbn, presence: true#, uniqueness:true
+	validates :isbn, presence: true, uniqueness:true
 	validate :is_valid_isbn
 
 	def is_valid_isbn
