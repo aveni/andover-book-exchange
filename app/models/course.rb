@@ -15,7 +15,7 @@ class Course < ActiveRecord::Base
 
 
 	validates :name, presence:true
-	validates :teacher, presence:true
+	validates :teacher, presence:true, inclusion: {in: TEACHERS}
 	validates :subject, presence:true, inclusion: {in: SUBJECTS.collect {|k,v| v}}
 
 

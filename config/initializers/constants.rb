@@ -28,14 +28,18 @@ QUALITIES = {
 
 TYPES = ["Buy","Auction","Borrow"]
 
-TEACHERS = [
-	"Jacque Hugon", 
-	"Patrick Farrell", 
-	"William Scott", 
-	"Maria Litvin", 
-	"Fei Yao",
-	"Emma Staffaroni" 
-]
+
+str = File.read("#{Rails.public_path}/ryan.txt")
+course_list = str.split("\n").map{|x| x.split("$")}
+course_list = course_list.delete_if{|course| course.length < 3}
+teacher_list = []
+course_list.each do |course| 
+	unless course_list.include?(course[2])
+		teacher_list.push(course[2])
+	end
+end
+
+TEACHERS = teacher_list
 
 SUBJECT_COLORS = {
 "MATH" => 7,

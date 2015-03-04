@@ -24,6 +24,8 @@ str = File.read("#{Rails.public_path}/ryan.txt")
 course_list = str.split("\n").map{|x| x.split("$")}
 COURSES = course_list.delete_if{|course| course.length < 3}
 
+	
+
 
 
 
