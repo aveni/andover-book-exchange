@@ -20,14 +20,13 @@ unless rb || av
   av.save
 end
 
-COURSES = [
-	["MATH-595", "Patrick Farrell", "MATH"],
-	["COMP-630: Ruby on Rails", "Jacque Hugon", "COMPSCI"],
-	["COMP-500", "Maria Litvin", "COMPSCI"],
-	["PHYS-550", "Fei Yao", "PHYS"],
-	["ENGL-500: A Room of Their Own", "Emma Staffaroni", "ENGL"],
-	["MATH-590", "William Scott", "MATH"]
-]
+str = File.read("#{Rails.public_path}/ryan.txt")
+course_list = str.split("\n").map{|x| x.split("$")}
+COURSES = course_list.delete_if{|course| course.length < 3}
+
+
+
+
 
 BOOKS = [
 	['1934356549', [2]],
@@ -59,7 +58,11 @@ LISTINGS = [
 	["Buy", 3, 1, "", 1, 1]
 ]
 
-COURSES.each do |name, teacher, subject|
+COURSES.each do |subject, name, teacher|
+	subject = subject.split("-").first
+	if SUBJECTS.select{|k,v| v == subject}.blank?
+		subject = "MISC"
+	end
 	Course.create!(name: name, teacher: teacher, subject: subject)
 end
 
