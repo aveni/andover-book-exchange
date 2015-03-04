@@ -71,8 +71,9 @@ class BooksController < ApplicationController
 
   def update
       @book = Book.find(params[:id])
+      @book.update(book_params)
       set_book(@book)
-      if @book.update(book_params)
+      if @book.save
         redirect_to @book, notice: 'Textbook Successfully Updated'
       else
         render 'edit'
