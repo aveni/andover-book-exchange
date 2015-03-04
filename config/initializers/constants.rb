@@ -43,7 +43,7 @@ TYPES = ["Buy","Auction","Borrow"]
 # TEACHERS = teacher_list
 
 TEACHERS = [
-"Jacque Hugon", 
+"Jacques Hugon", 
 "Patrick Farrell", 
 "Maria Litvin", 
 "Fei Yao",

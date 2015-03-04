@@ -34,9 +34,9 @@ end
 
 COURSES = [
 	["MATH-595", "Patrick Farrell"],
-	["COMP-630: Ruby on Rails", "Jacque Hugon"],
+	["COMP-630: Ruby on Rails", "Jacques Hugon"],
 	["COMP-500", "Maria Litvin"],
-	["PHYS-550", "Fei Yao", "PHYS"],
+	["PHYS-550", "Fei Yao"],
 	["ENGL-500: Writers in Depth", "Mary Fulton"],
 	["ENGL-535AA/2-01: James Joyce", "Kevin O'Conner"],
 	["HIST-SS520", "Elizabeth Monroe"],
