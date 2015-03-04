@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  ROLES = %w[superuser admin member]
+  ROLES = %w[superuser admin]
   
   def roles=(roles)
     # => %w[admin]

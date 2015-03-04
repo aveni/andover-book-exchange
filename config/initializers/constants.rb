@@ -16,6 +16,7 @@ SUBJECTS = {
 "Latin" => "LATN",
 "Music" => "MUSC",
 "Art" => "ART",
+"Physical Education" => "PHED",
 "Miscellaneous" => "MISC"
 }.sort_by{|k, v| k}
 
@@ -29,47 +30,66 @@ QUALITIES = {
 TYPES = ["Buy","Auction","Borrow"]
 
 
-str = File.read("#{Rails.public_path}/ryan.txt")
-course_list = str.split("\n").map{|x| x.split("$")}
-course_list = course_list.delete_if{|course| course.length < 3}
-teacher_list = []
-course_list.each do |course| 
-	unless course_list.include?(course[2])
-		teacher_list.push(course[2])
-	end
-end
+# str = File.read("#{Rails.public_path}/ryan.txt")
+# course_list = str.split("\n").map{|x| x.split("$")}
+# course_list = course_list.delete_if{|course| course.length < 3}
+# teacher_list = []
+# course_list.each do |course| 
+# 	unless course_list.include?(course[2])
+# 		teacher_list.push(course[2])
+# 	end
+# end
 
-TEACHERS = teacher_list
+# TEACHERS = teacher_list
+
+TEACHERS = [
+"Jacque Hugon", 
+"Patrick Farrell", 
+"Maria Litvin", 
+"Fei Yao",
+"Mary Fulton",
+"Kevin O'Conner",
+"Elizabeth Monroe",
+"Kathleen Dalton",
+"Elizabeth Poland",
+"Lixia Ma",
+"John Maier",
+"Anthony Lawson",
+"Peter Lorenco",
+"None"
+]
+
 
 SUBJECT_COLORS = {
-"MATH" => 7,
-"CHEM" => 5,
-"BIOL" => 5,
-"COMP" => 7,
-"PHYS" => 5,
-"ENGL" => 0, 
-"FREN" => 3, 
-"SPAN" => 3, 
-"RUSS" => 3, 
-"GERM" => 3, 
-"JAPA" => 3, 
-"CHIN" => 3, 
+"MATH" => 1,
+"CHEM" => 0,
+"BIOL" => 0,
+"COMP" => 1,
+"PHYS" => 0,
+"ENGL" => 3, 
+"FREN" => 4, 
+"SPAN" => 4, 
+"RUSS" => 4, 
+"GERM" => 4, 
+"JAPA" => 4, 
+"CHIN" => 4, 
 "HIST" => 2,
 "PHRE" => 2,
-"LATN" => 3,
-"MUSC" => 4,
-"ART" => 6,
-"MISC" => 0
+"LATN" => 4,
+"MUSC" => 6,
+"ART" => 5,
+"PHED" => 7,
+"MISC" => 7
 }
 
 
 COLORS = [
-	"EB65A0",						#"66, 139, 202, 1.00", Purple
-	"73C5E1",						#"190, 95, 124, 1.00", Blue
-	"5BB12F",						#"165, 198, 99, 1.00",  Green
-	"EB65A0",						#"224, 68, 68, 1.00", Pink
-	"CCDB05",						#"234, 229, 81, 1.00", Light Green
-	"FF0000",						#"238, 130, 51, 1.00",	Red
-	"F2E394",						#"76, 50, 164, 1.00", Yellow
-	"00C8F8"						# blue
+	"B80000",						#Maroon, Sciences
+	"1783FF",						#Blue, Math/Compsci
+	"06A300",						#Green, History/Relphil
+	"AA00CC",						#Purple, English
+	"FF7A0D",						#Orange, Languages
+	"FF3679",						#Pink, Art
+	"E3DF00",						#Dark Orange, Music
+	"2C006E"						#Dark Purple, Miscellaneous
 	]
