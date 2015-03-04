@@ -17,9 +17,10 @@ module BooksHelper
 	end
 
 	def set_book(book)
-		book.isbn.gsub! '-', ''
-		book_hash = get_book(book.isbn)
+		isbn = book.isbn.gsub '-', ''
+		book_hash = get_book(isbn)
 		if (book_hash)
+			book.isbn = isbn
       		book.title = title_upcase(book_hash["title"])
       		book.author = fixcomma(book_hash["authors_text"])
       	else

@@ -16,13 +16,11 @@ class Book < ActiveRecord::Base
 	has_and_belongs_to_many :courses
 	has_many :reports
 
-	validates :isbn, presence: true, uniqueness:true
+	validates :isbn, presence: true, uniqueness: true
 	validate :is_valid_isbn
 
 	def is_valid_isbn
-		url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
-		res = JSON.parse open(url).read
-		if isbn.present? && res['totalItems'] == 0
+		if !title.present?
 			 errors.add(:isbn, "Invalid ISBN.")
 		end
 	end
