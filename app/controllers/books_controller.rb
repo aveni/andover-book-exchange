@@ -22,11 +22,9 @@ class BooksController < ApplicationController
   end
 
    def create_sell
-    isbnf = params[:isbn].gsub '-', ''
-    book_hash = get_book(isbnf)
+    book_hash = get_book(params[:isbn])
     if book_hash
-      matches = Book.find_by_isbn(isbnf) 
-      matches = Book.find_by_title(title_upcase(book_hash["title"])) if matches.blank?
+      matches = Book.find_by_isbn(book_hash["isbn"]) 
       if matches.blank?
         course_select(book_hash)
       else
@@ -39,9 +37,6 @@ class BooksController < ApplicationController
 
   def course_select(book_hash)
     @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"])
-    if (params[:course_id] != nil)
-      @book.courses << Course.find(params[:course_id])
-    end 
     render :action => 'course_select'
   end
 

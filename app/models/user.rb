@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :offers, dependent: :destroy
   has_many :exchanges
-  has_many :reports, dependent: :destroy
+  has_many :reports
 
 
   validates :first, presence:true

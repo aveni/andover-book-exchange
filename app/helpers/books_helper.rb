@@ -2,6 +2,9 @@ module BooksHelper
 
 	def get_book(isbn)
 		return nil if isbn.empty?
+		isbn = isbn.gsub '-', ''
+		isbn = isbn.gsub ' ', ''
+		isbn = ISBN.thirteen(isbn) if isbn.length == 10
 
 		url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
 		res = JSON.parse open(url).read
@@ -11,33 +14,26 @@ module BooksHelper
 		else
 			info = res['items'].first['volumeInfo']
 			title = info['title']
-			authors = info['authors'].join(", ")
-			{"title" => title, "authors_text" => authors, "isbn" => isbn}
+			if info['authors']
+				authors_text = info['authors'].join(", ")
+			else 
+				authors_text = "No Author"
+			end
+			{"title" => title, "authors_text" => authors_text, "isbn" => isbn}
 		end
 	end
 
 	def set_book(book)
-		isbn = book.isbn.gsub '-', ''
-		book_hash = get_book(isbn)
+		book_hash = get_book(book.isbn)
 		if (book_hash)
-			book.isbn = isbn
+			book.isbn = book_hash["isbn"]
       		book.title = title_upcase(book_hash["title"])
-      		book.author = fixcomma(book_hash["authors_text"])
+      		book.author = book_hash["authors_text"]
       	else
       		book.title = nil
       		book.author = nil
       	end
     end
-
-    def fixcomma(str)
-		if str[-1] == ","
-			str[0..-2]
-		elsif str[-2..-1] == ", "
-			str[0..-3]
-		else
-			str
-		end
-	end
 
 
 	def title_upcase(ttl)

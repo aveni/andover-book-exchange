@@ -28,6 +28,8 @@ gem 'rails4-autocomplete'
 gem 'twitter-typeahead-rails', '~> 0.10.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# ISBN converter
+gem 'isbn', '~> 2.0.10'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
