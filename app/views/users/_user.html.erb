@@ -2,5 +2,11 @@
 	<td><%= user.first %></td>
 	<td><%= user.last %></td>
 	<td><%= user.email %></td>
-	<td><%= link_to "Destroy", admin_destroy_user_path(user), class:"btn btn-xs btn-primary", method: :delete, data: { confirm: "You sure?" } %></td>
+	<td>
+	<% if (!user.banned?)%>
+		<%= link_to "Ban", user_ban_path(user), class:"btn btn-xs btn-danger", data: { confirm: "You sure?" } %>
+	<% else %>
+		<%= link_to "Unban", user_unban_path(user), class:"btn btn-xs btn-success", data: { confirm: "You sure?" } %>
+	<% end %>
+	</td>
 </tr>

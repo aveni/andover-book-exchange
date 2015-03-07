@@ -53,11 +53,15 @@ class Ability
 
     can :read, User
     can :modify, User if user.is?(:admin)
+    can :ban, User if user.is?(:admin)
+    can :unban, User if user.is?(:admin)
     can :destroy, User if user.is?(:admin)
 
     can :read, :all if user.is?(:superuser)
     can :modify, :all if user.is?(:superuser)
     can :destroy, :all if user.is?(:superuser)
+    can :ban, User if user.is?(:superuser)
+    can :unban, User if user.is?(:superuser)
 
 
   end

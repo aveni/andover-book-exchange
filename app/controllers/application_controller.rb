@@ -1,7 +1,14 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  before_filter :banned?
 
+  def banned?
+    if current_user.present? && current_user.banned?
+      sign_out current_user
+      redirect_to root_url, alert:"This account has been banned. Contact pabookexchange@gmail.com if you have any questions."
+    end
+  end
   
   helper_method :landing
     protect_from_forgery with: :exception

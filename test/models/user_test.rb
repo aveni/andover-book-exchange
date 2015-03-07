@@ -5,6 +5,7 @@
 #  id                     :integer          not null, primary key
 #  first                  :string
 #  last                   :string
+#  banned                 :boolean
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string

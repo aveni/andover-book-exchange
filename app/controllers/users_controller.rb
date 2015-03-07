@@ -11,14 +11,19 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-	def destroy
-    		@user = User.find(params[:id])
-    		@user.destroy
+  def ban
+    @user = User.find(params[:user_id])
+    @user.banned = true
+    @user.save
+    redirect_to users_path, alert: "User banned."
+  end
 
-   		 if @user.destroy
-   			redirect_to users_path, notice: "User deleted."
-  		end
-	end
+  def unban
+    @user = User.find(params[:user_id])
+    @user.banned = false
+    @user.save
+    redirect_to users_path, notice: "User unbanned."
+  end
 
   private
 
