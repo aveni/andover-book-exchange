@@ -46,7 +46,7 @@
 	<% end %>
 	
 	<% if can? :destroy, Book %>
-		<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'WARNING: This will destory all listings and exchanges associated with this book. Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+		<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'WARNING: This will destroy all listings and exchanges associated with this book. Are you sure?'  }, class:'btn btn-sm btn-danger' %>
 	<% end %>
 </div>
 <br><br>
