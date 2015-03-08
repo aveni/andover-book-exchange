@@ -1,5 +1,5 @@
 <a href=<%= book_listing_path(listing.book, listing) %> class="thumbnail text-center"  style="text-decoration:none;" >
-	<div class="caption" style="background:#<%= (listing.user == current_user)? "777777" : "FFFFFF" %>">
+	<div class="caption" style="background:#<%= (listing.user == current_user)? "AAAAAA" : "FFFFFF" %>">
 		<h2 ><%= show_price(listing.min_price, 0) %></h2>
 		<h4><%= show_type(listing) %> </h4>
 		<h4><%= show_quality(listing)%> <%="(Yours!)" if listing.user == current_user%> </h4>

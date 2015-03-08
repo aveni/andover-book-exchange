@@ -43,7 +43,8 @@ class BooksController < ApplicationController
   def book_save
     @book = Book.new(book_params)
     if @book.save
-      Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED")
+      report = Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED: #{@book.title}")
+      Mailrobot.admin_report(report).deliver
       redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book.'
     else
       render 'sell', alert: "Couldn't save book."

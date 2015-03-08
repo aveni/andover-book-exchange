@@ -1,5 +1,6 @@
 <tr>
 	<td> <%= link_to(truncate(report.text, length:40), report) %> </td>
+	<td> <%= link_to(truncate(report.book.title, length:20), report.book) %> </td>
 	<td> <%= link_to(show_name(report.user), report.user) %> </td>
 
 	<td>

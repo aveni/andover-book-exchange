@@ -17,7 +17,9 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
+      Mailrobot.admin_report(@report).deliver
       redirect_to @report.book, notice: "Succesfully made report!"
+
     else
       render 'new', notice: "Error. Cannot make report."
     end
