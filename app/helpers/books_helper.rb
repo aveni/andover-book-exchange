@@ -19,7 +19,13 @@ module BooksHelper
 			else 
 				authors_text = "No Author"
 			end
-			{"title" => title, "authors_text" => authors_text, "isbn" => isbn}
+			if info['imageLinks'] && info['imageLinks']['thumbnail']
+				image = info['imageLinks']['thumbnail']
+			else
+				image = "book2.png"
+			end
+
+			{"title" => title, "authors_text" => authors_text, "isbn" => isbn, "image" => image}
 		end
 	end
 
@@ -29,6 +35,7 @@ module BooksHelper
 			book.isbn = book_hash["isbn"]
       		book.title = title_upcase(book_hash["title"])
       		book.author = book_hash["authors_text"]
+      		book.image_url = book_hash["image"]
       	else
       		book.title = nil
       		book.author = nil
@@ -77,6 +84,10 @@ module BooksHelper
 
 		[news.size > 0? newprice : nil, likenews.size > 0? likenewprice : nil,
 		 goods.size >0? goodprice : nil, accepts.size >0? acceptprice : nil]
+	end
+
+	def show_cover(book, width, height)
+		image_tag(book.image_url, width: width, height: height)
 	end
 
 end
