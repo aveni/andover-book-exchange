@@ -3,6 +3,13 @@
   </h1>
 </div>
 
+<div class="row">
+  <div class="col-sm-2">
+    <%= show_cover(@listing.book, 150, 200) %>
+  </div>
+
+  <div class="col-sm-10">
+  <br>
       <dl class="dl-horizontal">
         <dt>Listing Type</dt>
         <dd><%= @listing.listing_type %></dd>
@@ -15,6 +22,10 @@
         <dt>Seller</dt>
         <dd><%= show_seller(@listing) %></dd>
       </dl>
+  </div>
+
+
+</div>
 
 <!-- 
 <% if @listing.user_id == current_user.id or  current_user.is?(:superuser) or current_user.is?(:admin)%>

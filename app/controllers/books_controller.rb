@@ -36,7 +36,7 @@ class BooksController < ApplicationController
   end
 
   def course_select(book_hash)
-    @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"])
+    @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"], image_url: book_hash["image"])
     render :action => 'course_select'
   end
 
@@ -85,7 +85,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit(:title, :author, :isbn, :course_ids=>[])
+    params[:book].permit(:title, :author, :isbn, :image_url, :course_ids=>[])
   end
   
 end
