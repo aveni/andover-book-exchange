@@ -6,7 +6,7 @@ class Mailrobot < ApplicationMailer
 	def admin_report(report)
 		@user = report.user
 		@report = report
-		mail(to: "abhiv1015@gmail.com", subject: "Report for Andover Book Exchange")
+		mail(to: "pabookexchange@gmail.com", subject: "Report for Andover Book Exchange")
 	end
 
 	def notify_buyer(buyer, listing)
