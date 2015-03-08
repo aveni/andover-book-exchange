@@ -16,6 +16,15 @@
     <%= f.input :description, placeholder: 'Description' %>
     <%= f.input :min_price, placeholder: 'X or X.XX', label: 'Price' %>
 
+    <br>
+    <h5>Average Selling Prices:</h5>
+    <% prices = avg_prices(Book.find(params[:book_id])) %>
+    New: <%= prices[0]? show_price(prices[0], 2) : "---" %><br>
+    Like New: <%= prices[1]? show_price(prices[1], 2) : "---" %><br>
+    Good: <%= prices[2]? show_price(prices[2], 2) : "---" %><br>
+    Acceptable: <%= prices[3]? show_price(prices[3], 2) : "---" %><br>
+
+
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>
    	 <%= link_to 'Cancel', book_path(@book), class:'btn btn-default' %>

@@ -51,4 +51,32 @@ module BooksHelper
 		return nums
 	end
 
+	def avg_prices(book)
+		newprice = 0
+		likenewprice = 0
+		goodprice = 0
+		acceptprice = 0
+
+		news = book.listings.where(quality: "0")
+		likenews = book.listings.where(quality: "1")
+		goods = book.listings.where(quality: "2")
+		accepts = book.listings.where(quality: "3")
+
+		news.each do |l|
+			newprice += l.min_price/news.size
+		end
+		likenews.each do |l|
+			likenewprice += l.min_price/likenews.size
+		end
+		goods.each do |l|
+			goodprice += l.min_price/goods.size
+		end
+		accepts.each do |l|
+			acceptprice += l.min_price/accepts.size
+		end
+
+		[news.size > 0? newprice : nil, likenews.size > 0? likenewprice : nil,
+		 goods.size >0? goodprice : nil, accepts.size >0? acceptprice : nil]
+	end
+
 end
