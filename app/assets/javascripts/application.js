@@ -30,12 +30,12 @@ $( document ).ready(function() {
  
     $('.thumbnail').hover(
         function(){
-            $(this).find('.caption-hover').fadeIn("slow");
-            $(this).find('.caption-book').hide();
+            $(this).find('.caption-hover').show();
+            $(this).find('.caption-static').hide();
         },
         function(){
             $(this).find('.caption-hover').hide();
-            $(this).find('.caption-book').fadeIn("slow"); 
+            $(this).find('.caption-static').show(); 
         }
     ); 
 });
