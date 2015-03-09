@@ -23,3 +23,19 @@
 //= require turbolinks
 
 //= require_tree .
+
+
+$( document ).ready(function() {
+    $("[rel='tooltip']").tooltip();    
+ 
+    $('.thumbnail').hover(
+        function(){
+            $(this).find('.caption-hover').fadeIn("slow");
+            $(this).find('.caption').hide();
+        },
+        function(){
+            $(this).find('.caption-hover').hide();
+            $(this).find('.caption').fadeIn("slow"); 
+        }
+    ); 
+});

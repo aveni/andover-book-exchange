@@ -1,20 +1,16 @@
-<%= javascript_include_tag "hover.js" %>
 
 <div class="thumbnail thumbnail-book">
-    <div class="caption-top fill-div" style="background:#<%= book.courses.empty?? "000000" : COLORS[SUBJECT_COLORS[book.courses.first.subject]] %>;">
-        <a href=<%= book_path(book) %> style="text-decoration:none">
-        <h4 class="center-title resize"><%=  book.title %></h4>
-        <h5 class="center-title resize"><%= book.author %></h5>
-        <h4 class="center-title resize"> <%= show_subject(book.courses.first, false) if !book.courses.empty? %> </h4>
-        </a>          
-    </div>
+	<a href="<%= book_path(book) %>" style="text-decoration:none; color: #333333;">
+	<br>
+		<img src="<%= book.image_url %>" class="img-responsive" width="160" alt="No Book Cover">
+		
+		<div class="caption">
+			<h4 class="resize"><%= truncate(book.title,length:20) %></h4>
+		</div>
 
-    <a href=<%= book_path(book) %> style="text-decoration:none">
-        <br>
-        <%= show_cover(book, 150, 200) %>
-        <div class="caption">
-            <h3 class='text-center resize'><%= truncate(book.title, length:20) %></h3>
-            <h5 class='text-center resize'><%= truncate(book.author) %></h5>    
-        </div> 
-    </a>
+		<div class="caption-hover">
+			<h4 class="resize"><%= book.title %></h4>
+			<h5 class="resize"><%= book.author %></h5>
+		</div>
+	</a>
 </div>

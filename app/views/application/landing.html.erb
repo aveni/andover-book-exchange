@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= csrf_meta_tags %>
+
+<title>Andover Book Exchange</title>
+
 <body style="overflow-x: hidden;">
 	<%= image_tag("Andover.jpg", :class => "bg") %>
-	
+	<br>
 	<div class="container">
 	  <% if notice %>
 	    <div class="alert alert-success alert-dismissible" role="alert">
@@ -20,7 +24,6 @@
 	    </div>
 	  <% end %>
 	</div>
-	
 	<br>
 	<br>
 	<br>

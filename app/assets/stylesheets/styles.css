@@ -1,3 +1,6 @@
+@import "readable";
+@import "font-awesome";
+
 html,
 body {
   height: 100%;
@@ -37,35 +40,6 @@ h5.resize {
 }
 
 
-.caption{
-  overflow:hidden;
-}
- 
-.thumbnail {
-    position:relative;
-    overflow:hidden;
-}
- 
-.caption-top {
-    position:absolute;
-    top:0;
-    right:0;
-    width:100%;
-    height:100%;
-    padding:2%;
-    display: none;
-    text-align:center;
-    color:#fff !important;
-    z-index:2;
-}
-
-.fill-div a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
-
 .center-title {
   text-align: center;
   margin-top: 10%;
@@ -75,4 +49,53 @@ h5.resize {
   bottom:10%;
 }
   
+.btn-xl {  
+    padding: 20px 30px;
+    font-size: 50px;
+    line-height: 2;
+    border-radius: 0px;
+}
 
+.thumbnail-book{
+  position: relative;
+  overflow: hidden;
+  text-decoration:none;
+  min-height:325px;
+  color: #333333;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.thumbnail-book:hover{
+  z-index: 2;
+  min-height: 325px;
+  height:auto;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.caption {
+    position:relative;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    padding:2%;
+    text-align:center;
+}
+
+.caption-hover {
+    position:relative;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    padding:2%;
+    display: none;
+    text-align:center;
+}
