@@ -1,10 +1,9 @@
-
 <div class="thumbnail thumbnail-book">
 	<a href="<%= book_path(book) %>" style="text-decoration:none; color: #333333;">
 	<br>
 		<img src="<%= book.image_url %>" class="img-responsive" width="160" alt="No Book Cover">
 		
-		<div class="caption">
+		<div class="caption-book">
 			<h4 class="resize"><%= truncate(book.title,length:20) %></h4>
 		</div>
 

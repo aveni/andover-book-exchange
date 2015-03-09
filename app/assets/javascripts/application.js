@@ -31,11 +31,11 @@ $( document ).ready(function() {
     $('.thumbnail').hover(
         function(){
             $(this).find('.caption-hover').fadeIn("slow");
-            $(this).find('.caption').hide();
+            $(this).find('.caption-book').hide();
         },
         function(){
             $(this).find('.caption-hover').hide();
-            $(this).find('.caption').fadeIn("slow"); 
+            $(this).find('.caption-book').fadeIn("slow"); 
         }
     ); 
 });
