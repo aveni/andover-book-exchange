@@ -5,6 +5,7 @@
 #  id                     :integer          not null, primary key
 #  first                  :string
 #  last                   :string
+#  banned                 :boolean
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -30,7 +31,7 @@ class User < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :offers, dependent: :destroy
   has_many :exchanges
-  has_many :reports, dependent: :destroy
+  has_many :reports
 
 
   validates :first, presence:true
@@ -43,7 +44,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  ROLES = %w[superuser admin member]
+  ROLES = %w[superuser admin]
   
   def roles=(roles)
     # => %w[admin]

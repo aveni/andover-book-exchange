@@ -1,5 +1,6 @@
 <div class="page-header">
-  <h1>Select courses for <%= @book.title %> </h1>
+  <h2>Select courses for:</h2>
+  <h1> <%= @book.title %> <small><%= @book.author %></small> </h1>
 </div>
 
 <div class="alert alert-warning" role="alert">
@@ -13,6 +14,7 @@
     <%= f.hidden_field :isbn %>
     <%= f.hidden_field :author %>
     <%= f.hidden_field :title %>
+    <%= f.hidden_field :image_url %>
 
     <%= f.association :courses, label:"Select all Courses for this book:", collection: Course.all.order(:name), as: :check_boxes %>
 

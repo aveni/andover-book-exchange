@@ -10,25 +10,14 @@ class ReportsController < ApplicationController
   	@report = Report.new(book_id: params[:book_id], user_id: current_user.id)
   end
 
-  def edit
-    @report = Report.find(params[:id])
-  end
-
   def create
     @report = Report.new(report_params)
     if @report.save
+      Mailrobot.admin_report(@report).deliver
       redirect_to @report.book, notice: "Succesfully made report!"
+
     else
       render 'new', notice: "Error. Cannot make report."
-    end
-  end
-
-  def update
-    @report = Report.find(params[:id])
-    if @report.update(report_params)
-      redirect_to reports_path, notice: 'Report was successfully updated'
-    else
-      render 'edit'
     end
   end
 

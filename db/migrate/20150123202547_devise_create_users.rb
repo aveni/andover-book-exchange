@@ -4,6 +4,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :first
       t.string :last
+      t.boolean :banned
       
       ## Database authenticatable
       t.string :email,              null: false, default: ""

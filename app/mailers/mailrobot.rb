@@ -3,6 +3,12 @@ class Mailrobot < ApplicationMailer
 	default reply_to: "pabookexchange@gmail.com"
 
 
+	def admin_report(report)
+		@user = report.user
+		@report = report
+		mail(to: "pabookexchange@gmail.com", subject: "Report for Andover Book Exchange")
+	end
+
 	def notify_buyer(buyer, listing)
 		@buyer = buyer
 		@listing = listing

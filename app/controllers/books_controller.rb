@@ -22,15 +22,13 @@ class BooksController < ApplicationController
   end
 
    def create_sell
-    isbnf = params[:isbn].gsub '-', ''
-    book_hash = get_book(isbnf)
+    book_hash = get_book(params[:isbn])
     if book_hash
-      matches = Book.find_by_isbn(isbnf) 
-      matches = Book.find_by_title(title_upcase(book_hash["title"])) if matches.blank?
+      matches = Book.find_by_isbn(book_hash["isbn"]) 
       if matches.blank?
         course_select(book_hash)
       else
-        redirect_to matches, notice: "Book found! Now add a listing for this book."
+        redirect_to new_book_listing_path(matches), notice: "Book found! Now add a listing for this book."
       end   
     else
       redirect_to sell_books_path, alert: "Invalid ISBN. Could not find book."
@@ -38,17 +36,15 @@ class BooksController < ApplicationController
   end
 
   def course_select(book_hash)
-    @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"])
-    if (params[:course_id] != nil)
-      @book.courses << Course.find(params[:course_id])
-    end 
+    @book = Book.new(isbn: book_hash["isbn"], title: title_upcase(book_hash["title"]), author: book_hash["authors_text"], image_url: book_hash["image"])
     render :action => 'course_select'
   end
 
   def book_save
     @book = Book.new(book_params)
     if @book.save
-      Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED")
+      report = Report.create(book_id:@book.id, user_id: current_user.id, text:"BOOK CREATED: #{@book.title}")
+      Mailrobot.admin_report(report).deliver
       redirect_to new_book_listing_path(@book), notice: 'Book created. Now add a listing for this book.'
     else
       render 'sell', alert: "Couldn't save book."
@@ -89,7 +85,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params[:book].permit(:title, :author, :isbn, :course_ids=>[])
+    params[:book].permit(:title, :author, :isbn, :image_url, :course_ids=>[])
   end
   
 end

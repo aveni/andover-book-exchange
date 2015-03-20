@@ -6,6 +6,7 @@
 #  title      :string
 #  author     :string
 #  isbn       :string
+#  image_url  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

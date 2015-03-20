@@ -1,6 +1,7 @@
 <div class="row col-md-10 col-md-offset-1">
 
-<h1><%= controller.action_name.capitalize %> Listing </h1>
+<h2><%= controller.action_name.capitalize %> listing for: </h2>
+<h1><%= @book.title %> <small><%= @book.author %></small></h1>
 <br>
 <%= simple_form_for([@book,@listing], html:{class:'form-horizontal'} ) do |f| %>
   
@@ -14,6 +15,15 @@
     <%= f.input :quality, collection: QUALITIES, label:'Select Condition'%>
     <%= f.input :description, placeholder: 'Description' %>
     <%= f.input :min_price, placeholder: 'X or X.XX', label: 'Price' %>
+
+    <br>
+    <h5>Average Selling Prices:</h5>
+    <% prices = avg_prices(Book.find(params[:book_id])) %>
+    New: <%= prices[0]? show_price(prices[0], 2) : "---" %><br>
+    Like New: <%= prices[1]? show_price(prices[1], 2) : "---" %><br>
+    Good: <%= prices[2]? show_price(prices[2], 2) : "---" %><br>
+    Acceptable: <%= prices[3]? show_price(prices[3], 2) : "---" %><br>
+
 
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>

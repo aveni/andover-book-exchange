@@ -1,12 +1,9 @@
 <tr>
 	<td> <%= link_to(truncate(report.text, length:40), report) %> </td>
-	<td><%= link_to(truncate(report.book.title), report.book) %></td>
+	<td> <%= link_to(truncate(report.book.title, length:20), report.book) %> </td>
 	<td> <%= link_to(show_name(report.user), report.user) %> </td>
 
 	<td>
-	<% if can? :modify, Report %>
-  		<%= link_to fa_icon('pencil', text: 'Edit'), edit_report_path(report), class:'btn btn-xs btn-default'%>
-  	<% end %>
   	<% if can? :destroy, Report %>
 		<%= link_to fa_icon('trash-o', text:'Delete'), report, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-xs btn-danger' %>  	
 	<% end %>

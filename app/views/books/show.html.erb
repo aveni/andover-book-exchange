@@ -1,11 +1,18 @@
 <div class="page-header">
-	<h1><%= @book.title%></h1>
-	<h4><%=  @book.author%> </h4>
-	<h3>|
-		<% @book.courses.order(:name).each do |course| %>
-		<%= link_to(course.name, course) + " | " %>
-		<% end %>
-	</h3>
+	<div class="row">
+		<div class="col-sm-9">
+			<h1><%= @book.title%></h1>
+			<h4><%=  @book.author%> </h4>
+			<h3>|
+				<% @book.courses.order(:name).each do |course| %>
+				<%= link_to(course.name, course) + " | " %>
+				<% end %>
+			</h3>
+		</div>
+		<div class="col-sm-3 text-right">
+			<%= show_cover(@book, 120, 160) %>
+		</div>
+	</div>
 </div>
 <br>
 <div class="row text-right">
@@ -35,9 +42,8 @@
 		</div>
 	<% end %>
 </div>
-
-
 <br><br>
+
 <div class='text-right'>
 	<%= link_to "Found an Error? Report this Book", new_report_path(book_id: @book.id), class: 'btn btn-sm btn-warning' %>
 
@@ -46,7 +52,7 @@
 	<% end %>
 	
 	<% if can? :destroy, Book %>
-		<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'Are you sure?'  }, class:'btn btn-sm btn-danger' %>
+		<%= link_to fa_icon('trash-o', text:'Delete Book'),  @book, method: :delete, data: { confirm: 'WARNING: This will destroy all listings and exchanges associated with this book. Are you sure?'  }, class:'btn btn-sm btn-danger' %>
 	<% end %>
 </div>
 <br><br>

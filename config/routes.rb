@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-  resources :users
-
-  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+  resources :users do
+    get 'ban'
+    get 'unban'
+  end
 
   resources :exchanges
   resources :reports
