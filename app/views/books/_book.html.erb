@@ -2,7 +2,7 @@
 
 <div class="thumbnail thumbnail-book">
     <div class="caption-top fill-div" style="background:#<%= COLORS[SUBJECT_COLORS[book.courses.first.subject]] %>;">
-        <a href=<%= book_path(book) %> style="text-decoration:none">
+        <a href=<%= book_path(book) %> style="text-decoration:none;">
         <h4 class="center-title resize"><%=  book.title %></h4>
         <h5 class="center-title resize"><%= book.author %></h5>
         <h4 class="center-title resize"> <%= show_subject(book.courses.first, false) %> </h4>
