@@ -22,7 +22,7 @@ module BooksHelper
 			if info['imageLinks'] && info['imageLinks']['thumbnail']
 				image = info['imageLinks']['thumbnail']
 			else
-				image = "assets/book2.png"
+				image = "book2.png"
 			end
 
 			{"title" => title, "authors_text" => authors_text, "isbn" => isbn, "image" => image}

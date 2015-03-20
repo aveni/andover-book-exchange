@@ -2,6 +2,6 @@
 	<div class="caption" style="background:#<%= (listing.user == current_user)? "AAAAAA" : "FFFFFF" %>">
 		<h2 ><%= show_price(listing.min_price, 0) %></h2>
 		<h4><%= show_type(listing) %> </h4>
-		<h4><%= show_quality(listing)%> <%="(Yours!)" if listing.user == current_user%> </h4>
+		<h4><%= show_quality(listing)%></h4>
 	</div>
 </a>
