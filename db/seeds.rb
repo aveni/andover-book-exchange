@@ -115,7 +115,7 @@ BOOKS.each do |isbn, course_ids|
 	puts "Added #{b.title}."
 end
 
-LISTINGS.each do |type, quality, min_price, description, book_id, user_id|
+LISTINGS.each do |type, quality, min_price, description, book_id, user_id, statusp|
 	l = Listing.create!(listing_type: type, quality: quality, min_price: min_price, 
 		description: description, book_id: book_id, user_id: user_id, status: true)
 	puts "Added listing for #{Book.find(book_id).title}."

@@ -42,7 +42,7 @@ module ApplicationHelper
 	end
 
 	def venmo_pay_link(listing)
-		note = "Payment of #{show_price(listing.min_price, 3)} to #{listing.user.first + listing.user.last} for #{listing.book.title}."
+		note = "to #{listing.user.first + " " + listing.user.last} for #{listing.book.title}."
 		note = note.split(" ").join("%20")
 		return "https://venmo.com/?txn=pay&recipients=#{listing.user.email}&amount=#{listing.min_price}&note=#{note}"
 	end
