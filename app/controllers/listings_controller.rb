@@ -12,11 +12,11 @@ class ListingsController < ApplicationController
 		if @listing.status && @listing.user_id != current_user.id
 			@exchange = Exchange.new(listing_id: @listing.id, user_id: current_user.id)
 			if @exchange.save	
-				@listing.save
 				Mailrobot.notify_buyer(@exchange.user, @exchange.listing).deliver
 	      Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
 				redirect_to @exchange.user, notice: "Sucessfully bought #{@listing.book.title}! An email will be sent to both you and the seller shortly."
 	      @listing.status = false
+				@listing.save
 			else
 				redirect_to books_path, alert: "Error. Could not purchase book."
 			end
