@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1> Report for <%= @report.book.title %></h1>
+  <h1> Report for <%= link_to @report.book.title, @report.book %></h1>
   <h4>User: <%= show_name(@report.user) %></h4>
 </div>
 
