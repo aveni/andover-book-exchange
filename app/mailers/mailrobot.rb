@@ -1,4 +1,5 @@
 class Mailrobot < ApplicationMailer
+	add_template_helper(ApplicationHelper)
 	default from: "pabookexchange@gmail.com"
 	default reply_to: "pabookexchange@gmail.com"
 
