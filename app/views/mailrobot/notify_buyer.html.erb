@@ -20,15 +20,15 @@
 						
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">1. Contact the seller, <%= @listing.user.first + " " + @listing.user.last %>, at <%= @listing.user.email %> and arrange a time and place to conduct the transaction.</p>&#13;
 
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">2. Pay <%= @listing.user.first + " " + @listing.user.last %> for <%= @listing.book.title %> with <%= link_to "Venmo (recommended)", venmo_pay_link(@listing) %> or pay the seller in cash when the book is exchanged. </p>&#13;
+						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">2. Pay <%= @listing.user.first + " " + @listing.user.last %> for <%= @listing.book.title %> with <%= link_to "Venmo (recommended)", venmo_pay_link(@listing) %> or pay him in cash when the book is exchanged. </p>&#13;
 
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">3. If you have any concerns, please submit a report here, or contact us at pabookexchange@gmail.com</p>&#13;
 
-						
+						<br>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					  <tr>
 					    <td>
-					      <div class="text-center">
+					      <div style="width:15%;margin-left:auto;margin-right: auto;">
 					        <!--[if mso]>
 					          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<%= venmo_pay_link(@listing) %>" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#0099FF" fillcolor="#0099FF">
 					            <w:anchorlock/>
@@ -41,7 +41,7 @@
 					  </tr>
 					</table>
 					
-
+					<br>
 	
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">Thanks!</p>&#13;
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">Andover Book Exchange Team</a></p>&#13;
