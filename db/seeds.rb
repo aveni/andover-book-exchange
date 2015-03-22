@@ -9,16 +9,16 @@
 
 include BooksHelper
 
-# rb = User.find_by_email('rbrigden@andover.edu')
-# av = User.find_by_email('avenigalla@andover.edu')
-# unless rb || av
-#   av = User.new(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
-#   rb = User.new(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
-#   rb.roles = %w[superuser]
-#   av.roles = %w[admin]
-#   rb.save
-#   av.save
-# end
+rb = User.find_by_email('rbrigden@andover.edu')
+av = User.find_by_email('avenigalla@andover.edu')
+unless rb || av
+  av = User.new(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
+  rb = User.new(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
+  rb.roles = %w[superuser]
+  av.roles = %w[admin]
+  rb.save
+  av.save
+end
 
 def find_subj(name)
 	if name[0..2] == "ART"
@@ -97,6 +97,23 @@ COURSES.each do |c|
 	end
 	Course.create!(name: name, teacher: teacher_text, subject: find_subj(name))
 	puts "Added #{name}"
+end
+
+str = File.read("#{Rails.public_path}/books.txt")
+BOOKS = str.split("\n")
+
+BOOKS.each do |b|
+	arr = b.split("/")
+	isbn = arr[0]
+	courses = arr[1].split(",")
+	b = Book.new(isbn: isbn)
+	set_book(b)
+	b.save!
+	courses.each do |name|
+		course = Course.where(name: name).first
+		course.books << b
+	end
+	puts "Added #{b.title}"
 end
 
 # BOOKS.each do |isbn, course_ids|

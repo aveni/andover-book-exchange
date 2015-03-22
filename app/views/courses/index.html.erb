@@ -11,8 +11,6 @@
 		</form>
 	</div>
 	<div class="col-md-6 text-right">
-		<%= link_to "Sort by Name", courses_path, class: 'btn btn-md btn-default' %>
-		<%= link_to "Sort by Subject", courses_path(sort:"subj"), class: 'btn btn-md btn-default' %>
 		<% if can? :modify, Course %>
 			<%= link_to 'New Course', new_course_path, class:'btn btn-primary' %>
 		<% end %>
