@@ -16,7 +16,7 @@
     <%= f.hidden_field :title %>
     <%= f.hidden_field :image_url %>
 
-    <%= f.association :courses, label:"Select all Courses for this book:", collection: Course.all.order(:name), as: :check_boxes %>
+    <%= f.association :courses, label:"Select all Courses for this book:", collection: Course.all.order(:name)%>
 
     <div class='row text-center'>
    	 <%= f.submit "Add Book to Database", class:'btn btn-primary' %>
