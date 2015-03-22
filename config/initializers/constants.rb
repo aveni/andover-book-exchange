@@ -12,10 +12,16 @@ SUBJECTS = {
 "Japanese" => "JAPA", 
 "Chinese" => "CHIN", 
 "History" => "HIST",
+"Lunch" => "LUNC",
 "Religion & Philosophy" => "PHRE",
 "Latin" => "LATN",
+"Classics" => "CLAS",
 "Music" => "MUSC",
 "Art" => "ART",
+"PACE" => "PACE",
+"Other Science" => "SCIE",
+"Psychology" => "PSYC",
+"Theater" => "THDA",
 "Physical Education" => "PHED",
 "Miscellaneous" => "MISC"
 }.sort_by{|k, v| k}
@@ -29,67 +35,36 @@ QUALITIES = {
 
 TYPES = ["Buy","Auction","Borrow"]
 
-
-# str = File.read("#{Rails.public_path}/ryan.txt")
-# course_list = str.split("\n").map{|x| x.split("$")}
-# course_list = course_list.delete_if{|course| course.length < 3}
-# teacher_list = []
-# course_list.each do |course| 
-# 	unless course_list.include?(course[2])
-# 		teacher_list.push(course[2])
-# 	end
-# end
-
-# TEACHERS = teacher_list
-
-TEACHERS = [
-"Jacques Hugon", 
-"Patrick Farrell", 
-"Maria Litvin", 
-"Fei Yao",
-"Mary Fulton",
-"Kevin O'Conner",
-"Elizabeth Monroe",
-"Kathleen Dalton",
-"Elizabeth Poland",
-"Lixia Ma",
-"John Maier",
-"Anthony Lawson",
-"Peter Lorenco",
-"None"
-]
+# SUBJECT_COLORS = {
+# "MATH" => 1,
+# "CHEM" => 0,
+# "BIOL" => 0,
+# "COMP" => 1,
+# "PHYS" => 0,
+# "ENGL" => 3, 
+# "FREN" => 4, 
+# "SPAN" => 4, 
+# "RUSS" => 4, 
+# "GERM" => 4, 
+# "JAPA" => 4, 
+# "CHIN" => 4, 
+# "HIST" => 2,
+# "PHRE" => 2,
+# "LATN" => 4,
+# "MUSC" => 6,
+# "ART" => 5,
+# "PHED" => 7,
+# "MISC" => 7
+# }
 
 
-SUBJECT_COLORS = {
-"MATH" => 1,
-"CHEM" => 0,
-"BIOL" => 0,
-"COMP" => 1,
-"PHYS" => 0,
-"ENGL" => 3, 
-"FREN" => 4, 
-"SPAN" => 4, 
-"RUSS" => 4, 
-"GERM" => 4, 
-"JAPA" => 4, 
-"CHIN" => 4, 
-"HIST" => 2,
-"PHRE" => 2,
-"LATN" => 4,
-"MUSC" => 6,
-"ART" => 5,
-"PHED" => 7,
-"MISC" => 7
-}
-
-
-COLORS = [
-	"B80000",						#Maroon, Sciences
-	"1783FF",						#Blue, Math/Compsci
-	"06A300",						#Green, History/Relphil
-	"AA00CC",						#Purple, English
-	"FF7A0D",						#Orange, Languages
-	"FF3679",						#Pink, Art
-	"E3DF00",						#Dark Orange, Music
-	"2C006E"						#Dark Purple, Miscellaneous
-	]
+# COLORS = [
+# 	"B80000",						#Maroon, Sciences
+# 	"1783FF",						#Blue, Math/Compsci
+# 	"06A300",						#Green, History/Relphil
+# 	"AA00CC",						#Purple, English
+# 	"FF7A0D",						#Orange, Languages
+# 	"FF3679",						#Pink, Art
+# 	"E3DF00",						#Dark Orange, Music
+# 	"2C006E"						#Dark Purple, Miscellaneous
+# 	]

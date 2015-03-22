@@ -1,5 +1,5 @@
 <a href=<%= course_path(course) %> class="thumbnail"  style="text-decoration:none;">
-		<h4><%= course.name%> <small><%=course.teacher %></small>
+		<h4><%= course.name%> <small><%=truncate(course.teacher, length:30) %></small>
 		<span style="float:right;"><%= show_subject(course, true) %></span></h4>
 </a>
 
