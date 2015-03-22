@@ -4,7 +4,7 @@ You have just purchased <%= @listing.book.title %> from <%= @listing.user.first 
 
 1. Contact the seller, <%= @listing.user.first + " " + @listing.user.last %>, at <%= @listing.user.email %> and arrange a time and place to conduct the transaction.
 
-2. Only accept cash payment of the <strong> exact same </strong> amount specified in the listing.
+2. Pay <%= @listing.user.first + " " + @listing.user.last %> for <%= @listing.book.title %> with <%=link_to "Venmo (recommended)", venmo_pay_link(@listing) %> or pay in cash when the book is exchanged.
 
 3. If you have any concerns, please submit a report here, or contact us at pabookexchange@gmail.com.
 
