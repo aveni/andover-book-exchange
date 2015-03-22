@@ -13,7 +13,7 @@ gem 'simple_form', '~> 3.1.0'
 # Use Cocoon
 gem 'cocoon', '~> 1.2.6'
 # Use Bootstrap
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.4'
 # Use AutoPrefixer
 gem 'autoprefixer-rails'
 # Use Faker
