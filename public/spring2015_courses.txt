@@ -1,0 +1,203 @@
+BIOL-500/Thomas E. Cone, Reem I. Hussein, Anna H. Milkowski, Christine A. Marshall-Walker, Leon M. Holley, Marc D. Koolen
+ENGL-539AW/Allen R. Grimm
+LUNC-100/
+MATH-578/Matthew J. Lisa, William R. Orben
+PHYS-550/John E. Rogers, Mika E. Latva-Kokko, Fei Yao, Caroline E. Odden
+THDA-380/Judith T. Wombwell
+ART-350/Elaine Crivelli, Shirley A. Veenema
+CLAS-400/Nicholas V. Kip
+ENGL-505AA/Paul Yoon
+LATN-520/Elizabeth A. Meyer
+ART-310/Daniel S. Williams
+CHEM-250/Neferterneken K. Francis, Brendan MacKinson, Brian D. Faulk, Kevin F. Cardozo, Julianne L. McDonough
+ENGL-200/Jeremy S. Rosenholtz, Randall S. Peffer, Flavia M. Vidal, Catherine D. Tousignant, Genevieve C. Barrons, Elly O. Nyamwaya, Nina S. Scott, Jeffrey C. Domina, Tasha M. Hawthorne, Marian P. Homans-Turnbull, Kathryn J. McQuade, Stephen K. Kim, Daniel Cadarette
+MATH-340/Lionel B. Amanfu, Karin Knudson, Amy L. Shoemaker, Dianne D. Cruz, Nikki R. Cleare, Howard L. Kalter
+PHED-200/Michael J. Kuta, Karen A. Kennedy, Kathryn A. Birecki, Martha G. Fenton, Kathryn A. Dolan, Leon A. Modeste
+SPAN-320/Cesar Dominique Moreno
+CHEM-500/Neferterneken K. Francis
+HIST-SS577D/Kathleen M. Dalton
+HIST-SS521/Elizabeth Monroe
+MUSC-225/Christopher R. Walter, Elizabeth G. Aureden, Peter A. Lorenco, Vincent J. Monaco, Christina R. Landolt
+PHRE-310/Onaje X. Offley Woodbine
+SPAN-200/Anthony J. Perry, Mark A. Cutler
+COMP-500/Maria M. Litvin, James S. Herman
+FREN-120/Elizabeth R. Poland
+MATH-580/Suzanne E. Buckwalter, Joel M. Jacob, William W. Scott, Khiem DoBa, Jacques L. Hugon, Karin Knudson, William R. Orben
+PACE-100/Carol J. Israel, Elisa M. Joel, David C. Gardner, Amy Patel, Sandra L. Lopez-Morales, Keith A. Robinson, Christopher P. Capano, William R. Orben, Erin E. Strong, Jill B. Thompson, Carlos A. Hoyt, Elisabeth E. Tully
+PHRE-370/Andrew A. Housiaux
+ENGL-300/Gregory J. Wilkin, LaShonda N. Long, Kevin T. O'Connor, John E. Bird, Adrian N. Khactu, Stephen K. Kim, David C. Gardner, Mary L. Fulton, Thomas H. Kane, Patricia R. Har, Marian P. Homans-Turnbull
+HIST-300/Emma L. Frey
+MATH-560/Heidi E. Wall, William W. Scott, Dale P. Hurley
+SPAN-300/Rachel A. Hyland, Peter A. Neissa
+FREN-200/Annabelle M. Hicks, Debra J. Pickering
+ENGL-543AB/Seth B. Bardo
+MATH-575/Corbin F. Lang, Shawn Fulford
+SPAN-400/Anthony J. Perry, Yasmine B. Allen, John R. Maier
+THDA-920/Kevin P. Heelan
+ENGL-301/Patricia R. Har
+HIST-310/Kathleen M. Dalton, Damany M. Fisher, Marisela Ramos, Matthew C. Hession, John G. Palfrey, Noah Rachlin, Megan Paulson, Kathryn A. Slater, Tracy E. Ainsworth, Jennifer K. Elliott
+JAPA-200/Teruyo S. Shimazu
+MATH-595/Patrick J. Farrell
+CHEM-300/Brendan MacKinson, Neferterneken K. Francis, David A. Stern, Kevin F. Cardozo, Keith A. Robinson
+ART-405/Emily E. Trespas
+BIOL-421/Thomas E. Cone
+ENGL-535AA/Kevin T. O'Connor
+GERM-300/Benjamin T. Duclos, Lisa J. Svec
+MATH-520/Nikki R. Cleare, Howard L. Kalter
+ART-304/Emily E. Trespas
+BIOL-100/Anna H. Milkowski, Leon M. Holley, Marc D. Koolen, Willa B. Abel, Reem I. Hussein, Patricia C. Russell, Catherine J. Kemp, Rajesh R. Mundra
+ENGL-100/Patrick Rielly, Daniel Cadarette, Deborah M. Chase, Seth B. Bardo, Stephanie E. Curci, Gregory J. Wilkin, Emma Staffaroni, Genevieve C. Barrons, Mary L. Fulton
+HIST-100/Laura E. Lowry, George A. Heinrichs, Elizabeth Monroe, Emma L. Frey, Caitlin C. Monroe, Mary M. Mulligan, Marcelle A. Doheny, Christopher L. Jones, Frank P. Tipton, Theodore R. Parker
+MATH-320/Heidi E. Wall, Dale P. Hurley, Amy L. Shoemaker, Michael J. McHugh
+ENGL-542AA/Tasha M. Hawthorne
+PHRE-510/Thomas S. Hodgson
+RUSS-300/Victor Svec
+CHEM-550/David A. Stern, Kevin F. Cardozo
+ENGL-542CA/LaShonda N. Long
+MATH-650/Michael J. McHugh
+FREN-320/Debra J. Pickering
+PHYS-400/Mika E. Latva-Kokko, Spencer G. Diamond, Peter Watt, Fei Yao, John E. Rogers
+COMP-470/Maria M. Litvin
+ART-500/Therese Y. Zemlin
+ENGL-515GR/Stephanie E. Curci
+ENGL-540AF/Elly O. Nyamwaya
+PHYS-600/Peter Watt
+PHYS-530/Caroline E. Odden
+PHRE-520/Thomas S. Hodgson
+ENGL-511CC/John E. Bird
+FREN-520/Claire L. Gallou
+MATH-590/Chloe B. Epstein, Khiem DoBa, Christopher T. Odden, Scott W. Hoenig, Karin Knudson
+THDA-420/Kevin P. Heelan
+ENGL-537AA/Mary L. Fulton
+RUSS-130/Victor Svec
+THDA-210/Judith T. Wombwell, Kevin P. Heelan
+ART-225C/Shirley A. Veenema
+ENGL-501AB/Louis M. Bernieri
+MATH-500/Lani M. Silversides, William R. Orben
+PHRE-410/Andrew A. Housiaux
+SCIE-460/Paul D. Cernota
+MATH-330/Bruce W. Bacon, Shawn Fulford, Deborah M. Olander
+LATN-300/Catherine J. Carter, Nicholas V. Kip
+PHRE-360/Thomas S. Hodgson
+BIOL-620/Christine A. Marshall-Walker
+FREN-420/Eugene Hughes
+PHRE-440/Onaje X. Offley Woodbine
+BIOL-580/Jeremiah C. Hagler, Catherine J. Kemp, Keith A. Robinson
+ENGL-545AS/Adrian N. Khactu
+MATH-530/Ellen M. Greenberg, Matthew J. Lisa
+MUSC-360/Vincent J. Monaco
+ART-301/Anthony S. Lawson
+CHEM-580/Paul D. Cernota
+MATH-360/Lionel B. Amanfu, Suzanne E. Buckwalter
+ENGL-544QL/David C. Gardner
+JAPA-400/Teruyo S. Shimazu
+RUSS-200/Peter T. Merrill
+THDA-330/Allen R. Grimm
+MATH-350/Lani M. Silversides, Yue Cao, Bruce W. Bacon
+ENGL-519AA/Deborah M. Chase
+HIST-SS522/Theodore R. Parker
+SCIE-470/Jeremiah C. Hagler
+MUSC-350/Peter A. Lorenco
+SPAN-620/Carmen Munoz-Fernandez
+CHIN-420/Lilia Cai-Hurteau
+ART-404/Elaine Crivelli
+THDA-360/Allen R. Grimm
+ART-300/Elaine Crivelli
+MUSC-485/Christopher R. Walter
+ENGL-540AB/Thomas H. Kane
+MUSC-370/Christina R. Landolt
+CHIN-320/Congmin Zhao
+HIST-200/Kathryn A. Slater, Damany M. Fisher, Caitlin C. Monroe, Noah Rachlin, Nile K. Blunt
+ART-402/Samuel T. Zaeder
+GERM-400/Lisa J. Svec
+MATH-630/Joel M. Jacob
+ART-225B/Therese Y. Zemlin, Samuel T. Zaeder
+GERM-200/Benjamin T. Duclos
+MATH-210/Howard L. Kalter, Ellen M. Greenberg
+FREN-110/Annabelle M. Hicks
+MUSC-235/Elizabeth G. Aureden
+PHYS-270/Clyfe G. Beckwith
+LATN-200/Catherine J. Carter
+HIST-SS538/Frank P. Tipton
+MATH-100/Suzanne E. Buckwalter
+SPAN-110/Rachel A. Hyland, Amanda F. Washington
+FREN-300/Elizabeth R. Poland, Emmanuel A. Odjo
+MUSC-310/Peter M. Cirelli
+CHIN-120/Lixia Ma
+RUSS-520/Peter T. Merrill
+PHYS-440/Caroline E. Odden
+ART-314/Therese Y. Zemlin
+SPAN-401/Peter A. Neissa
+ENGL-525AA/Gregory J. Wilkin
+JAPA-300/Teruyo S. Shimazu
+CHIN-520/Lixia Ma
+ENGL-501AA/Kathryn J. McQuade
+THDA-320/Billy W. Murray
+CHIN-300/Congmin Zhao
+PHYS-520/Clyfe G. Beckwith
+RUSS-100/Victor Svec
+ENGL-546WW/Emma Staffaroni
+PHRE-340/Thomas S. Hodgson
+CHIN-620/Ying Schmitt
+MATH-220/Corbin F. Lang, Nancy M. Lang
+GERM-520/Lisa J. Svec
+PSYC-430/Max C. Alovisetti
+PHRE-330/Onaje X. Offley Woodbine
+LATN-100/Catherine J. Carter
+GERM-600/Benjamin T. Duclos
+HIST-SS531/Nile K. Blunt
+ENGL-536AA/Patricia R. Har
+SPAN-120/John R. Maier
+SPAN-511/Mark A. Cutler
+LATN-150/Elizabeth A. Meyer
+MUSC-550/Derek B. Jacoby
+SCIE-475/Leon M. Holley
+ART-225A/Emily E. Trespas
+CLAS-410/Nicholas V. Kip
+CHIN-110/Lilia Cai-Hurteau
+MATH-280/Chloe B. Epstein
+SPAN-520/Cesar Dominique Moreno
+MUSC-330A/Peter A. Lorenco
+THDA-321/Billy W. Murray
+GERM-100/Lisa J. Svec
+HIST-SS485/Marcelle A. Doheny
+COMP-350/Maria M. Litvin
+ART-302/Samuel T. Zaeder
+ART-410/Daniel S. Williams
+HIST-SS540/Mary M. Mulligan
+FREN-400/Emmanuel A. Odjo
+ART-309/Shirley A. Veenema
+GERM-150/Peter T. Merrill
+RUSS-400/Peter T. Merrill
+PHRE-300/Andrew A. Housiaux
+HIST-SS535/Marisela Ramos
+CHIN-200/Congmin Zhao
+ENGL-513AA/Randall S. Peffer
+HIST-SS545/Megan Paulson
+ENGL-505AB/Paul Yoon
+MUSC-530/Peter M. Cirelli
+CLAS-500/Joshua D. Mann
+ART-509/Shirley A. Veenema
+JAPA-100/Teruyo S. Shimazu
+THDA-365/Erin E. Strong
+ART-602/Samuel T. Zaeder
+ENGL-549DD/Patrick Rielly
+ENGL-530AB/Flavia M. Vidal
+RUSS-150/Kassie M. Archambault
+PHYS-450/Peter Watt
+RUSS-600/Victor Svec
+MUSC-500C/Holly A. Barnes
+LATN-600/Joshua D. Mann
+ENGL-538AA/Nina S. Scott
+ART-609/Shirley A. Veenema
+CHIN-640/Ying Schmitt
+FREN-620/Claire L. Gallou
+JAPA-520/Teruyo S. Shimazu
+THDA-901/Allen R. Grimm
+ART-409/Shirley A. Veenema
+THDA-539/Allen R. Grimm
+ART-502/Samuel T. Zaeder
+ART-505/Emily E. Trespas
+ART-414/Therese Y. Zemlin
+ART-504/Elaine Crivelli
+ART-510/Daniel S. Williams
