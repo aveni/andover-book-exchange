@@ -23,6 +23,8 @@ Rails.application.routes.draw do
  
   end
 
+  match '/pages/terms' => "pages#terms", :via => [:get], :as => 'terms'
+
   
   root 'application#landing'
 
