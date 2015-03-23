@@ -84,7 +84,7 @@ end
 # ]
 
 
-str = File.read("#{Rails.public_path}/courses.txt")
+str = File.read("#{Rails.public_path}/spring2015_courses.txt")
 COURSES = str.split("\n")
 
 COURSES.each do |c|
@@ -99,7 +99,7 @@ COURSES.each do |c|
 	puts "Added #{name}"
 end
 
-str = File.read("#{Rails.public_path}/books.txt")
+str = File.read("#{Rails.public_path}/spring2015_books.txt")
 BOOKS = str.split("\n")
 
 BOOKS.each do |b|

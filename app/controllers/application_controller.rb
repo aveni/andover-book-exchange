@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   
   helper_method :landing
     protect_from_forgery with: :exception
-    before_action :authenticate_user!, :except => [:landing]
+    before_action :authenticate_user!, :except => [:landing, :terms]
     before_action :configure_permitted_parameters, if: :devise_controller?
 
   def landing
