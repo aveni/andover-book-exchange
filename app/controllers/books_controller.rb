@@ -8,7 +8,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all.order(:title)
     end
-    @books = @books.first(30)
+    @books = @books.first(32)
   end
 
   def show

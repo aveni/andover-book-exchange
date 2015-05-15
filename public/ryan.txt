@@ -1,0 +1,350 @@
+BIOL-500/3$Topics in Adv Biology III$Thomas E. Cone
+ENGL-539AW/3$August Wilson's View 1940-$Allen R. Grimm
+LUNC-100$Lunch$
+MATH-578$AP AB Calculus I$Matthew J. Lisa
+PHYS-550/0$Calculus-Based Physics$John E. Rogers
+THDA-380$Stage Craft$Judith T. Wombwell
+ART-350$The Artist: Media and Mean$Elaine Crivelli
+CLAS-400/0$Greek$Nicholas V. Kip
+ENGL-505AA$Creative Writing: Poetry$Paul Yoon
+LATN-520/0$Vergil/Caesar$Elizabeth A. Meyer
+PHYS-550/0$Calculus-Based Physics$Mika E. Latva-Kokko
+ART-310$Intro to Photography$Daniel S. Williams
+CHEM-250/0$Introduction to Chemistry$Neferterneken K. Francis
+ENGL-200/0$Writing to Read, Reading .$Jeremy S. Rosenholtz
+MATH-340$Precalculus$Lionel B. Amanfu
+PHED-200$Physical Education$Michael J. Kuta
+SPAN-320/5$Accelerated Spanish Sequen$Cesar Dominique Moreno
+CHEM-500/0$Advanced Placement Chemist$Neferterneken K. Francis
+HIST-SS577D$US: Roosevelt to Roosevelt$Kathleen M. Dalton
+HIST-SS521$Economics Ii: Microeconomi$Elizabeth Monroe
+CHEM-250/0$Introduction to Chemistry$Brendan MacKinson
+ENGL-200/0$Writing to Read, Reading .$Randall S. Peffer
+MATH-340$Precalculus$Karin Knudson
+MUSC-225$The Nature of Music A$Christopher R. Walter
+PHRE-310$Religions of the Book$Onaje X. Offley Woodbine
+SPAN-200/0$Second-Level Spanish$Anthony J. Perry
+COMP-500/5$AP Computer Science II$Maria M. Litvin
+ENGL-200/0$Writing to Read, Reading .$Flavia M. Vidal
+FREN-120/5$Accel. French Sequence$Elizabeth R. Poland
+MATH-580$AP BC Calculus I$Suzanne E. Buckwalter
+PACE-100$Personal & Community Educa$Carol J. Israel
+PHRE-370$Views of Human Nature$Andrew A. Housiaux
+PHED-200$Physical Education$Karen A. Kennedy
+ENGL-300/0$The Stories of Literature$Gregory J. Wilkin
+HIST-300/5$The United States$Emma L. Frey
+MATH-560$AP AB Calculus I$Heidi E. Wall
+SPAN-300/0$Third-Level Spanish$Rachel A. Hyland
+ENGL-200/0$Writing to Read, Reading .$Catherine D. Tousignant
+FREN-200/0$Second-Level French$Annabelle M. Hicks
+MATH-340$Precalculus$Amy L. Shoemaker
+ENGL-543AB$Haunted by Shadows$Seth B. Bardo
+MATH-575/0$AP Accelerated AB Calculus$Corbin F. Lang
+SPAN-400/3$Current Events & Multimedi$Anthony J. Perry
+THDA-920/3$Play Production$Kevin P. Heelan
+ENGL-301/0$Stories of Lit., New Upper$Patricia R. Har
+HIST-310$The United States$Kathleen M. Dalton
+JAPA-200/0$Second-Level Japanese$Teruyo S. Shimazu
+MATH-595/0$AP Accelerated Bc Calculus$Patrick J. Farrell
+PHYS-550/0$Calculus-Based Physics$Fei Yao
+CHEM-300/0$College Chemistry$Brendan MacKinson
+ENGL-200/0$Writing to Read, Reading .$Genevieve C. Barrons
+MATH-340$Precalculus$Dianne D. Cruz
+PHED-200$Physical Education$Kathryn A. Birecki
+SPAN-200/0$Second-Level Spanish$Mark A. Cutler
+ART-405$Painting II$Emily E. Trespas
+BIOL-421$Ornithology$Thomas E. Cone
+ENGL-535AA/3$James Joyce$Kevin T. O'Connor
+GERM-300/0$Third-Level German$Benjamin T. Duclos
+MATH-520/5$Calculus$Nikki R. Cleare
+ART-304$Drawing I$Emily E. Trespas
+BIOL-100/0$Introduction to Biology$Anna H. Milkowski
+ENGL-100/0$An Introduction$Patrick Rielly
+HIST-100/0$World History 1000-1550;$Laura E. Lowry
+MATH-320$Precalculus$Heidi E. Wall
+ENGL-542AA/3$African-American Literatur$Tasha M. Hawthorne
+PHRE-510$Justice and Globalization$Thomas S. Hodgson
+RUSS-300/0$Third-Level Russian$Victor Svec
+ART-350$The Artist: Media and Mean$Shirley A. Veenema
+CHEM-550/0$Accelerated Advanced Chemi$David A. Stern
+ENGL-542CA/3$California Dreaming$LaShonda N. Long
+MATH-650/5$Multivariable Calc& Linear$Michael J. McHugh
+ENGL-300/0$The Stories of Literature$LaShonda N. Long
+FREN-320/5$Accelerated French Sequenc$Debra J. Pickering
+HIST-310$The United States$Damany M. Fisher
+MATH-580$AP BC Calculus I$Joel M. Jacob
+PHYS-400/5$College Physics II$Mika E. Latva-Kokko
+ENGL-300/0$The Stories of Literature$Kevin T. O'Connor
+HIST-310$The United States$Marisela Ramos
+CHEM-300/0$College Chemistry$Neferterneken K. Francis
+COMP-470$Discrete Math & Programmin$Maria M. Litvin
+MATH-580$AP BC Calculus I$William W. Scott
+SPAN-300/0$Third-Level Spanish$Peter A. Neissa
+ART-500/0$Advanced Studio Art$Therese Y. Zemlin
+ENGL-515GR$The Graphic Novel$Stephanie E. Curci
+HIST-310$The United States$Matthew C. Hession
+MATH-578$AP AB Calculus I$William R. Orben
+ENGL-540AF$African Literature$Elly O. Nyamwaya
+PHYS-600$Foundations of Modern Phys$Peter Watt
+PHYS-530/3$Astronomy Research$Caroline E. Odden
+PHRE-520$Great Philosophers$Thomas S. Hodgson
+ENGL-511CC$"The World in Pieces"$John E. Bird
+FREN-520/0$French Civilization/Lit/Ci$Claire L. Gallou
+MATH-590/5$AP BC Calculus II (T2)$Chloe B. Epstein
+PHYS-550/0$Calculus-Based Physics$Caroline E. Odden
+THDA-420$Public Speaking$Kevin P. Heelan
+ENGL-537AA/3$Writers in Depth$Mary L. Fulton
+RUSS-130$A Short Course in Beg. Rus$Victor Svec
+BIOL-500/3$Topics in Adv Biology III$Reem I. Hussein
+ENGL-300/0$The Stories of Literature$John E. Bird
+CHEM-250/0$Introduction to Chemistry$Brian D. Faulk
+THDA-210$Acting I$Judith T. Wombwell
+ART-225C$Visual Studies Media Studi$Shirley A. Veenema
+CHEM-300/0$College Chemistry$David A. Stern
+ENGL-501AB$Writing Through Discourse$Louis M. Bernieri
+MATH-500/3$Introduction to Calculus I$Lani M. Silversides
+PHRE-410$Religion in America$Andrew A. Housiaux
+SCIE-460$Molecular Gastronomy$Paul D. Cernota
+THDA-210$Acting I$Kevin P. Heelan
+ENGL-200/0$Writing to Read, Reading .$Elly O. Nyamwaya
+MATH-330/3$Precalculus$Bruce W. Bacon
+MUSC-225$The Nature of Music A$Elizabeth G. Aureden
+ENGL-200/0$Writing to Read, Reading .$Nina S. Scott
+LATN-300/0$Third-Level Latin: Livy...$Catherine J. Carter
+PHRE-360$Proof and Persuasion$Thomas S. Hodgson
+BIOL-620$Biology Indep. Lab Res. II$Christine A. Marshall-Walker
+FREN-420/0$Crossing Cultures$Eugene Hughes
+PHRE-440$Nonviolence & Moral Leader$Onaje X. Offley Woodbine
+BIOL-580/3$Evolution and Ecology$Jeremiah C. Hagler
+ENGL-545AS/3$Asian-American Literature$Adrian N. Khactu
+MATH-530/5$AP Statistics II$Ellen M. Greenberg
+MUSC-360$Electronic Music$Vincent J. Monaco
+ART-301$Architecture I$Anthony S. Lawson
+BIOL-100/0$Introduction to Biology$Leon M. Holley
+HIST-100/0$World History 1000-1550;$George A. Heinrichs
+CHEM-580/0$Advanced College Chemistry$Paul D. Cernota
+LATN-300/0$Third-Level Latin: Livy...$Nicholas V. Kip
+MATH-580$AP BC Calculus I$Khiem DoBa
+BIOL-500/3$Topics in Adv Biology III$Anna H. Milkowski
+HIST-310$The United States$John G. Palfrey
+MATH-360/3$Precalculus Curves$Lionel B. Amanfu
+COMP-500/5$AP Computer Science II$James S. Herman
+ENGL-544QL/3$Queer Literature$David C. Gardner
+JAPA-400/0$Fourth-Level Japanese$Teruyo S. Shimazu
+RUSS-200/0$Second-Level Russian$Peter T. Merrill
+THDA-330$Theatre Theory and History$Allen R. Grimm
+HIST-310$The United States$Noah Rachlin
+MATH-590/5$AP BC Calculus II (T2)$Khiem DoBa
+CHEM-300/0$College Chemistry$Kevin F. Cardozo
+ENGL-200/0$Writing to Read, Reading .$Jeffrey C. Domina
+MATH-350$Precalculus Trigonometry$Lani M. Silversides
+MATH-350$Precalculus Trigonometry$Yue Cao
+ENGL-519AA/3$20th Century Drama$Deborah M. Chase
+HIST-SS522$Economics Research Colloqu$Theodore R. Parker
+ENGL-300/0$The Stories of Literature$Adrian N. Khactu
+HIST-310$The United States$Megan Paulson
+CHEM-300/0$College Chemistry$Keith A. Robinson
+SCIE-470$Human Origins$Jeremiah C. Hagler
+SPAN-400/3$Current Events & Multimedi$Yasmine B. Allen
+MUSC-350$Understanding and Making M$Peter A. Lorenco
+SPAN-620/3$"Our Americas"$Carmen Munoz-Fernandez
+CHIN-420/0$Accelerated Chinese Sequen$Lilia Cai-Hurteau
+ART-404$Drawing II$Elaine Crivelli
+THDA-360$Directing$Allen R. Grimm
+ENGL-200/0$Writing to Read, Reading .$Tasha M. Hawthorne
+ART-300/3$Discovering Addison Collec$Elaine Crivelli
+ENGL-100/0$An Introduction$Daniel Cadarette
+HIST-100/0$World History 1000-1550;$Elizabeth Monroe
+BIOL-500/3$Topics in Adv Biology III$Christine A. Marshall-Walker
+MUSC-485$Out of Tune$Christopher R. Walter
+ENGL-300/0$The Stories of Literature$Stephen K. Kim
+MATH-580$AP BC Calculus I$Jacques L. Hugon
+MATH-360/3$Precalculus Curves$Suzanne E. Buckwalter
+BIOL-100/0$Introduction to Biology$Marc D. Koolen
+ENGL-100/0$An Introduction$Deborah M. Chase
+MATH-340$Precalculus$Nikki R. Cleare
+ENGL-540AB/3$Atomic Amer.: Service Lear$Thomas H. Kane
+MATH-520/5$Calculus$Howard L. Kalter
+MUSC-370$Film Scoring$Christina R. Landolt
+PHYS-400/5$College Physics II$Spencer G. Diamond
+CHIN-320/5$Accelerated Chinese Sequen$Congmin Zhao
+HIST-200$The Early Modern World$Kathryn A. Slater
+ART-402/3$Advanced Ceramics$Samuel T. Zaeder
+GERM-400/3$Fourth-Level German$Lisa J. Svec
+MATH-630/3$Honors Mathematics Seminar$Joel M. Jacob
+ART-225B$Visual Studies 3D Studio$Therese Y. Zemlin
+CHEM-250/0$Introduction to Chemistry$Kevin F. Cardozo
+GERM-200/0$Second-Level German$Benjamin T. Duclos
+ENGL-200/0$Writing to Read, Reading .$Marian P. Homans-Turnbull
+PACE-100$Personal & Community Educa$Elisa M. Joel
+ENGL-100/0$An Introduction$Seth B. Bardo
+FREN-200/0$Second-Level French$Debra J. Pickering
+HIST-100/0$World History 1000-1550;$Emma L. Frey
+MATH-210$Geometry$Howard L. Kalter
+ENGL-100/0$An Introduction$Stephanie E. Curci
+FREN-110/5$First-Level French$Annabelle M. Hicks
+HIST-100/0$World History 1000-1550;$Caitlin C. Monroe
+MUSC-235$Nature of Music B$Elizabeth G. Aureden
+MATH-560$AP AB Calculus I$William W. Scott
+PHYS-270/0$Introduction to Physics$Clyfe G. Beckwith
+MATH-575/0$AP Accelerated AB Calculus$Shawn Fulford
+LATN-200/0$Second-Level Latin$Catherine J. Carter
+PHYS-400/5$College Physics II$Peter Watt
+HIST-SS538$When States Fail$Frank P. Tipton
+MATH-100/0$Elementary Algebra$Suzanne E. Buckwalter
+SPAN-110/5$First-Level Spanish$Rachel A. Hyland
+ENGL-300/0$The Stories of Literature$David C. Gardner
+MATH-590/5$AP BC Calculus II (T2)$Christopher T. Odden
+PHYS-400/5$College Physics II$Fei Yao
+ENGL-300/0$The Stories of Literature$Mary L. Fulton
+FREN-300/0$Third-Level French$Elizabeth R. Poland
+MUSC-310$Jazz History$Peter M. Cirelli
+PACE-100$Personal & Community Educa$David C. Gardner
+CHIN-120/5$Accelerated Chinese Sequen$Lixia Ma
+MATH-350$Precalculus Trigonometry$Bruce W. Bacon
+HIST-310$The United States$Kathryn A. Slater
+RUSS-520/0$Advanced Fourth-Level Russ$Peter T. Merrill
+MATH-590/5$AP BC Calculus II (T2)$Scott W. Hoenig
+PHYS-440$Astronomy$Caroline E. Odden
+SPAN-110/5$First-Level Spanish$Amanda F. Washington
+ART-314$Woven Structures and Fabri$Therese Y. Zemlin
+HIST-200$The Early Modern World$Damany M. Fisher
+SPAN-401/3$Intro. to Hispanic Literat$Peter A. Neissa
+ENGL-525AA/3$Feasts and Fools$Gregory J. Wilkin
+JAPA-300/0$Third-Level Japanese$Teruyo S. Shimazu
+BIOL-100/0$Introduction to Biology$Willa B. Abel
+HIST-100/0$World History 1000-1550;$Mary M. Mulligan
+MUSC-225$The Nature of Music A$Peter A. Lorenco
+BIOL-580/3$Evolution and Ecology$Catherine J. Kemp
+ENGL-300/0$The Stories of Literature$Thomas H. Kane
+CHEM-250/0$Introduction to Chemistry$Julianne L. McDonough
+PACE-100$Personal & Community Educa$Amy Patel
+HIST-310$The United States$Tracy E. Ainsworth
+CHIN-520/0$Advanced Chinese$Lixia Ma
+ENGL-501AA/3$Creative Nonfiction$Kathryn J. McQuade
+THDA-320$Lighting$Billy W. Murray
+HIST-200$The Early Modern World$Caitlin C. Monroe
+PACE-100$Personal & Community Educa$Sandra L. Lopez-Morales
+BIOL-580/3$Evolution and Ecology$Keith A. Robinson
+CHIN-300/0$Third-Level Chinese$Congmin Zhao
+PHYS-520$Electronics$Clyfe G. Beckwith
+ENGL-300/0$The Stories of Literature$Patricia R. Har
+MATH-560$AP AB Calculus I$Dale P. Hurley
+ENGL-300/0$The Stories of Literature$Marian P. Homans-Turnbull
+FREN-300/0$Third-Level French$Emmanuel A. Odjo
+BIOL-100/0$Introduction to Biology$Reem I. Hussein
+MATH-210$Geometry$Ellen M. Greenberg
+MUSC-225$The Nature of Music A$Vincent J. Monaco
+RUSS-100/0$First-Level Russian$Victor Svec
+ENGL-546WW/3$A Room of Their Own$Emma Staffaroni
+MATH-330/3$Precalculus$Shawn Fulford
+PHRE-340$Introduction to Ethics$Thomas S. Hodgson
+CHIN-620/3$Advanced Topics in Chinese$Ying Schmitt
+PHYS-400/5$College Physics II$John E. Rogers
+MATH-220$Geometry$Corbin F. Lang
+PHED-200$Physical Education$Martha G. Fenton
+ENGL-100/0$An Introduction$Gregory J. Wilkin
+MATH-320$Precalculus$Dale P. Hurley
+ENGL-200/0$Writing to Read, Reading .$Kathryn J. McQuade
+ENGL-100/0$An Introduction$Emma Staffaroni
+HIST-100/0$World History 1000-1550;$Marcelle A. Doheny
+MATH-320$Precalculus$Amy L. Shoemaker
+GERM-520/5$Advanced Fourth-Level Germ$Lisa J. Svec
+PSYC-430$Developmental Psychology$Max C. Alovisetti
+BIOL-100/0$Introduction to Biology$Patricia C. Russell
+ENGL-200/0$Writing to Read, Reading .$Stephen K. Kim
+PHRE-330$Introduction to New Testam$Onaje X. Offley Woodbine
+LATN-100/0$First-Level Latin$Catherine J. Carter
+GERM-600/3$Advanced Topics in German$Benjamin T. Duclos
+HIST-SS531$Comparative Government$Nile K. Blunt
+ENGL-536AA/3$Shakespeare$Patricia R. Har
+PACE-100$Personal & Community Educa$Keith A. Robinson
+ENGL-100/0$An Introduction$Genevieve C. Barrons
+HIST-100/0$World History 1000-1550;$Christopher L. Jones
+SPAN-120/5$Accel. First-Level Spanish$John R. Maier
+SPAN-511$Engagement in Lawrence$Mark A. Cutler
+LATN-150/0$First- and Second-Level La$Elizabeth A. Meyer
+MUSC-550$Adv. Theory & Composition$Derek B. Jacoby
+MATH-590/5$AP BC Calculus II (T2)$Karin Knudson
+MATH-220$Geometry$Nancy M. Lang
+SCIE-475$Darwin's (R)Evolution$Leon M. Holley
+ART-225A$Visual Studies 2D Studio$Emily E. Trespas
+CLAS-410$Etymology$Nicholas V. Kip
+MATH-340$Precalculus$Howard L. Kalter
+CHIN-110/5$First-Level Chinese$Lilia Cai-Hurteau
+ENGL-100/0$An Introduction$Mary L. Fulton
+MATH-280/0$Geometry and Precalculus$Chloe B. Epstein
+MATH-320$Precalculus$Michael J. McHugh
+CHEM-550/0$Accelerated Advanced Chemi$Kevin F. Cardozo
+SPAN-520/3$Understanding Latin Americ$Cesar Dominique Moreno
+HIST-100/0$World History 1000-1550;$Frank P. Tipton
+HIST-200$The Early Modern World$Noah Rachlin
+MUSC-330A/3$Survey of Music History$Peter A. Lorenco
+THDA-321$Costuming$Billy W. Murray
+HIST-310$The United States$Jennifer K. Elliott
+GERM-100/0$First-Level German$Lisa J. Svec
+HIST-SS485$Out of Tune$Marcelle A. Doheny
+MATH-500/5$Introduction to Calculus I$William R. Orben
+COMP-350$Programming Fundamentals$Maria M. Litvin
+BIOL-100/0$Introduction to Biology$Catherine J. Kemp
+MATH-580$AP BC Calculus I$Karin Knudson
+MUSC-225$The Nature of Music A$Christina R. Landolt
+ART-302$Clay and the Ancestral Pot$Samuel T. Zaeder
+HIST-200$The Early Modern World$Nile K. Blunt
+PACE-100$Personal & Community Educa$Christopher P. Capano
+BIOL-500/3$Topics in Adv Biology III$Leon M. Holley
+ART-410$Photography II$Daniel S. Williams
+MATH-330/3$Precalculus$Deborah M. Olander
+HIST-SS540/3$Europe: Birth, Revltn, and$Mary M. Mulligan
+ART-225B$Visual Studies 3D Studio$Samuel T. Zaeder
+HIST-100/0$World History 1000-1550;$Theodore R. Parker
+FREN-400/3$The Francophone Literature$Emmanuel A. Odjo
+ART-309$Video I$Shirley A. Veenema
+GERM-150/5$Accel. First-Level German$Peter T. Merrill
+PHED-200$Physical Education$Kathryn A. Dolan
+BIOL-100/0$Introduction to Biology$Rajesh R. Mundra
+RUSS-400/3$Fourth-Level Russian$Peter T. Merrill
+PACE-100$Personal & Community Educa$William R. Orben
+PACE-100$Personal & Community Educa$Erin E. Strong
+PHED-200$Physical Education$Leon A. Modeste
+PACE-100$Personal & Community Educa$Jill B. Thompson
+PHRE-300$Asian Religions: Intro.$Andrew A. Housiaux
+HIST-SS535$A Social History of Latin$Marisela Ramos
+CHIN-200/0$Second-Level Chinese$Congmin Zhao
+ENGL-513AA$Short Novel: Risk & Romanc$Randall S. Peffer
+HIST-SS545$Critical Race Theory$Megan Paulson
+GERM-300/0$Third-Level German$Lisa J. Svec
+ENGL-505AB$Creative Writing: Fiction$Paul Yoon
+MUSC-530$Brazilian Cultural Studies$Peter M. Cirelli
+BIOL-500/3$Topics in Adv Biology III$Marc D. Koolen
+CLAS-500/0$Greek: Homer and Others$Joshua D. Mann
+ART-509/3$Video III$Shirley A. Veenema
+JAPA-100/0$First-Level Japanese$Teruyo S. Shimazu
+THDA-365$Choreographic Elements$Erin E. Strong
+ART-602/3$Ceramics IV$Samuel T. Zaeder
+ENGL-549DD$The Internet in Print$Patrick Rielly
+SPAN-400/3$Current Events & Multimedi$John R. Maier
+ENGL-530AB$Brazilian Cultural Studies$Flavia M. Vidal
+RUSS-150/5$Accelerated First Year Rus$Kassie M. Archambault
+PHYS-450$Physical Geology$Peter Watt
+RUSS-600/3$Advanced Topics in Russian$Victor Svec
+MUSC-500C$Chamber Music Perform. Sem$Holly A. Barnes
+MATH-580$AP BC Calculus I$William R. Orben
+LATN-600/3$Adv. Latin Authors Seminar$Joshua D. Mann
+PACE-100$Personal & Community Educa$Carlos A. Hoyt
+ENGL-200/0$Writing to Read, Reading .$Daniel Cadarette
+ENGL-538AA$Edith Wharton$Nina S. Scott
+MATH-530/5$AP Statistics II$Matthew J. Lisa
+ART-609/3$Video IV$Shirley A. Veenema
+CHIN-640/3$Modern Chinese Literature$Ying Schmitt
+FREN-620/3$Advanced Topics in French$Claire L. Gallou
+PACE-100$Personal & Community Educa$Elisabeth E. Tully
+JAPA-520/0$Japanese Language/Culture$Teruyo S. Shimazu
+THDA-901$Advanced Practical Theatre$Allen R. Grimm
+ART-409/3$Video II$Shirley A. Veenema
+THDA-539/3$August Wilson's View 1940-$Allen R. Grimm
+ART-502/3$Ceramics III$Samuel T. Zaeder
+ART-505$Painting III$Emily E. Trespas
+ART-414$Woven Structures and Fabri$Therese Y. Zemlin
+ART-504$Drawing III$Elaine Crivelli
+ART-510$Photography III: Self & Ot$Daniel S. Williams
