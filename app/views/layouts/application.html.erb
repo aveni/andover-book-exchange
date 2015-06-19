@@ -41,7 +41,6 @@
         <% if user_signed_in? %>
           <li><%= link_to "Welcome, #{current_user.first}", current_user %> </li>
           <li><a href= <%= books_path %> >Books</a></li>
-          <li><a href= <%= courses_path %> >Courses</a></li>
         <% end %>
         
         <% if current_user && (current_user.is?(:superuser) ||  current_user.is?(:admin))%>

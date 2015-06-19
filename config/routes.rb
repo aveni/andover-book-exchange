@@ -8,13 +8,10 @@ Rails.application.routes.draw do
 
   resources :exchanges
   resources :reports
-  resources :courses
   resources :books do
     collection do
       get 'sell'
       post 'create_sell'
-      get 'course_select'
-      post 'book_save'
     end
     resources :listings do
       get 'buy'
