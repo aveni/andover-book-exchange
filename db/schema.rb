@@ -11,26 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225220855) do
+ActiveRecord::Schema.define(version: 20150619192722) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.string   "isbn"
     t.string   "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "books_courses", id: false, force: :cascade do |t|
-    t.integer "book_id",   null: false
-    t.integer "course_id", null: false
-  end
-
-  create_table "courses", force: :cascade do |t|
-    t.string   "name"
-    t.string   "teacher"
-    t.string   "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

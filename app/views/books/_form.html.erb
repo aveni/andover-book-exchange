@@ -8,7 +8,6 @@
     <% f.error_notification %>
 
     <%= f.input :isbn, placeholder: 'ISBN' %>
-    <%= f.association :courses, collection: Course.all.order(:name), as: :check_boxes  %>
 
     <div class='row text-center'>
    	 <%= f.submit nil, class:'btn btn-primary' %>

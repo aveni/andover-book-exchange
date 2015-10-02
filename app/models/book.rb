@@ -14,7 +14,6 @@
 class Book < ActiveRecord::Base
 	
 	has_many :listings, dependent: :destroy
-	has_and_belongs_to_many :courses
 	has_many :reports, dependent: :destroy
 
 	validates :isbn, presence: true, uniqueness: true

@@ -1,13 +1,9 @@
 <div class="page-header">
 	<div class="row">
 		<div class="col-sm-9">
+			<br><br>
 			<h1><%= @book.title%></h1>
 			<h4><%=  @book.author%> </h4>
-			<h3>|
-				<% @book.courses.order(:name).each do |course| %>
-				<%= link_to(course.name, course) + " | " %>
-				<% end %>
-			</h3>
 		</div>
 		<div class="col-sm-3 text-right">
 			<%= show_cover(@book, 120, 160) %>

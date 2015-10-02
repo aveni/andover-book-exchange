@@ -40,11 +40,6 @@ class Ability
     can :modify, Book if user.is?(:admin)
     can :destroy, Book if user.is?(:admin)
    
-    
-    can :read, Course
-    can :modify, Course if user.is?(:admin)
-    can :destroy, Course if user.is?(:admin)
-
 
     can :read, Exchange if user.is?(:admin)
 

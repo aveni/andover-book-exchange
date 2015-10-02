@@ -33,14 +33,14 @@ module BooksHelper
 		book_hash = get_book(book.isbn)
 		if (book_hash)
 			book.isbn = book_hash["isbn"]
-      		book.title = title_upcase(book_hash["title"])
-      		book.author = book_hash["authors_text"]
-      		book.image_url = book_hash["image"]
-      	else
-      		book.title = nil
-      		book.author = nil
-      	end
-    end
+  		book.title = title_upcase(book_hash["title"])
+  		book.author = book_hash["authors_text"]
+  		book.image_url = book_hash["image"]
+  	else
+  		book.title = nil
+  		book.author = nil
+  	end
+  end
 
 
 	def title_upcase(ttl)
