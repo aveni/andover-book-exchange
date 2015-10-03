@@ -9,7 +9,7 @@
 
 	<%= f.hidden_field :book_id %>
 	<%= f.hidden_field :listing_type %>
-	<%= f.input :library_exchange, inline_label: "I'll drop this book at the library where the buyer can pick it up (recommended)",css:"font-size:20px;",  :input_html => { :checked => @listing.library_exchange }%>
+	<%= f.input :library_exchange, inline_label: "I'll drop this book at the library where the buyer can pick it up (recommended)",css:"font-size:20px;"#,  :input_html => { :checked => @listing.library_exchange }%>
 	<%= f.hidden_field :user_id %>
 	<%= f.hidden_field :status %>
 
