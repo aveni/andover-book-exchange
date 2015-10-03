@@ -19,6 +19,13 @@ module ListingsHelper
 		end
 	end
 
+	def show_pickup_option(listing)
+		# content_tag(:span, "OWHL Pickup Available", class: "label label-info label-as-badge")
+		if listing.library_exchange
+			"OWHL Pickup Available"
+		end
+	end
+
 	def show_seller(listing)
 		user = User.find(listing.user_id)
 		"#{user.first} #{user.last}"

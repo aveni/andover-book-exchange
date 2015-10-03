@@ -9,24 +9,26 @@
 
 include BooksHelper
 
-# rb = User.find_by_email('rbrigden@andover.edu')
+rb = User.find_by_email('rbrigden@andover.edu')
 av = User.find_by_email('avenigalla@andover.edu')
 unless rb || av
   av = User.new(first:'Abhinav', last:'Venigalla', email: 'avenigalla@andover.edu', password: 'abhiveni', password_confirmation: 'abhiveni')
-  # rb = User.new(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
-  # rb.roles = %w[superuser]
+  rb = User.new(first:'Ryan', last:'Brigden', email: 'rbrigden@andover.edu', password: 'ryanbrig', password_confirmation: 'ryanbrig')
+  rb.roles = %w[superuser]
   av.roles = %w[admin]
-  # rb.save
+  rb.confirm!
+  av.confirm!
+  rb.save
   av.save
 end
 
-def find_subj(name)
-	if name[0..2] == "ART"
-		"ART"
-	else
-		name[0..3]
-	end
-end
+# def find_subj(name)
+# 	if name[0..2] == "ART"
+# 		"ART"
+# 	else
+# 		name[0..3]
+# 	end
+# end
 
 # COURSES = [
 # 	["MATH-595", "Patrick Farrell"],
@@ -84,37 +86,33 @@ end
 # ]
 
 
-str = File.read("#{Rails.public_path}/spring2015_courses.txt")
-COURSES = str.split("\n")
+# str = File.read("#{Rails.public_path}/spring2015_courses.txt")
+# COURSES = str.split("\n")
 
-COURSES.each do |c|
-	arr = c.split("/")
-	name = arr[0]
-	if arr[1]
-		teacher_text = arr[1]
-	else
-		teacher_text = "No Teacher"
-	end
-	Course.create!(name: name, teacher: teacher_text, subject: find_subj(name))
-	puts "Added #{name}"
-end
+# COURSES.each do |c|
+# 	arr = c.split("/")
+# 	name = arr[0]
+# 	if arr[1]
+# 		teacher_text = arr[1]
+# 	else
+# 		teacher_text = "No Teacher"
+# 	end
+# 	Course.create!(name: name, teacher: teacher_text, subject: find_subj(name))
+# 	puts "Added #{name}"
+# end
 
-str = File.read("#{Rails.public_path}/spring2015_books.txt")
-BOOKS = str.split("\n")
+# str = File.read("#{Rails.public_path}/spring2015_books.txt")
+# BOOKS = str.split("\n")
 
-BOOKS.each do |b|
-	arr = b.split("/")
-	isbn = arr[0]
-	courses = arr[1].split(",")
-	b = Book.new(isbn: isbn)
-	set_book(b)
-	b.save!
-	courses.each do |name|
-		course = Course.where(name: name).first
-		course.books << b
-	end
-	puts "Added #{b.title}"
-end
+# BOOKS.each do |b|
+# 	arr = b.split("/")
+# 	isbn = arr[0]
+# 	courses = arr[1].split(",")
+# 	b = Book.new(isbn: isbn)
+# 	set_book(b)
+# 	b.save!
+# 	puts "Added #{b.title}"
+# end
 
 # BOOKS.each do |isbn, course_ids|
 # 	puts "Adding #{isbn} ..." 

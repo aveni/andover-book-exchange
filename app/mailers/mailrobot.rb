@@ -27,5 +27,28 @@ class Mailrobot < ApplicationMailer
 	end
 
 
+	# for library pickups
+
+	def notify_delivery_seller(exchange)
+		@exchange = exchange
+		mail(to:@exchange.listing.user.email, subject:"Delivery to OWHL Confirmation")
+	end
+
+	def notify_delivery_buyer(exchange)
+		@exchange = exchange
+		mail(to:@exchange.user.email, subject:"#{@exchange.listing.book.title} is ready for pickup from the OWHL!")
+	end
+
+	def notify_pickup_seller(exchange)
+		@exchange = exchange
+		mail(to:@exchange.listing.user.email, subject:"Pickup from OWHL Confirmation")
+	end
+
+	def notify_pickup_buyer(exchange)
+		@exchange = exchange
+		mail(to:@exchange.user.email, subject:"Pickup from OWHL Confirmation")
+	end
+
+
 
 end

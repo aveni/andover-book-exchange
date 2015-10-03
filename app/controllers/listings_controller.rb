@@ -10,20 +10,21 @@ class ListingsController < ApplicationController
 	def buy
 		@listing = Listing.find(params[:listing_id])
 		if @listing.status && @listing.user_id != current_user.id
-			@exchange = Exchange.new(listing_id: @listing.id, user_id: current_user.id)
+			@exchange = Exchange.new(listing_id: @listing.id, user_id: current_user.id, delivered: false, library_exchange: @listing.library_exchange)
 			if @exchange.save	
 				Mailrobot.notify_buyer(@exchange.user, @exchange.listing).deliver
-	      Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
+		  		Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
 				redirect_to @exchange.user, notice: "Sucessfully bought #{@listing.book.title}! An email will be sent to both you and the seller shortly."
-	      @listing.status = false
+		  		@listing.status = false
 				@listing.save
 			else
 				redirect_to books_path, alert: "Error. Could not purchase book."
 			end
-    else
-    	redirect_to books_path, alert: "Cannot purchase book."
-    end
+		else
+			redirect_to books_path, alert: "Cannot purchase book."
+		end
 	end
+
 
 	def show
 		@listing = Listing.find(params[:id])
@@ -73,8 +74,7 @@ class ListingsController < ApplicationController
 	end
 
 	def listing_params
-		params.require(:listing).permit( :description, :quality, :listing_type, :status, :library_trade, :min_price,  :course_id,  :user_id, :book_id)
+		params.require(:listing).permit( :description, :quality, :listing_type, :status, :library_exchange, :min_price,  :course_id,  :user_id, :book_id)
 	end
-
 
 end

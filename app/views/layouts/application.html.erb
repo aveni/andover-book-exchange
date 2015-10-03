@@ -45,6 +45,7 @@
         
         <% if current_user && (current_user.is?(:superuser) ||  current_user.is?(:admin))%>
           <li><a href= <%= users_path %> >Users</a></li>
+          <li><a href= <%= library_inventory_path %> >OWHL Inventory</a></li>
           <li><a href= <%= exchanges_path %> >Exchanges</a></li>
           <li><a href= <%= reports_path %> >Reports</a></li>
         <% end %>

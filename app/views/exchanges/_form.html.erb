@@ -1,0 +1,28 @@
+<div class="row col-md-10 col-md-offset-1 text-center">
+
+<h2>Seller: <%= show_name(@exchange.listing.user) %> | Buyer: <%= show_name(@exchange.user) %></h2>
+
+<h4>Book purchased at: <%= @exchange.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%I:%M %p  %b %d, %Y ").to_s %></h3>
+
+<br>
+
+<%= simple_form_for(@exchange, html:{class:'form-horizontal'} ) do |f| %>
+  
+	<% f.error_notification %>
+
+	<% unless @exchange.delivered %>
+	<%= f.input :delivered, inline_label: "This book has been delivered to the OWHL by the seller (#{show_name(@exchange.listing.user) })", class: "checkbox" %>
+	<% else %>
+	<%= f.input :picked_up, inline_label: "This book has been picked up from OWHL by the buyer (#{show_name(@exchange.user) })", class: "checkbox" %>
+	<% end %>
+	<br>
+	<div class='row text-center'>
+	 <%= f.submit nil, class:'btn btn-primary' %>
+	 <%= link_to 'Cancel', library_inventory_path, class:'btn btn-default' %>
+	</div>
+
+<% end %>
+
+</div>
+
+   

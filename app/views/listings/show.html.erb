@@ -8,21 +8,26 @@
     <%= show_cover(@listing.book, 150, 200) %>
   </div>
 
-  <div class="col-sm-10">
-  <br>
-      <dl class="dl-horizontal">
-        <dt>Listing Type</dt>
-        <dd><%= @listing.listing_type %></dd>
-        <dt>Quality</dt>
-        <dd><%= show_quality(@listing) %></dd>
-        <dt>Description</dt>
-        <dd><%= @listing.description %></dd>
-        <dt>Price</dt>
-        <dd><%= show_price(@listing.min_price, 2) %></dd>
-        <dt>Seller</dt>
-        <dd><%= show_seller(@listing) %>  <%="(You!)" if @listing.user == current_user%> </dd>
-      </dl>
+      <div class="col-sm-4">
+      <br>
+          <dl class="dl-horizontal">
+
+            <dt>Quality</dt>
+            <dd><%= show_quality(@listing) %></dd>
+            <dt>Description</dt>
+            <dd><%= @listing.description %></dd>
+            <dt>Price</dt>
+            <dd><%= show_price(@listing.min_price, 2) %></dd>
+            <dt>Seller</dt>
+            <dd><%= show_seller(@listing) %>  <%="(You!)" if @listing.user == current_user %> </dd>
+          </dl>
+      </div>
+<% if @listing.library_exchange  %>
+  <div class="col-md-3">
+    <br>
+        <a href="/pages/library_exchange" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="You can pick up this book from the OWHL after you purchase it"><i class="fa fa-exchange"> </i>  Library Pickup</a>
   </div>
+<% end %>
 </div>
 
 <!-- 
@@ -77,3 +82,9 @@
   </div>
 
 <% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>

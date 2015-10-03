@@ -31,6 +31,8 @@ class Ability
     user ||= User.new
     
     alias_action :create, :update, :to=>:modify
+
+    alias_action :library_inventory, :to=>:read
     
 
     can :read, Book    # show and index
@@ -42,6 +44,7 @@ class Ability
    
 
     can :read, Exchange if user.is?(:admin)
+    can :modify, Exchange if user.is?(:admin)
 
     can :read, Report if user.is?(:admin)
     can :create, Report

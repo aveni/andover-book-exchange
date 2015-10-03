@@ -2,11 +2,19 @@ Got It!
 
 You have just purchased <%= @listing.book.title %> from <%= @listing.user.first + " " + @listing.user.last %>. Follow these next steps to make the exchange:
 
+<% if @listing.library_exchange %>
+1. You will be notified when <%= @listing.book.title %> is available to be picked up from the OWHL (the library). The Andover Book Exchange desk is located...
+
+2. Pay <%= @listing.user.first + " " + @listing.user.last %> the exact amount (<%= show_price(@listing.min_price, 0) %>) before you pick up your book. We recommend you <%= link_to "pay with Venmo", venmo_pay_link(@listing) %>, a secure, online transaction service.  
+<% else %>
 1. Contact the seller, <%= @listing.user.first + " " + @listing.user.last %>, at <%= @listing.user.email %> and arrange a time and place to conduct the transaction.
+2. Pay <%= @listing.user.first + " " + @listing.user.last %> the exact cash amount listed in this email when the book is exchanged. You can also <%= link_to "pay with Venmo", venmo_pay_link(@listing) %>, a secure, online transaction service.  
 
-2. Pay <%= @listing.user.first + " " + @listing.user.last %> for <%= @listing.book.title %> with <%=link_to "Venmo (recommended)", venmo_pay_link(@listing) %> or pay in cash when the book is exchanged.
+<% end %>
 
-3. If you have any concerns, please submit a report here, or contact us at pabookexchange@gmail.com.
+
+3. If you have any problems, concerns or suggestions, please submit a report here, or contact us at <a href="mailto:pabookexchange@gmail.com?Subject=Help%20me!" target="_top">pabookexchange@gmail.com</a>
+
 
 Thanks!
 Andover Book Exchange Team

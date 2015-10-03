@@ -1,0 +1,36 @@
+<div class="page-header">
+	<h1>OWHL Inventory</h1>
+</div>
+<br>
+<div class="row">
+	<table class="table table-striped table-hover" id="users_table">
+		<thead>
+			<tr>
+			<th> Status </th>
+			<th> Exchange ID</th>
+			<th> Listing </th>
+			<th> Price </th>
+			<th> Buyer </th>
+			<th> Seller </th>
+			<th> Seller Status </th>
+			<th> Buyer Status </th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @exchanges.each do |exchange| %>
+				<%= render 'exchanges/inventory_exchange', exchange: exchange %>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+<script>
+$(document).ready(
+	function() {
+		$('#users_table').DataTable({
+			paginationType: 'full_numbers'
+		})
+	}
+	)
+</script>

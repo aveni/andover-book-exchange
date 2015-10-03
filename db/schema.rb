@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619192722) do
+ActiveRecord::Schema.define(version: 20151003040621) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -22,11 +22,19 @@ ActiveRecord::Schema.define(version: 20150619192722) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books_courses", id: false, force: :cascade do |t|
+    t.integer "book_id",   null: false
+    t.integer "course_id", null: false
+  end
+
   create_table "exchanges", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "listing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "delivered",        default: false
+    t.boolean  "library_exchange", default: false
+    t.boolean  "picked_up",        default: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -37,8 +45,9 @@ ActiveRecord::Schema.define(version: 20150619192722) do
     t.boolean  "status"
     t.integer  "book_id"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "library_exchange", default: false
   end
 
   create_table "offers", force: :cascade do |t|

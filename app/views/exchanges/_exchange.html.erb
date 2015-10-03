@@ -5,6 +5,7 @@
 	<% if current_user.is?(:superuser) || current_user.is?(:admin) %>
 		<td> <%= link_to(show_name(exchange.user), exchange.user) %> </td>
 		<td> <%= link_to(show_name(exchange.listing.user), exchange.listing.user) %> </td>
+
 	<% else %>
 		<td> <%= show_name(exchange.user) %> </td>
 		<td> <%= show_name(exchange.listing.user) %> </td>

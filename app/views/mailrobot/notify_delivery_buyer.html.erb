@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Book Purchase</title>
+    <title><%= @exchange.listing.book.title %> is ready for pickup!</title>
   </head>
   <body bgcolor="#f6f6f6" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; margin: 0; padding: 0;">&#13;
 &#13;
@@ -14,23 +14,15 @@
 			&#13;
 			<div style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; max-width: 600px; display: block; margin: 0 auto; padding: 0;">&#13;
 			<table style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; width: 100%; margin: 0; padding: 0;"><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; margin: 0; padding: 0;"><td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; margin: 0; padding: 0;">&#13;
-						<h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 36px; line-height: 1.2; color: #000; font-weight: 200; margin: 40px 0 10px; padding: 0;">Got It!</h1>&#13;
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">You have just purchased <%= @listing.book.title %> from <%= @listing.user.first + " " + @listing.user.last %> for <%= show_price(@listing.min_price, 0) %>. Follow these next steps to make the exchange:</p>&#13;
-						
-					<% if @listing.library_exchange %>
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">1. You will be notified when <%= @listing.book.title %> is available to be picked up from the OWHL (the library). The Andover Book Exchange desk is located...</p>&#13;
-
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">2. Pay <%= @listing.user.first + " " + @listing.user.last %> the <strong> exact </strong> amount (<%= show_price(@listing.min_price, 0) %>) before you pick up your book. We recommend you <%= link_to "pay with Venmo", venmo_pay_link(@listing) %>, a secure, online transaction service.  </p>&#13;
-					<% else %>
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">1. Contact the seller, <%= @listing.user.first + " " + @listing.user.last %>, at <%= @listing.user.email %> and arrange a time and place to conduct the transaction.</p>&#13;
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">2. Pay <%= @listing.user.first + " " + @listing.user.last %> the <strong> exact </strong> cash amount listed in this email when the book is exchanged. You can also <%= link_to "pay with Venmo", venmo_pay_link(@listing) %>, a secure, online transaction service.  </p>&#13;
-
-					<% end %>
-
+						<h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 36px; line-height: 1.2; color: #000; font-weight: 200; margin: 40px 0 10px; padding: 0;">Come get it!</h1>&#13;
+						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">Your purchase of <%= @exchange.listing.book.title %> is available for pickup from the OWHL (the library). Please come by the Andover Book Exchange desk located in....</p>&#13;
 					
-						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">3. If you have any problems, concerns or suggestions, please submit a report here, or contact us at <a href="mailto:pabookexchange@gmail.com?Subject=Help%20me!" target="_top">pabookexchange@gmail.com</a></p>&#13;
 
+						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">If you have not already, please pay <%= @exchange.listing.user.first + " " + @exchange.listing.user.last %> the <strong> exact </strong> amount (<%= show_price(@exchange.listing.min_price, 0) %>) before you pick up your book. We recommend you <%= link_to "pay with Venmo", venmo_pay_link(@exchange.listing) %>, a secure, online transaction service.  </p>&#13;
 					
+
+						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">If you have any problems, concerns or suggestions, please submit a report here, or contact us at <a href="mailto:pabookexchange@gmail.com?Subject=Help%20me!" target="_top">pabookexchange@gmail.com</a></p>&#13;
+
 	
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">Thanks!</p>&#13;
 						<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">Andover Book Exchange Team</a></p>&#13;

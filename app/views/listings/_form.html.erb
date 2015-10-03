@@ -5,33 +5,33 @@
 <br>
 <%= simple_form_for([@book,@listing], html:{class:'form-horizontal'} ) do |f| %>
   
-    <% f.error_notification %>
+	<% f.error_notification %>
 
-    <%= f.hidden_field :book_id %>
-    <%= f.hidden_field :listing_type %>
-    <%= f.input :library_exchange, inline_label: "I'll drop this book at the library where the buyer can grab it (recommended)" %>
-    <%= f.hidden_field :user_id %>
-    <%= f.hidden_field :status %>
+	<%= f.hidden_field :book_id %>
+	<%= f.hidden_field :listing_type %>
+	<%= f.input :library_exchange, inline_label: "I'll drop this book at the library where the buyer can pick it up (recommended)",css:"font-size:20px;",  :input_html => { :checked => @listing.library_exchange }%>
+	<%= f.hidden_field :user_id %>
+	<%= f.hidden_field :status %>
 
-    <%= f.input :quality, collection: QUALITIES, label:'Select Condition'%>
-    <%= f.input :description, placeholder: 'Description' %>
-    <%= f.input :min_price, placeholder: 'X or X.XX', label: 'Price' %>
+	<%= f.input :quality, collection: QUALITIES, label:'Select Condition'%>
+	<%= f.input :description, placeholder: 'Description' %>
+	<%= f.input :min_price, placeholder: 'X or X.XX', label: 'Price' %>
 
-    <br>
-    <h5>Average Selling Prices:</h5>
-    <% prices = avg_prices(Book.find(params[:book_id])) %>
-    New: <%= prices[0]? show_price(prices[0], 2) : "---" %><br>
-    Like New: <%= prices[1]? show_price(prices[1], 2) : "---" %><br>
-    Good: <%= prices[2]? show_price(prices[2], 2) : "---" %><br>
-    Acceptable: <%= prices[3]? show_price(prices[3], 2) : "---" %><br>
+	<br>
+	<h5>Average Selling Prices:</h5>
+	<% prices = avg_prices(Book.find(params[:book_id])) %>
+	New: <%= prices[0]? show_price(prices[0], 2) : "---" %><br>
+	Like New: <%= prices[1]? show_price(prices[1], 2) : "---" %><br>
+	Good: <%= prices[2]? show_price(prices[2], 2) : "---" %><br>
+	Acceptable: <%= prices[3]? show_price(prices[3], 2) : "---" %><br>
 
 
-    <div class='row text-center'>
-   	 <%= f.submit nil, class:'btn btn-primary' %>
-   	 <%= link_to 'Cancel', book_path(@book), class:'btn btn-default' %>
-   	</div>
+	<div class='row text-center'>
+	 <%= f.submit nil, class:'btn btn-primary' %>
+	 <%= link_to 'Cancel', book_path(@book), class:'btn btn-default' %>
+	</div>
 
-    <% end %>
+	<% end %>
 
 </div>
 

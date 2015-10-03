@@ -7,13 +7,18 @@ Your listing for <%= @listing.book.title  %> has just sold for <%=  number_to_cu
 In order to complete this sale and offload your book, please follow the steps below:
 
 
-1. Contact the buyer, <%= @buyer.first + " " + @buyer.last %>, at <%= @buyer.email %> and arrange a time and place to conduct the exchange.
+<% if @listing.library_exchange %>
+1. Please drop off <%= @listing.book.title %> at the OWHL (the library) within 48 hours. The Andover Book Exchange desk is located... 
 
-2. Accept cash payment of the  exact amount specified in this email when the exchange is made. You can also arrange payment through a secure, online transaction service called Venmo. In order to conduct payment through Venmo, please ensure that you have <a href="https://venmo.com/signup">signed up</a> with your @andover.edu address. 
+	Accept payment of the  exact  amount (<%= number_to_currency(@listing.min_price) %>) after you drop off the book. You must arrange this payment through a secure, online transaction service called Venmo. In order to conduct payment through Venmo, please ensure that you have <a href="https://venmo.com/signup">signed up</a> with your@andover.edu address. You will be notified when the buyer picks up the book.
+<% else %>
+	1. Contact the buyer, <%= @buyer.first + " " + @buyer.last %>, at <%= @buyer.email %> and arrange a time and place to conduct the exchange.
 
-3. If for any reason you are unable able to make the transaction, you can relist the book <%= link_to "here", new_book_listing_path(@listing.book) %>.
-  
-4. If you have any concerns, please submit a report here, or contact us at pabookexchange@gmail.com.
+	2. Accept cash payment of the  exact  amount specified in this email when the exchange is made. You can also arrange payment through a secure, online transaction service called Venmo. In order to conduct payment through Venmo, please ensure that you have <a href="https://venmo.com/signup">signed up</a> with your @andover.edu address. 
+
+<% end %>
+
+	If you have any problems, concerns or suggestions, please submit a report here, or contact us at <a href="mailto:pabookexchange@gmail.com?Subject=Help%20me!" target="_top">pabookexchange@gmail.com</a>
 
 Thanks!
 Andover Book Exchange Team
