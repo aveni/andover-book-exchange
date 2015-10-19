@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     if current_user != nil
       redirect_to books_path
     else
-      render :layout => false
+      render :layout => true
     end
   end
 
