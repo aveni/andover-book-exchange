@@ -70,7 +70,9 @@
 		</thead>
 		<tbody>
 			<% @user.listings.where(status:false).reverse.each do |listing| %>
-				<%= render listing.exchange %>
+				<% unless listing.exchange.nil? %>
+					<%= render listing.exchange %>
+				<% end %>
 			<% end %>
 		</tbody>
 	</table>

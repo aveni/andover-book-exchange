@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
   validates_format_of :email, with: /andover\.edu/i, message: "must use andover.edu address"
   validates :first, presence: true
   validates :last, presence: true
+  before_create :capitalize
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
@@ -60,5 +61,10 @@ class User < ActiveRecord::Base
   def is?(role)
     # => true if matches a role for this user, false otherwise
     roles.include?(role.to_s)
+  end
+
+  def capitalize
+    self.first.capitalize!
+    self.last.capitalize!
   end
 end
