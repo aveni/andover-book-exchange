@@ -15,6 +15,8 @@ class ExchangesController < ApplicationController
 		end
 	end
 
+
+
 	# def deliver
 	# 	@exchange = Exchange.find(params[:id])
  #    		@exchange.delivered = true

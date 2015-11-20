@@ -14,7 +14,8 @@ class ListingsController < ApplicationController
 			if @exchange.save	
 				Mailrobot.notify_buyer(@exchange.user, @exchange.listing).deliver
 		  		Mailrobot.notify_seller(@exchange.user, @exchange.listing).deliver
-				redirect_to @exchange.user, notice: "Sucessfully bought #{@listing.book.title}! An email will be sent to both you and the seller shortly."
+				render action: :after_buy 
+		  		flash[:notice] = "Sucessfully bought #{@listing.book.title}! An email will be sent to both you and the seller shortly."
 		  		@listing.status = false
 				@listing.save
 			else
@@ -23,6 +24,10 @@ class ListingsController < ApplicationController
 		else
 			redirect_to books_path, alert: "Cannot purchase book."
 		end
+	end
+
+	def after_buy
+		@exchange = Exchange.find(params[:id])
 	end
 
 
@@ -37,10 +42,16 @@ class ListingsController < ApplicationController
 	def create
 		@listing = Listing.new(listing_params)
 		if @listing.save
-			redirect_to book_listing_path(@listing.book, @listing), notice:'Listing was created successfully'
+			render action: :after_listing_create
+			flash[:notice] = 'Listing was created successfully'
+
 		else
 			render 'new'
 		end
+	end
+
+	def after_listing_create
+		@listing = Listing.find(params[:id])
 	end
 
 	def edit

@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<h2>Thanks for joining the Exchange, <%= @listing.user.first %>! </h2>		
+	</div>
+
+		<div class="col-md-8 col-sm-offset-2">
+
+		<h5> We are going to help you get <%= @listing.book.title %> off your hands ASAP. Here is what you can do right now to accept payment easily and securely. <h5>
+		<br>
+		
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-4 text-center ">
+		<h4> Don't have a Venmo account yet?</h4>
+		</div>
+		
+		<div class="col-md-4 text-center ">
+		<h4> Have a Venmo account, but haven't connected your Andover account?</h3>
+		</div>
+		
+		<div class="col-md-4 text-center ">
+		<h4> Ready to move on? </h3>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-4 text-center ">
+		<%= link_to 'Sign up for Venmo!',  "https://venmo.com", :target => "_blank", class: 'btn btn-lg outline' %>
+		</div>
+		
+		<div class="col-md-4 text-center ">
+		<% venmo_verify = "https://venmo.com/account/sign-in/?next=%2Fidentity%2Fverify_email_addresses" %>
+		<%= link_to 'Verify @andover.edu address',  venmo_verify, :target => "_blank", class: 'btn btn-lg outline' %>
+		</div>
+		
+		<div class="col-md-4 text-center ">
+		<%= link_to "Continue", book_listing_path(@listing.book, @listing), class: 'btn btn-lg outline' %>
+		</div>
+	</div>
+</div>

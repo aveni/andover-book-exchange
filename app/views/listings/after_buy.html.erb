@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+		<h2>Thanks for purchasing, <%= @exchange.user.first %>! </h2>
+
+		<h3> We are going to help you get your book ASAP. Here is what you can do right now <h3>
+		<br>
+		<div class="row text-center">
+		<%= link_to 'Pay with Venmo!',  venmo_pay_link(@exchange.listing), :target => "_blank", class: 'btn btn-lg outline' %> &nbsp;&nbsp;&nbsp;&nbsp;
+		<%= link_to "Continue", user_path(@exchange.user), class: 'btn btn-lg outline' %>
+		</div>
+
+	</div>
+</div>
