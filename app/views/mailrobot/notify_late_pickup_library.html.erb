@@ -1,0 +1,14 @@
+<h2> Late Pickup Notification for <%= show_name(@exchange.user) %> </h2>
+
+<p> 
+The seller <%= show_name(@exchange.listing.user) %> delivered <%= @exchange.listing.book.title %> 7 days ago. <%= show_name(@exchange.user) %> has yet to pick the book up from the OWHL.
+</p>
+
+<p>
+<%= show_name(@exchange.user) %> has already been notified of this issue. %>
+</p>
+
+<p>
+If necessary, contact <%= show_name(@exchange.user) %> here: <%= mail_to @exchange.user.email %>
+</p>
+

@@ -1,0 +1,25 @@
+<div class="row col-md-10 col-md-offset-1">
+
+<h2> Notification Form</h2>
+
+<%= simple_form_for(@notification, html:{class:'form-horizontal'} ) do |f| %>
+  
+	
+	
+	
+	<% if @notification.persisted? %>
+		<%= f.input :show %>
+	<% else %>
+		<%= f.input :message %>
+	<% end %>
+
+
+
+	<div class='row text-center'>
+	 <%= f.submit nil, class:'btn btn-primary' %>
+	 <%= link_to 'Cancel', notifications_path, class:'btn btn-default' %>
+	</div>
+
+	<% end %>
+
+</div>

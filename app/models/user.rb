@@ -63,6 +63,10 @@ class User < ActiveRecord::Base
     roles.include?(role.to_s)
   end
 
+  def full_name
+    self.first + " " + self.last
+  end
+
   def capitalize
     self.first.capitalize!
     self.last.capitalize!

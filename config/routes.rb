@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'notifications/new'
+
+  get 'notifications/create'
+
 	devise_for :users, :controllers => { :registrations => "registrations" }
 	resources :users do
 		get 'ban'
 		get 'unban'
 	end
 
+	resources :notifications
 	resources :exchanges
 	resources :reports
 	resources :books do

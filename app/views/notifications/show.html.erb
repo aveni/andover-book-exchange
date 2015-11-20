@@ -1,0 +1,12 @@
+<div class="page-header">
+	<h2>Notification Visible to Students</h2>
+</div>
+
+<div class="row">
+	
+	<h4> <%= @notification.message unless @notification.blank? %> </h4>
+	<br>
+	<%= link_to "Create a new notification", new_notification_path, class: 'btn btn-sm btn-info' %>
+	<%= link_to "Show or hide this notification", edit_notification_path(@notification), class: 'btn btn-sm btn-info' %>
+
+</div>

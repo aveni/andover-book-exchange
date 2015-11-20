@@ -9,6 +9,10 @@ class BooksController < ApplicationController
       @books = Book.all.order(:title)
     end
     @books = @books.first(32)
+    notification = Notification.order("created_at").last
+    unless notification.blank? or !notification.show
+      flash[:notice] = notification.message
+    end
   end
 
   def show
