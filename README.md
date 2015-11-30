@@ -1,29 +1,3 @@
-# README #
+# Andover Book Exchange
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-PABOOKEXCHANGE
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+This is for students tired of forking out large amounts of money for textbooks on top of an already obscene tuition bill, only to sell them at the end of the year for a small fraction of the cost. Let's stop wasting time, money and paper and focus on reason why we are here: to learn. The Andover Book Exchange connects Phillips Academy students who need to buy and sell their books at affordable prices.
